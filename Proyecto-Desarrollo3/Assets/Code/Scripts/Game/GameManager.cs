@@ -6,7 +6,6 @@ namespace Code.Scripts.Game
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private TMP_Text currency;
-        public int userLvl = 1;
         private int intValue = 10;
         public delegate void DoubleValueEventHandler(double value);
         public static event DoubleValueEventHandler OnValueReceived;
@@ -15,11 +14,13 @@ namespace Code.Scripts.Game
         private void OnEnable()
         {
             Player.OnValueUpdated += UpdateCurrency;
+            InputManager.OnClickEvent += CheckClick;
         }
 
         private void OnDisable()
         {
             Player.OnValueUpdated -= UpdateCurrency;
+            InputManager.OnClickEvent -= CheckClick;
         }
         
         public void SendDoubleValue(double valueToSend)
@@ -30,14 +31,34 @@ namespace Code.Scripts.Game
         {
             OnValueReceived?.Invoke(valueToSend);
         }
-        public void UpdateCurrency(double value)
+
+        private void CheckClick()
+        {
+            Ray ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit hit;
+            
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.gameObject)
+                {
+                    Debug.Log("Object Clicked: " + gameObject.name);
+                    if (gameObject.GetComponent<Clickable>())
+                    {
+                        SendFloatValue(Player.UserLvl);
+                    }
+                }
+            }
+        }
+        
+        private void UpdateCurrency(double value)
         {
             currency.text = value.ToString();
         }
 
         public void UpgradeLevel()
         {
-            userLvl++;
+            Player.UserLvl++;
         }
 
         [ContextMenu("Send 10 coins")]

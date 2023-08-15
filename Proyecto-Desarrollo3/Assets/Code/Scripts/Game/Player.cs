@@ -4,10 +4,13 @@ namespace Code.Scripts.Game
 {
     public class Player : MonoBehaviour
     {
-        private double currency = 0.0;
-        
+        private double _currency = 0.0;
+        public static int UserLvl { get; set; }
+
         public delegate void CurrencyUpdatedEventHandler(double value);
+
         public static event CurrencyUpdatedEventHandler OnValueUpdated;
+
         private void OnEnable()
         {
             GameManager.OnValueReceived += HandleValue;
@@ -20,14 +23,11 @@ namespace Code.Scripts.Game
 
         private void HandleValue(double value)
         {
-            currency += value;
-            if (currency != null && OnValueUpdated != null)
+            _currency += value;
+            if (OnValueUpdated != null)
             {
-                OnValueUpdated(currency);
+                OnValueUpdated(_currency);
             }
         }
-    
-    
-    
     }
 }
