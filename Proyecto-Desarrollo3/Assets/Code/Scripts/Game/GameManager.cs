@@ -24,12 +24,12 @@ namespace Code.Scripts.Game
         
         public void SendDoubleValue(double valueToSend)
         {
-            if(OnValueReceived != null)
-            {
-                OnValueReceived(valueToSend);
-            }
+                OnValueReceived?.Invoke(valueToSend);
         }
-
+        public void SendFloatValue(float valueToSend)
+        {
+            OnValueReceived?.Invoke(valueToSend);
+        }
         public void UpdateCurrency(double value)
         {
             currency.text = value.ToString();
@@ -37,13 +37,13 @@ namespace Code.Scripts.Game
 
         public void UpgradeLevel()
         {
-            
+            userLvl++;
         }
 
         [ContextMenu("Send 10 coins")]
         private void Send10Coins()
         {
-            SendDoubleValue(intValue);
+            OnValueReceived?.Invoke(intValue);
         }
     }
 }
