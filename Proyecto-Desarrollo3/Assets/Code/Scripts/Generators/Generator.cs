@@ -17,6 +17,7 @@
         /// After a certain time or condition, returns currency generated.
         /// </summary>
         /// <returns> currency generated </returns>
+        // TODO mejorar esto?
         public double Generate()
         {
             if (_timer <= 0)
@@ -32,8 +33,7 @@
         /// Upgrade generator's currency generated
         /// </summary>
         /// <param name="currency"> Player's currency </param>
-        // TODO return costo del upgrade? reducir currency con evento?
-        public void Upgrade(double currency)
+        public double Upgrade(double currency)
         {
             if (currency > LevelUpCost)
             {
@@ -41,9 +41,10 @@
                 LevelUpCost *= LevelUpCostIncrease;
                 CurrencyGenerated = CurrencyGeneratedIncrease * _level;
                 
-                //TODO fix currency not modified (not ref)
-                currency -= LevelUpCost;
+                return LevelUpCost;
             }
+
+            return 0;
         }
     }
 }

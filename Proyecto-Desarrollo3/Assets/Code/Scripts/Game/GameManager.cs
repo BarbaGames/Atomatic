@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using Code.Scripts.Generators;
 using TMPro;
@@ -7,7 +6,7 @@ using UnityEngine;
 namespace Code.Scripts.Game
 {
     /// <summary>
-    /// Manages game elemets such as the player, generators and upgrades.
+    /// Manages game elements such as the player, generators and upgrades.
     /// </summary>
     public class GameManager : MonoBehaviour
     {
@@ -72,13 +71,16 @@ namespace Code.Scripts.Game
             OnCurrencyEvent?.Invoke(currency);
         }
 
+        private void RemoveCurrency(double currency)
+        {
+            OnCurrencyEvent?.Invoke(-currency);
+        }
+
         private void CheckClick()
         {
             Ray ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
 
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out var hit))
             {
                 if (hit.collider.gameObject)
                 {
@@ -97,12 +99,12 @@ namespace Code.Scripts.Game
 
         public void UpgradeLevel(int id)
         {
-            _generators[id].Upgrade(_player.Currency);
+            RemoveCurrency(_generators[id].Upgrade(_player.Currency));
         }
 
         public void UpgradePlayerGenerator()
         {
-            _playerGenerator.Upgrade(_player.Currency);
+             RemoveCurrency(_playerGenerator.Upgrade(_player.Currency));
         }
     }
 }
