@@ -1,16 +1,35 @@
+using System;
+using System.Globalization;
+using Code.Scripts.Generators;
 using TMPro;
 using UnityEngine;
 
 namespace Code.Scripts.Game
 {
+    /// <summary>
+    /// Manages game elemets such as the player, generators and upgrades.
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] private TMP_Text currency;
-        private int intValue = 10;
-        public delegate void DoubleValueEventHandler(double value);
-        public static event DoubleValueEventHandler OnValueReceived;
+        [SerializeField] private TMP_Text currencyText;
 
-        
+        private const short GeneratorsQty = 5;
+
+        private Generator[] _generators;
+        private Generator _playerGenerator;
+        private Player _player;
+
+        public delegate void CurrencyEventHandler(double value);
+
+        public static event CurrencyEventHandler OnCurrencyEvent;
+
+        private void Awake()
+        {
+            InitPlayerGenerator();
+            _generators = new Generator[GeneratorsQty];
+            _player = gameObject.AddComponent<Player>();
+        }
+
         private void OnEnable()
         {
             Player.OnValueUpdated += UpdateCurrency;
@@ -22,14 +41,35 @@ namespace Code.Scripts.Game
             Player.OnValueUpdated -= UpdateCurrency;
             InputManager.OnClickEvent -= CheckClick;
         }
-        
-        public void SendDoubleValue(double valueToSend)
+
+        private void Update()
         {
-                OnValueReceived?.Invoke(valueToSend);
+            foreach (Generator generator in _generators)
+            {
+                if(generator == null) continue;
+                if (!generator.IsActive) continue;
+                double generated = generator.Generate();
+                if (generated <= 0) continue;
+            
+                //TODO better way to manage this event?
+                AddCurrency(generated);
+            }
         }
-        public void SendFloatValue(float valueToSend)
+
+        private void InitPlayerGenerator()
         {
-            OnValueReceived?.Invoke(valueToSend);
+            _playerGenerator = new Generator
+            {
+                IsActive = true,
+                TimerMax = 0,
+                CurrencyGenerated = 1,
+                LevelUpCost = 1,
+                CurrencyGeneratedIncrease = 1.15
+            };
+        }
+        private void AddCurrency(double currency)
+        {
+            OnCurrencyEvent?.Invoke(currency);
         }
 
         private void CheckClick()
@@ -37,34 +77,32 @@ namespace Code.Scripts.Game
             Ray ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
-            
+
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.gameObject)
                 {
-                    Debug.Log("Object Clicked: " + gameObject.name);
-                    if (gameObject.GetComponent<Clickable>())
+                    if (hit.transform.GetComponent<Clickable>())
                     {
-                        SendFloatValue(Player.UserLvl);
+                        AddCurrency(_playerGenerator.Generate());
                     }
                 }
             }
         }
-        
+
         private void UpdateCurrency(double value)
         {
-            currency.text = value.ToString();
+            currencyText.text = value.ToString(CultureInfo.CurrentCulture);
         }
 
-        public void UpgradeLevel()
+        public void UpgradeLevel(int id)
         {
-            Player.UserLvl++;
+            _generators[id].Upgrade(_player.Currency);
         }
 
-        [ContextMenu("Send 10 coins")]
-        private void Send10Coins()
+        public void UpgradePlayerGenerator()
         {
-            OnValueReceived?.Invoke(intValue);
+            _playerGenerator.Upgrade(_player.Currency);
         }
     }
 }
