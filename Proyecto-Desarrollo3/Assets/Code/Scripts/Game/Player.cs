@@ -1,11 +1,11 @@
+using System;
 using UnityEngine;
 
 namespace Code.Scripts.Game
 {
     public class Player : MonoBehaviour
     {
-        private double _currency = 0.0;
-        public static int UserLvl { get; set; }
+        public double Currency { get; set; }
 
         public delegate void CurrencyUpdatedEventHandler(double value);
 
@@ -13,20 +13,20 @@ namespace Code.Scripts.Game
 
         private void OnEnable()
         {
-            GameManager.OnValueReceived += HandleValue;
+            GameManager.OnCurrencyEvent += ModifyCurrency;
         }
 
         private void OnDisable()
         {
-            GameManager.OnValueReceived -= HandleValue;
+            GameManager.OnCurrencyEvent -= ModifyCurrency;
         }
 
-        private void HandleValue(double value)
+        private void ModifyCurrency(double value)
         {
-            _currency += value;
+            Currency += value;
             if (OnValueUpdated != null)
             {
-                OnValueUpdated(_currency);
+                OnValueUpdated(Currency);
             }
         }
     }
