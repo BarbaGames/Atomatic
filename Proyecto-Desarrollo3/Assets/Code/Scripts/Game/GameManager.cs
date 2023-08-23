@@ -51,7 +51,6 @@ namespace Code.Scripts.Game
                 double generated = generator.Generate();
                 if (generated <= 0) continue;
             
-                //TODO better way to manage this event?
                 AddCurrency(generated);
             }
         }

@@ -1,4 +1,6 @@
-﻿namespace Code.Scripts.Generators
+﻿using UnityEngine;
+
+namespace Code.Scripts.Generators
 {
     public class Generator
     {
@@ -17,15 +19,14 @@
         /// After a certain time or condition, returns currency generated.
         /// </summary>
         /// <returns> currency generated </returns>
-        // TODO mejorar esto?
         public double Generate()
         {
+            _timer -= Time.deltaTime;
             if (_timer <= 0)
             {
                 _timer = TimerMax;
                 return CurrencyGenerated;
             }
-
             return 0;
         }
 

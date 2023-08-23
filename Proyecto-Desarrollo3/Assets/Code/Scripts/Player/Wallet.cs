@@ -7,6 +7,11 @@ namespace Code.Scripts.Player
     {
         public double Currency { get; set; }
         
+        //TODO
+        //Achievements
+        //Decorator - procesador
+        //currency multiplier
+
         public delegate void CurrencyUpdatedEventHandler(double value);
 
         public static event CurrencyUpdatedEventHandler OnValueUpdated;
