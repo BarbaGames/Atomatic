@@ -1,12 +1,12 @@
-using System;
+﻿using Code.Scripts.Game;
 using UnityEngine;
 
-namespace Code.Scripts.Game
+namespace Code.Scripts.Player
 {
-    public class Player : MonoBehaviour
+    public class Wallet : MonoBehaviour
     {
         public double Currency { get; set; }
-
+        
         public delegate void CurrencyUpdatedEventHandler(double value);
 
         public static event CurrencyUpdatedEventHandler OnValueUpdated;
@@ -21,6 +21,7 @@ namespace Code.Scripts.Game
             GameManager.OnCurrencyEvent -= ModifyCurrency;
         }
 
+        //TODO Decorator
         private void ModifyCurrency(double value)
         {
             Currency += value;

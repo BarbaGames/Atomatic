@@ -1,5 +1,5 @@
-using System.Globalization;
 using Code.Scripts.Generators;
+using Code.Scripts.Player;
 using TMPro;
 using UnityEngine;
 
@@ -16,28 +16,29 @@ namespace Code.Scripts.Game
 
         private Generator[] _generators;
         private Generator _playerGenerator;
-        private Player _player;
-
+        private PlayerManager _playerManager;
+        private PlayerView _playerView;
         public delegate void CurrencyEventHandler(double value);
-
         public static event CurrencyEventHandler OnCurrencyEvent;
 
         private void Awake()
         {
             InitPlayerGenerator();
+            
             _generators = new Generator[GeneratorsQty];
-            _player = gameObject.AddComponent<Player>();
+            _playerManager = gameObject.AddComponent<PlayerManager>();
+            _playerManager.Wallet = gameObject.AddComponent<Wallet>();
+            _playerView = gameObject.AddComponent<PlayerView>();
+            _playerView.CurrencyText = currencyText;
         }
 
         private void OnEnable()
         {
-            Player.OnValueUpdated += UpdateCurrency;
             InputManager.OnClickEvent += CheckClick;
         }
 
         private void OnDisable()
         {
-            Player.OnValueUpdated -= UpdateCurrency;
             InputManager.OnClickEvent -= CheckClick;
         }
 
@@ -92,19 +93,18 @@ namespace Code.Scripts.Game
             }
         }
 
-        private void UpdateCurrency(double value)
+        public void PlayerClick()
         {
-            currencyText.text = value.ToString(CultureInfo.CurrentCulture);
+            AddCurrency(_playerGenerator.Generate());
         }
-
         public void UpgradeLevel(int id)
         {
-            RemoveCurrency(_generators[id].Upgrade(_player.Currency));
+            RemoveCurrency(_generators[id].Upgrade(_playerManager.Wallet.Currency));
         }
 
         public void UpgradePlayerGenerator()
         {
-             RemoveCurrency(_playerGenerator.Upgrade(_player.Currency));
+             RemoveCurrency(_playerGenerator.Upgrade(_playerManager.Wallet.Currency));
         }
     }
 }
