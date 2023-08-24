@@ -12,7 +12,6 @@ namespace Code.Scripts.Generators
         public double LevelUpCost { get; set; }
         public double CurrencyGenerated { get; set; }
         public double CurrencyGeneratedIncrease { get; set; }
-
         public string Description { get; set; }
         
         /// <summary>
