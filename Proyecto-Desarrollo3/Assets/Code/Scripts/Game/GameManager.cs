@@ -114,7 +114,7 @@ namespace Code.Scripts.Game
         [ContextMenu("Upgrade basic Generator")]
         public void UpgradeBasicGenerator()
         {
-            generators[0].Upgrade(_playerManager.Wallet.Currency);
+            RemoveCurrency(generators[0].Upgrade(_playerManager.Wallet.Currency));
         }
     }
 }
