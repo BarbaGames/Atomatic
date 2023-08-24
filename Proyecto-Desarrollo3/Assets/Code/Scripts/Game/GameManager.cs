@@ -2,6 +2,7 @@ using Code.Scripts.Generators;
 using Code.Scripts.Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Code.Scripts.Game
 {
@@ -11,25 +12,23 @@ namespace Code.Scripts.Game
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private TMP_Text currencyText;
+        [SerializeField] private Generator[] generators;
+        [SerializeField] private GeneratorStats playerGeneratorStats;
+        [SerializeField] private GameObject textHolderPrefab;
 
         private const short GeneratorsQty = 5;
 
-        private Generator[] _generators;
         private Generator _playerGenerator;
         private PlayerManager _playerManager;
         private PlayerView _playerView;
+
         public delegate void CurrencyEventHandler(double value);
+
         public static event CurrencyEventHandler OnCurrencyEvent;
 
         private void Awake()
         {
-            InitPlayerGenerator();
-            
-            _generators = new Generator[GeneratorsQty];
-            _playerManager = gameObject.AddComponent<PlayerManager>();
-            _playerManager.Wallet = gameObject.AddComponent<Wallet>();
-            _playerView = gameObject.AddComponent<PlayerView>();
-            _playerView.CurrencyText = currencyText;
+            InitPlayerComponents();
         }
 
         private void OnEnable()
@@ -44,28 +43,27 @@ namespace Code.Scripts.Game
 
         private void Update()
         {
-            foreach (Generator generator in _generators)
+            foreach (Generator generator in generators)
             {
-                if(generator == null) continue;
                 if (!generator.IsActive) continue;
                 double generated = generator.Generate();
                 if (generated <= 0) continue;
-            
+
                 AddCurrency(generated);
             }
         }
 
-        private void InitPlayerGenerator()
+        private void InitPlayerComponents()
         {
-            _playerGenerator = new Generator
-            {
-                IsActive = true,
-                TimerMax = 0,
-                CurrencyGenerated = 1,
-                LevelUpCost = 1,
-                CurrencyGeneratedIncrease = 1.15
-            };
+            _playerGenerator = gameObject.AddComponent<Generator>();
+            _playerGenerator.generatorStats =  playerGeneratorStats;
+            _playerGenerator.textHolderPrefab = textHolderPrefab;
+            _playerManager = gameObject.AddComponent<PlayerManager>();
+            _playerManager.Wallet = gameObject.AddComponent<Wallet>();
+            _playerView = gameObject.AddComponent<PlayerView>();
+            _playerView.CurrencyText = currencyText;
         }
+
         private void AddCurrency(double currency)
         {
             OnCurrencyEvent?.Invoke(currency);
@@ -96,14 +94,27 @@ namespace Code.Scripts.Game
         {
             AddCurrency(_playerGenerator.Generate());
         }
+
         public void UpgradeLevel(int id)
         {
-            RemoveCurrency(_generators[id].Upgrade(_playerManager.Wallet.Currency));
+            RemoveCurrency(generators[id].Upgrade(_playerManager.Wallet.Currency));
         }
 
         public void UpgradePlayerGenerator()
         {
-             RemoveCurrency(_playerGenerator.Upgrade(_playerManager.Wallet.Currency));
+            RemoveCurrency(_playerGenerator.Upgrade(_playerManager.Wallet.Currency));
+        }
+
+        [ContextMenu("Unlock basic Generator")]
+        public void UnlockGenerator()
+        {
+            generators[0].IsActive = true;
+        }
+        
+        [ContextMenu("Upgrade basic Generator")]
+        public void UpgradeBasicGenerator()
+        {
+            generators[0].Upgrade(_playerManager.Wallet.Currency);
         }
     }
 }

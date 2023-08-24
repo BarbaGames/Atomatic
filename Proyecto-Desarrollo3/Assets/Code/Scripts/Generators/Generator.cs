@@ -1,9 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Globalization;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Code.Scripts.Generators
 {
-    public class Generator
+    public class Generator : MonoBehaviour
     {
+        [SerializeField] public GeneratorStats generatorStats;
+        [SerializeField] public GameObject textHolderPrefab;
         public bool IsActive { get; set; }
         private int _level = 1;
         private float _timer = 0;
@@ -13,7 +18,17 @@ namespace Code.Scripts.Generators
         public double CurrencyGenerated { get; set; }
         public double CurrencyGeneratedIncrease { get; set; }
         public string Description { get; set; }
-        
+
+        private void Start()
+        {
+            TimerMax = generatorStats.timerMax;
+            LevelUpCostIncrease = generatorStats.levelUpCostIncrease;
+            LevelUpCost = generatorStats.levelUpCost;
+            CurrencyGenerated = generatorStats.currencyGenerated;
+            CurrencyGeneratedIncrease = generatorStats.currencyGeneratedIncrease;
+            Description = generatorStats.description;
+        }
+
         /// <summary>
         /// After a certain time or condition, returns currency generated.
         /// </summary>
@@ -24,6 +39,8 @@ namespace Code.Scripts.Generators
             if (_timer <= 0)
             {
                 _timer = TimerMax;
+                GameObject textInstance = Instantiate(textHolderPrefab, transform);
+                textInstance.GetComponent<TextManager>().SetText(CurrencyGenerated.ToString(CultureInfo.InvariantCulture));
                 return CurrencyGenerated;
             }
             return 0;
