@@ -1,7 +1,9 @@
+using System.Globalization;
 using Code.Scripts.Generators;
 using Code.Scripts.Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 namespace Code.Scripts.Game
@@ -30,17 +32,6 @@ namespace Code.Scripts.Game
         {
             InitPlayerComponents();
         }
-
-        private void OnEnable()
-        {
-            InputManager.OnClickEvent += CheckClick;
-        }
-
-        private void OnDisable()
-        {
-            InputManager.OnClickEvent -= CheckClick;
-        }
-
         private void Update()
         {
             foreach (Generator generator in generators)
@@ -74,25 +65,18 @@ namespace Code.Scripts.Game
             OnCurrencyEvent?.Invoke(-currency);
         }
 
-        private void CheckClick()
-        {
-            Ray ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out var hit))
-            {
-                if (hit.collider.gameObject)
-                {
-                    if (hit.transform.GetComponent<Clickable>())
-                    {
-                        AddCurrency(_playerGenerator.Generate());
-                    }
-                }
-            }
-        }
-
         public void PlayerClick()
         {
-            AddCurrency(_playerGenerator.Generate());
+            double currencyGenerated = _playerGenerator.Generate();
+            if(currencyGenerated <= 0) return;
+            AddCurrency(currencyGenerated);
+            
+            Transform textTransform = transform;
+            textTransform.position = Camera.main!.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 3;
+            
+            GameObject textInstance = Instantiate(textHolderPrefab, textTransform);
+            
+            textInstance.GetComponent<TextManager>().SetText(currencyGenerated.ToString(CultureInfo.InvariantCulture));
         }
 
         public void UpgradeLevel(int id)
