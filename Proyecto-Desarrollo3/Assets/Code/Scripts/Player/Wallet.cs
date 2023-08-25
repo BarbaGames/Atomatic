@@ -5,7 +5,7 @@ namespace Code.Scripts.Player
 {
     public class Wallet : MonoBehaviour
     {
-        public double Currency { get; set; }
+        public double Currency { get; private set; }
         
         //TODO
         //Achievements
