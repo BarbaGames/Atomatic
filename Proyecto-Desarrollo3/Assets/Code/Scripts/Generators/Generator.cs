@@ -1,7 +1,5 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Code.Scripts.Generators
 {
@@ -12,22 +10,6 @@ namespace Code.Scripts.Generators
         public bool IsActive { get; set; }
         private int _level = 1;
         private float _timer = 0;
-        public float TimerMax { get; set; }
-        public float LevelUpCostIncrease { get; set; }
-        public double LevelUpCost { get; set; }
-        public double CurrencyGenerated { get; set; }
-        public double CurrencyGeneratedIncrease { get; set; }
-        public string Description { get; set; }
-
-        private void Start()
-        {
-            TimerMax = generatorStats.timerMax;
-            LevelUpCostIncrease = generatorStats.levelUpCostIncrease;
-            LevelUpCost = generatorStats.levelUpCost;
-            CurrencyGenerated = generatorStats.currencyGenerated;
-            CurrencyGeneratedIncrease = generatorStats.currencyGeneratedIncrease;
-            Description = generatorStats.description;
-        }
 
         /// <summary>
         /// After a certain time or condition, returns currency generated.
@@ -38,10 +20,10 @@ namespace Code.Scripts.Generators
             _timer -= Time.deltaTime;
             if (_timer <= 0)
             {
-                _timer = TimerMax;
+                _timer = generatorStats.timerMax;
                 GameObject textInstance = Instantiate(textHolderPrefab, transform);
-                textInstance.GetComponent<TextManager>().SetText(CurrencyGenerated.ToString(CultureInfo.InvariantCulture));
-                return CurrencyGenerated;
+                textInstance.GetComponent<TextManager>().SetText(generatorStats.currencyGenerated.ToString(CultureInfo.InvariantCulture));
+                return generatorStats.currencyGenerated;
             }
             return 0;
         }
@@ -52,13 +34,13 @@ namespace Code.Scripts.Generators
         /// <param name="currency"> Player's currency </param>
         public double Upgrade(double currency)
         {
-            if (currency > LevelUpCost)
+            if (currency > generatorStats.levelUpCost)
             {
                 _level++;
-                LevelUpCost *= LevelUpCostIncrease;
-                CurrencyGenerated = CurrencyGeneratedIncrease * _level;
+                generatorStats.levelUpCost *= generatorStats.levelUpCostIncrease;
+                generatorStats.currencyGenerated =generatorStats.currencyGeneratedIncrease * _level;
                 
-                return LevelUpCost;
+                return generatorStats.levelUpCost;
             }
 
             return 0;

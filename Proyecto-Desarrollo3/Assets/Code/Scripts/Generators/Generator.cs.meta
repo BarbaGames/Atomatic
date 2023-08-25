@@ -1,3 +1,13 @@
 fileFormatVersion: 2
 guid: c6c28e0850904b82a948e28d00d3686d
-timeCreated: 1692104603
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - generatorStats: {fileID: 11400000, guid: d4430a9401729f34eaee5d8f58ad7fed, type: 2}
+  - textHolderPrefab: {fileID: 4391840094260375945, guid: 9ca4538f65bacf442a20b2f2833c1408, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
