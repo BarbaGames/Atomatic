@@ -12,7 +12,7 @@ namespace Code.Scripts.Player
         //Decorator - procesador
         //currency multiplier
 
-        public delegate void CurrencyUpdatedEventHandler(double value);
+        public delegate void CurrencyUpdatedEventHandler();
 
         public static event CurrencyUpdatedEventHandler OnValueUpdated;
 
@@ -32,7 +32,7 @@ namespace Code.Scripts.Player
             Currency += value;
             if (OnValueUpdated != null)
             {
-                OnValueUpdated(Currency);
+                OnValueUpdated();
             }
         }
     }
