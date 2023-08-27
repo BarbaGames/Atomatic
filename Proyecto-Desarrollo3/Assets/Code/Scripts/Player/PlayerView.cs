@@ -1,30 +1,44 @@
 ﻿using TMPro;
 using UnityEngine;
 using System.Globalization;
+using Code.Scripts.Game;
+using UnityEngine.Serialization;
 
 namespace Code.Scripts.Player
 {
     public class PlayerView : MonoBehaviour
     {
         public TMP_Text CurrencyText { get; set; }
-
+        public TMP_Text[] generatorsUiText;
+        public Wallet wallet;
         private void OnEnable()
         {
             Wallet.OnValueUpdated += UpdateCurrency;
+            GameManager.OnGeneratorChangeEvent += UpdateGeneratorsUiText;
         }
 
         private void OnDisable()
         {
             Wallet.OnValueUpdated -= UpdateCurrency;
+            GameManager.OnGeneratorChangeEvent -= UpdateGeneratorsUiText;
         }
         
-        //Sound
+        //TODO
+        //Sounds
         //Achievements
         //Show currency
-        
-        private void UpdateCurrency(double value)
+        //Show unlock/upgrade generator costs
+        //Show buy upgrades
+
+        private void UpdateGeneratorsUiText(short id, int cost)
         {
-            CurrencyText.text = value.ToString(CultureInfo.CurrentCulture);
+            generatorsUiText[id].text = cost.ToString(CultureInfo.CurrentCulture);
+        }
+        
+        private void UpdateCurrency()
+        {
+            int currency = (int)wallet.Currency;
+            CurrencyText.text = currency.ToString(CultureInfo.CurrentCulture);
         }
     }
 }
