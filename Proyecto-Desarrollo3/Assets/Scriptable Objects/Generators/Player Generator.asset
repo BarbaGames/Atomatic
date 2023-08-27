@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Player Generator
   m_EditorClassIdentifier: 
   timerMax: 0
-  levelUpCostIncrease: 1
-  levelUpCost: 1
+  levelUpCostIncrease: 1.2
+  levelUpCost: 7
   currencyGenerated: 1
   currencyGeneratedIncrease: 1
-  description: 
+  description: player generator

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Basic Generator
   m_EditorClassIdentifier: 
   timerMax: 1
-  levelUpCostIncrease: 1
-  levelUpCost: 1
+  levelUpCostIncrease: 1.2
+  levelUpCost: 10
   currencyGenerated: 1
   currencyGeneratedIncrease: 1
   description: Basic Generator
