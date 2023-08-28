@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace Code.Scripts.Animations
 {
-    public class DestroyOnAnimationEnd : MonoBehaviour
+    public class AnimationController : MonoBehaviour
     {
-        public void DestroyParent()
+        public void SetParentInactive()
         {
             GameObject parent = gameObject.transform.parent.gameObject;
-            Destroy(parent);
+            parent.SetActive(false);
             
         }
     }

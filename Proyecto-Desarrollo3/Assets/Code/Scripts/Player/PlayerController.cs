@@ -1,9 +1,8 @@
-using Code.Scripts.Game;
 using UnityEngine;
 
 namespace Code.Scripts.Player
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         public Wallet Wallet { get; set; }
     }
