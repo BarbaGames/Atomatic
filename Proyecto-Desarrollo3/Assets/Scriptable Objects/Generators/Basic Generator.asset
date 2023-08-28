@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a32569ad3434e2fb05ada9852f02703, type: 3}
   m_Name: Basic Generator
   m_EditorClassIdentifier: 
-  timerMax: 1
+  timerMax: 0.7
   levelUpCostIncrease: 1.2
-  levelUpCost: 10
-  currencyGenerated: 1
+  levelUpCost: 29.85984711914133
+  currencyGenerated: 5
   currencyGeneratedIncrease: 1
   description: Basic Generator

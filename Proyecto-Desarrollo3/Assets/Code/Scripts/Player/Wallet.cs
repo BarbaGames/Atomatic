@@ -34,6 +34,8 @@ namespace Code.Scripts.Player
             {
                 OnValueUpdated();
             }
+            PlayerPrefs.SetInt("currency", (int)Currency);
+            PlayerPrefs.Save();
         }
     }
 }

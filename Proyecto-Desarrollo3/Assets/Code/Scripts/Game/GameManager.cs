@@ -1,4 +1,3 @@
-using System.Globalization;
 using Code.Scripts.Generators;
 using Code.Scripts.Player;
 using TMPro;
@@ -14,27 +13,34 @@ namespace Code.Scripts.Game
     {
         [SerializeField] private TMP_Text currencyText;
         [SerializeField] private Generator[] generators;
-        [SerializeField] private GeneratorStats playerGeneratorStats;
         [SerializeField] private GameObject textHolderPrefab;
         [SerializeField] private Button[] generatorButtons;
 
-        private PlayerManager _playerManager;
+        private const short TextHolderAmount = 15;
+        public static GameObject[] textHolderPool;
+        private PlayerController _playerController;
         private PlayerView _playerView;
+        private const string CurrencyKey = "currency";
 
         public delegate void CurrencyEventHandler(double value);
-
         public static event CurrencyEventHandler OnCurrencyEvent;
-
         public delegate void GeneratorUpgradeEventHandler(short id, int cost);
-
         public static event GeneratorUpgradeEventHandler OnGeneratorChangeEvent;
 
         private void Awake()
         {
             InitPlayerComponents();
-            if (PlayerPrefs.HasKey("currency"))
+            if (PlayerPrefs.HasKey(CurrencyKey))
             {
-                AddCurrency(PlayerPrefs.GetInt("currency"));
+                AddCurrency(PlayerPrefs.GetInt(CurrencyKey));
+            }
+
+            textHolderPool = new GameObject[TextHolderAmount];
+
+            for(int i = 0; i < textHolderPool.Length; i++)
+            {
+                textHolderPool[i] = Instantiate(textHolderPrefab);
+                textHolderPool[i].SetActive(false);
             }
         }
 
@@ -49,29 +55,22 @@ namespace Code.Scripts.Game
 
                 AddCurrency(generated);
             }
-
-            PlayerPrefs.SetInt("currency", (int)_playerManager.Wallet.Currency);
-            PlayerPrefs.Save();
         }
 
         private void InitPlayerComponents()
         {
-            _playerManager = gameObject.AddComponent<PlayerManager>();
-            _playerManager.Wallet = gameObject.AddComponent<Wallet>();
+            _playerController = gameObject.AddComponent<PlayerController>();
+            _playerController.Wallet = gameObject.AddComponent<Wallet>();
 
             _playerView = gameObject.AddComponent<PlayerView>();
             _playerView.CurrencyText = currencyText;
-            _playerView.wallet = _playerManager.Wallet;
+            _playerView.wallet = _playerController.Wallet;
 
             _playerView.generatorsUiText = new TMP_Text[generatorButtons.Length];
 
             for (int i = 0; i < generatorButtons.Length; i++)
             {
                 _playerView.generatorsUiText[i] = generatorButtons[i].GetComponentsInChildren<TMP_Text>()[0];
-            }
-
-            for (int i = 0; i < generators.Length; i++)
-            {
                 OnGeneratorChangeEvent?.Invoke((short)i, (int)generators[i].generatorStats.levelUpCost);
             }
         }
@@ -91,19 +90,12 @@ namespace Code.Scripts.Game
             double currencyGenerated = generators[0].Generate();
             if (currencyGenerated <= 0) return;
             AddCurrency(currencyGenerated);
-
-            Transform textTransform = transform;
-            textTransform.position = Camera.main!.ScreenToWorldPoint(Input.mousePosition) + Vector3.forward * 3;
-
-            GameObject textInstance = Instantiate(textHolderPrefab, textTransform);
-
-            textInstance.GetComponent<TextManager>().SetText(currencyGenerated.ToString(CultureInfo.InvariantCulture));
         }
 
         public void UpgradeLevel(int id)
         {
             if (!generators[id]) return;
-            if(_playerManager.Wallet.Currency < generators[id].generatorStats.levelUpCost) return;
+            if(_playerController.Wallet.Currency < generators[id].generatorStats.levelUpCost) return;
             
             if (!generators[id].IsActive)
             {
@@ -111,7 +103,7 @@ namespace Code.Scripts.Game
             }
             else
             {
-                RemoveCurrency(generators[id].Upgrade(_playerManager.Wallet.Currency));
+                RemoveCurrency(generators[id].Upgrade(_playerController.Wallet.Currency));
                 OnGeneratorChangeEvent?.Invoke((short)id, (int)generators[id].generatorStats.levelUpCost);
             }
         }
@@ -119,17 +111,11 @@ namespace Code.Scripts.Game
         [ContextMenu("Unlock Generator")]
         public void UnlockGenerator(int id)
         {
-            if (_playerManager.Wallet.Currency < generators[id].generatorStats.levelUpCost) return;
+            if (_playerController.Wallet.Currency < generators[id].generatorStats.levelUpCost) return;
 
-            RemoveCurrency(generators[id].Upgrade(_playerManager.Wallet.Currency));
+            RemoveCurrency(generators[id].Upgrade(_playerController.Wallet.Currency));
             generators[id].IsActive = true;
             generators[id].gameObject.SetActive(true);
-        }
-
-        [ContextMenu("Upgrade basic Generator")]
-        public void UpgradeBasicGenerator()
-        {
-            RemoveCurrency(generators[0].Upgrade(_playerManager.Wallet.Currency));
         }
     }
 }

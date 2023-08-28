@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Code.Scripts.Game;
 using UnityEngine;
 
 namespace Code.Scripts.Generators
@@ -6,7 +7,6 @@ namespace Code.Scripts.Generators
     public class Generator : MonoBehaviour
     {
         [SerializeField] public GeneratorStats generatorStats;
-        [SerializeField] public GameObject textHolderPrefab;
         public bool IsActive { get; set; }
         private int _level = 1;
         private float _timer = 0;
@@ -21,10 +21,21 @@ namespace Code.Scripts.Generators
             if (_timer <= 0)
             {
                 _timer = generatorStats.timerMax;
-                GameObject textInstance = Instantiate(textHolderPrefab, transform);
-                textInstance.GetComponent<TextManager>().SetText(generatorStats.currencyGenerated.ToString(CultureInfo.InvariantCulture));
+                foreach (GameObject textHolder in GameManager.textHolderPool)
+                {
+                    if (!textHolder.activeSelf)
+                    {
+                        textHolder.SetActive(true);
+                        textHolder.transform.position = transform.position;
+                        textHolder.GetComponent<TextManager>()
+                            .SetText("+" + generatorStats.currencyGenerated.ToString(CultureInfo.InvariantCulture));
+                        break;
+                    }
+                }
+
                 return generatorStats.currencyGenerated;
             }
+
             return 0;
         }
 
@@ -38,8 +49,8 @@ namespace Code.Scripts.Generators
             {
                 _level++;
                 generatorStats.levelUpCost *= generatorStats.levelUpCostIncrease;
-                generatorStats.currencyGenerated =generatorStats.currencyGeneratedIncrease * _level;
-                
+                generatorStats.currencyGenerated = generatorStats.currencyGeneratedIncrease * _level;
+
                 return generatorStats.levelUpCost;
             }
 
