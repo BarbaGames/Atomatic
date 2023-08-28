@@ -285,7 +285,7 @@ Transform:
   m_GameObject: {fileID: 154531644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 611.251, y: 197.34729, z: 3.2384977}
+  m_LocalPosition: {x: -16.2, y: -12.57, z: -0.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -307,7 +307,6 @@ MonoBehaviour:
   generators:
   - {fileID: 2059804902}
   - {fileID: 1138655378}
-  playerGeneratorStats: {fileID: 11400000, guid: 834621c1344c7fe42b34556f5fdafdcb, type: 2}
   textHolderPrefab: {fileID: 4391840094260375945, guid: 9ca4538f65bacf442a20b2f2833c1408, type: 3}
   generatorButtons:
   - {fileID: 568363614}
@@ -1652,7 +1651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorStats: {fileID: 11400000, guid: d4430a9401729f34eaee5d8f58ad7fed, type: 2}
-  textHolderPrefab: {fileID: 4391840094260375945, guid: 9ca4538f65bacf442a20b2f2833c1408, type: 3}
 --- !u!65 &1138655379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2005,7 +2003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 753.1658, y: 1}
+  m_AnchoredPosition: {x: 687, y: 1}
   m_SizeDelta: {x: 545.0708, y: 683.6926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433442500
@@ -2618,7 +2616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorStats: {fileID: 11400000, guid: 834621c1344c7fe42b34556f5fdafdcb, type: 2}
-  textHolderPrefab: {fileID: 4391840094260375945, guid: 9ca4538f65bacf442a20b2f2833c1408, type: 3}
 --- !u!1 &2089596316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,5 +2840,5 @@ SceneRoots:
   - {fileID: 178045002}
   - {fileID: 154531645}
   - {fileID: 2144758643}
-  - {fileID: 529636833}
   - {fileID: 1590385007}
+  - {fileID: 529636833}
