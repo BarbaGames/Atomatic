@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a32569ad3434e2fb05ada9852f02703, type: 3}
-  m_Name: Player Generator
+  m_Name: Hamster
   m_EditorClassIdentifier: 
-  timerMax: 0
-  levelUpCostIncrease: 1.5
-  levelUpCost: 7
-  currencyGenerated: 1
-  currencyGeneratedIncrease: 1
-  description: player generator
+  timerMax: 0.5
+  levelUpCostIncrease: 3
+  levelUpCost: 300
+  currencyGenerated: 6
+  currencyGeneratedIncrease: 2
+  description: fiuuuumba

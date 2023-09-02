@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerMax: 0.7
   levelUpCostIncrease: 1.2
-  levelUpCost: 29.85984711914133
-  currencyGenerated: 5
+  levelUpCost: 30
+  currencyGenerated: 1
   currencyGeneratedIncrease: 1
   description: Basic Generator
