@@ -48,10 +48,11 @@ namespace Code.Scripts.Generators
             if (currency > generatorStats.levelUpCost)
             {
                 _level++;
+                double cost = generatorStats.levelUpCost;
                 generatorStats.levelUpCost *= generatorStats.levelUpCostIncrease;
                 generatorStats.currencyGenerated = generatorStats.currencyGeneratedIncrease * _level;
 
-                return generatorStats.levelUpCost;
+                return cost;
             }
 
             return 0;
