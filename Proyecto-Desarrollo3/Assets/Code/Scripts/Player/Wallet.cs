@@ -31,14 +31,15 @@ namespace Code.Scripts.Player
         //TODO Decorator
         private void ModifyCurrency(double value)
         {
-            float modifier = 0;
-            float multiplier = 0;
-            
-            foreach (Achievement achievement in _achievements)
-            {
-                achievement.Modify(ref value);
-            }
-            Currency += value * multiplier + modifier;
+            // float modifier = 0;
+            // float multiplier = 0;
+            //
+            // foreach (Achievement achievement in _achievements)
+            // {
+            //     achievement.Modify(ref value);
+            // }
+            // Currency += value * multiplier + modifier;
+            Currency += value;
             if (OnValueUpdated != null)
             {
                 OnValueUpdated();
