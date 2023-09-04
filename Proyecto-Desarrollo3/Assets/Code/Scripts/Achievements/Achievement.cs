@@ -1,9 +1,10 @@
+using Code.Scripts.UI;
+
 namespace Code.Scripts.Achievements
 {
     public abstract class Achievement : IFloatModifier
     {
-        //deberia tener una imagen?
-        public string description;
+        public Configuration config;
         protected double modifier;
         public abstract void Modify(ref double originalValue);
     }
