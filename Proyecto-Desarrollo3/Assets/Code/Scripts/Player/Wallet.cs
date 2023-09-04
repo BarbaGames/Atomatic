@@ -1,4 +1,5 @@
-﻿using Code.Scripts.Game;
+﻿using Code.Scripts.Achievements;
+using Code.Scripts.Game;
 using UnityEngine;
 
 namespace Code.Scripts.Player
@@ -6,7 +7,8 @@ namespace Code.Scripts.Player
     public class Wallet : MonoBehaviour
     {
         public double Currency { get; private set; }
-        
+
+        private Achievement[] _achievements; //scriptableObject?
         //TODO
         //Achievements
         //Decorator - procesador
@@ -29,7 +31,14 @@ namespace Code.Scripts.Player
         //TODO Decorator
         private void ModifyCurrency(double value)
         {
-            Currency += value;
+            float modifier = 0;
+            float multiplier = 0;
+            
+            foreach (Achievement achievement in _achievements)
+            {
+                achievement.Modify(ref value);
+            }
+            Currency += value * multiplier + modifier;
             if (OnValueUpdated != null)
             {
                 OnValueUpdated();
