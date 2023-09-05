@@ -30,10 +30,18 @@ namespace Code.Scripts.Game
         private void Awake()
         {
             InitPlayerComponents();
-            if (PlayerPrefs.HasKey(CurrencyKey))
+            if (FileHandler.FileExist(CurrencyKey))
             {
-                AddCurrency(PlayerPrefs.GetInt(CurrencyKey));
+                if (FileHandler.TryLoadFileRaw(CurrencyKey, out string data))
+                {
+                    AddCurrency(int.Parse(data));
+                }
             }
+            
+            // if (PlayerPrefs.HasKey(CurrencyKey))
+            // {
+            //     AddCurrency(PlayerPrefs.GetInt(CurrencyKey));
+            // }
 
             textHolderPool = new GameObject[TextHolderAmount];
 

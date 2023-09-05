@@ -1,6 +1,9 @@
-﻿using Code.Scripts.Achievements;
-using Code.Scripts.Game;
+﻿using System.Globalization;
+
 using UnityEngine;
+
+using Code.Scripts.Game;
+using Code.Scripts.Achievements;
 
 namespace Code.Scripts.Player
 {
@@ -44,8 +47,9 @@ namespace Code.Scripts.Player
             {
                 OnValueUpdated();
             }
-            PlayerPrefs.SetInt("currency", (int)Currency);
-            PlayerPrefs.Save();
+            FileHandler.SaveFile("currency", Currency.ToString(CultureInfo.InvariantCulture));
+            // PlayerPrefs.SetInt("currency", (int)Currency);
+            // PlayerPrefs.Save();
         }
     }
 }
