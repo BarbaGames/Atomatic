@@ -34,7 +34,7 @@ namespace Code.Scripts.Game
             {
                 if (FileHandler.TryLoadFileRaw(CurrencyKey, out string data))
                 {
-                    AddCurrency(int.Parse(data));
+                    //AddCurrency(int.Parse(data));
                 }
             }
             

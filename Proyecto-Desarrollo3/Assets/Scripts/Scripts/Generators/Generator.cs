@@ -21,6 +21,8 @@ namespace Code.Scripts.Generators
             if (_timer <= 0)
             {
                 _timer = generatorStats.timerMax;
+                //TODO move to a new class, should look like this
+                //TextManager.ShowText(transform.position,"+" + generatorStats.currencyGenerated.ToString(CultureInfo.InvariantCulture));
                 foreach (GameObject textHolder in GameManager.textHolderPool)
                 {
                     if (!textHolder.activeSelf)
