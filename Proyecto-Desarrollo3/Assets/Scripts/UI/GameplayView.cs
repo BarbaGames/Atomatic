@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
+using BarbaGames.Game.Animations;
 using BarbaGames.Game.Generators;
 
 using TMPro;
@@ -50,9 +51,14 @@ namespace BarbaGames.Game.UI
 
         public void SpawnFlyingText(double energyGenerated)
         {
-            var falopa = flyingTextPool.Get();
-            falopa.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
-            falopa.gameObject.transform.position = flyingTextSpawnPos.position;
+            var text = flyingTextPool.Get();
+            text.text = "+" + energyGenerated.ToString(CultureInfo.InvariantCulture);
+            text.gameObject.transform.position = flyingTextSpawnPos.position;
+        }
+
+        private void OnFlyingTextFinish(TMP_Text tmpText)
+        {
+            flyingTextPool.Release(tmpText);
         }
         #endregion
 
@@ -61,7 +67,8 @@ namespace BarbaGames.Game.UI
         {
             GameObject go = Instantiate(flyingTextPrefab, transform);
             TMP_Text text = go.GetComponent<TMP_Text>();
-
+            AnimationController anim = go.GetComponent<AnimationController>();
+            anim.SetCallBack(OnFlyingTextFinish);
             return text;
         }
 
