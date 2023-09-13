@@ -520,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnClick: {fileID: 546095028}
   txtEnergy: {fileID: 451301963}
-  flyingTextPrefab: {fileID: 4852444694773455330, guid: cfcc6d94df6927f41828990bb5e2dec0, type: 3}
+  flyingTextPrefab: {fileID: 2840037898535521750, guid: 6ed9e47161ddbfa4ba78055a504e8a6a, type: 3}
   flyingTextSpawnPos: {fileID: 2144758646}
   generatorsBuyView: {fileID: 776989417}
 --- !u!1 &185320770
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!4 &2144758646 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db5f23eda4accae4d84f4736c7d1e1fa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2561406053986132890, guid: db5f23eda4accae4d84f4736c7d1e1fa, type: 3}
   m_PrefabInstance: {fileID: 2144758643}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

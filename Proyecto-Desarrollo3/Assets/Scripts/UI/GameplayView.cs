@@ -53,7 +53,7 @@ namespace BarbaGames.Game.UI
         {
             var text = flyingTextPool.Get();
             text.text = "+" + energyGenerated.ToString(CultureInfo.InvariantCulture);
-            text.gameObject.transform.position = flyingTextSpawnPos.position;
+            text.transform.parent.position = flyingTextSpawnPos.position;
         }
 
         private void OnFlyingTextFinish(TMP_Text tmpText)
@@ -65,9 +65,9 @@ namespace BarbaGames.Game.UI
         #region POOLING
         TMP_Text CreatePooledItem()
         {
-            GameObject go = Instantiate(flyingTextPrefab, transform);
-            TMP_Text text = go.GetComponent<TMP_Text>();
-            AnimationController anim = go.GetComponent<AnimationController>();
+            GameObject go = Instantiate(flyingTextPrefab);
+            TMP_Text text = go.GetComponentInChildren<TMP_Text>();
+            AnimationController anim = go.GetComponentInChildren<AnimationController>();
             anim.SetCallBack(OnFlyingTextFinish);
             return text;
         }
