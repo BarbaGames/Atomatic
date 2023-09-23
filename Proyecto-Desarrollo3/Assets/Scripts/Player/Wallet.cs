@@ -8,7 +8,7 @@ namespace BarbaGames.Game.Player
 {
     public class Wallet : MonoBehaviour
     {
-        public double Currency { get; private set; }
+        public long Currency { get; private set; }
 
         private Achievement[] _achievements; //scriptableObject?
         //TODO
@@ -29,7 +29,7 @@ namespace BarbaGames.Game.Player
         }
 
         //TODO Decorator
-        private void ModifyCurrency(double value)
+        private void ModifyCurrency(long value)
         {
             // float modifier = 0;
             // float multiplier = 0;

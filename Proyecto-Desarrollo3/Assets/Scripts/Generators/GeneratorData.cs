@@ -8,9 +8,9 @@ namespace BarbaGames.Game.Generators
         [SerializeField] public string id;
         [SerializeField] public float timerMax;
         [SerializeField] public float levelUpCostIncrease;
-        [SerializeField] public double levelUpCost;
-        [SerializeField] public double currencyGenerated;
-        [SerializeField] public double currencyGeneratedIncrease;
+        [SerializeField] public long levelUpCost;
+        [SerializeField] public long currencyGenerated;
+        [SerializeField] public long currencyGeneratedIncrease;
         [SerializeField] public string description;
     }
 }

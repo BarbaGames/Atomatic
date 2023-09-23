@@ -28,14 +28,14 @@ namespace BarbaGames.Game.Player
         //Show unlock/upgrade generator costs
         //Show buy upgrades
 
-        private void UpdateGeneratorsUiText(short id, int cost)
+        private void UpdateGeneratorsUiText(short id, long cost)
         {
             generatorsUiText[id].text = cost.ToString(CultureInfo.CurrentCulture);
         }
         
         private void UpdateCurrency()
         {
-            int currency = (int)wallet.Currency;
+            long currency = wallet.Currency;
             CurrencyText.text = currency.ToString(CultureInfo.CurrentCulture);
         }
     }

@@ -1,15 +1,7 @@
 using System.Collections.Generic;
-
 using UnityEngine;
-using UnityEngine.UI;
-
-using BarbaGames.Game.Player;
 using BarbaGames.Game.Generators;
 using BarbaGames.Game.UI;
-
-using TMPro;
-
-using UnityEngine.Serialization;
 
 namespace BarbaGames.Game
 {
@@ -23,22 +15,22 @@ namespace BarbaGames.Game
         [SerializeField] private GameplayView gameplayView = null;
 
         private const string energyKey = "energy";
-        private double energy = 0;
+        private long energy = 0;
         private Generator playerClick = null;
         private List<Generator> generators = null;
-        
+
         private void Start()
         {
             if (FileHandler.FileExist(energyKey))
             {
                 if (FileHandler.TryLoadFileRaw(energyKey, out string data))
                 {
-                    AddCurrency(double.Parse(data));
+                    AddCurrency(long.Parse(data));
                 }
             }
-            
+
             gameplayView.Init(generatorsDataSO.generators, UpgradeGenerator, PlayerClick);
-            
+
             generators = new List<Generator>();
             for (int i = 0; i < generatorsDataSO.generators.Count; i++)
             {
@@ -46,28 +38,27 @@ namespace BarbaGames.Game
                 generator.Init(Instantiate(generatorsDataSO.generators[i]));
                 generators.Add(generator);
             }
-
         }
 
         private void Update()
         {
-            for (int i = 1; i < generators.Count; i++) 
+            for (int i = 1; i < generators.Count; i++)
             {
                 if (!generators[i].IsActive) continue;
 
-                double generated = generators[i].Generate();
+                long generated = generators[i].Generate();
                 if (generated <= 0) continue;
                 AddCurrency(generated);
             }
         }
 
-        private void AddCurrency(double energyToAdd)
+        private void AddCurrency(long energyToAdd)
         {
             energy += energyToAdd;
             gameplayView.UpdateEnergy(energy);
         }
 
-        private void RemoveCurrency(double energyToRemove)
+        private void RemoveCurrency(long energyToRemove)
         {
             energy -= energyToRemove;
             gameplayView.UpdateEnergy(energy);
@@ -75,7 +66,7 @@ namespace BarbaGames.Game
 
         private void PlayerClick()
         {
-            double energyGenerated = generators[0].Generate();
+            long energyGenerated = generators[0].Generate();
             if (energyGenerated <= 0) return;
             AddCurrency(energyGenerated);
             gameplayView.SpawnFlyingText(energyGenerated);

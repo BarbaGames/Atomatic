@@ -17,7 +17,7 @@ namespace BarbaGames.Game.Generators
         /// After a certain time or condition, returns currency generated.
         /// </summary>
         /// <returns> currency generated </returns>
-        public double Generate()
+        public long Generate()
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
@@ -47,8 +47,8 @@ namespace BarbaGames.Game.Generators
         public void Upgrade()
         {
             level++;
-            double cost = generatorData.levelUpCost;
-            generatorData.levelUpCost *= generatorData.levelUpCostIncrease;
+            long cost = generatorData.levelUpCost;
+            generatorData.levelUpCost =  (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
             generatorData.currencyGenerated = generatorData.currencyGeneratedIncrease * level;
             
         }
