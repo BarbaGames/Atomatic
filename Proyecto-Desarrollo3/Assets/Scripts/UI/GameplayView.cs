@@ -52,7 +52,7 @@ namespace BarbaGames.Game.UI
         public void SpawnFlyingText(double energyGenerated)
         {
             var text = flyingTextPool.Get();
-            text.text = "+" + energyGenerated.ToString(CultureInfo.InvariantCulture);
+            text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
             text.transform.parent.position = flyingTextSpawnPos.position;
         }
 
