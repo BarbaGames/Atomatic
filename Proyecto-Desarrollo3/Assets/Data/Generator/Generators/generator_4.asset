@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   timerMax: 1
-  levelUpCostIncrease: 5
+  levelUpCostIncrease: 3.3
   levelUpCost: 1000
   currencyGenerated: 6
   currencyGeneratedIncrease: 2

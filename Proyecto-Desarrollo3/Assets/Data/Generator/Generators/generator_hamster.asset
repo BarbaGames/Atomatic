@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: hamster
   timerMax: 0.5
-  levelUpCostIncrease: 3
+  levelUpCostIncrease: 2.5
   levelUpCost: 300
   currencyGenerated: 6
   currencyGeneratedIncrease: 2

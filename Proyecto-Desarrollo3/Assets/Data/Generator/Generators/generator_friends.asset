@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: friends
   timerMax: 0.7
-  levelUpCostIncrease: 1.2
+  levelUpCostIncrease: 1.3
   levelUpCost: 30
   currencyGenerated: 1
   currencyGeneratedIncrease: 1
