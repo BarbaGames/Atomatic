@@ -46,8 +46,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_fontSize
-      value: 5.35
+      value: 4.95
       objectReference: {fileID: 0}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 523521bb4724a2f41a03683656c68965, type: 2}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4603817454934140051, guid: 523521bb4724a2f41a03683656c68965, type: 2}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957006679415453055, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -4603817454934140051, guid: 523521bb4724a2f41a03683656c68965, type: 2}
     - target: {fileID: 4861559942317231522, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
