@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BarbaGames.Game.Generators;
 using BarbaGames.Game.UI;
+using UnityEngine.Serialization;
 
 namespace BarbaGames.Game
 {
@@ -11,13 +12,14 @@ namespace BarbaGames.Game
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private GameObject generatorPrefab = null;
-        [SerializeField] private Generators.Generators generatorsDataSO = null;
+        [SerializeField] private GeneratorSO generatorSoData = null;
         [SerializeField] private GameplayView gameplayView = null;
 
         private const string energyKey = "energy";
         private long energy = 0;
         private Generator playerClick = null;
         private List<Generator> generators = null;
+        public static int id { get; set; }
 
         private void Start()
         {
@@ -29,13 +31,13 @@ namespace BarbaGames.Game
                 }
             }
 
-            gameplayView.Init(generatorsDataSO.generators, UpgradeGenerator, PlayerClick);
+            gameplayView.Init(generatorSoData.generators, BuyGenerator, PlayerClick);
 
             generators = new List<Generator>();
-            for (int i = 0; i < generatorsDataSO.generators.Count; i++)
+            for (int i = 0; i < generatorSoData.generators.Count; i++)
             {
                 Generator generator = Instantiate(generatorPrefab, transform).GetComponent<Generator>();
-                generator.Init(Instantiate(generatorsDataSO.generators[i]));
+                generator.Init(Instantiate(generatorSoData.generators[i]));
                 generators.Add(generator);
             }
         }
@@ -49,6 +51,15 @@ namespace BarbaGames.Game
                 long generated = generators[i].Generate();
                 if (generated <= 0) continue;
                 AddCurrency(generated);
+            }
+        }
+
+        public void UpgradeGenerator(int price)
+        {
+            if (energy > price)
+            {
+                generators[id].GeneratorData.currencyGenerated *= 2;
+                RemoveCurrency(price);
             }
         }
 
@@ -72,7 +83,7 @@ namespace BarbaGames.Game
             gameplayView.SpawnFlyingText(energyGenerated);
         }
 
-        private void UpgradeGenerator(string id)
+        private void BuyGenerator(string id)
         {
             Generator generator = generators.Find(i => i.GeneratorData.id == id);
 

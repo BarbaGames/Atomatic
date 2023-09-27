@@ -5,7 +5,7 @@ using UnityEngine;
 namespace BarbaGames.Game.Generators
 {
     [CreateAssetMenu(fileName = "Generators")]
-    public class Generators : ScriptableObject
+    public class GeneratorSO : ScriptableObject
     {
         [SerializeField] public List<GeneratorData> generators = null;
     }
