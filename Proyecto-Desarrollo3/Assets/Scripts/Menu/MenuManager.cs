@@ -1,19 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BarbaGames.Game.Menu
+namespace Menu
 {
     public class MenuManager : MonoBehaviour
     {
-        private const string SceneName = "Tutorial";
-
-        /// <summary>
-        /// Loads the game scene
-        /// </summary>
-        public void LoadGame()
-        {
-            LoadSceneByName();
-        }
+        private const string SceneName = "Game";
 
         /// <summary>
         /// Quits the application
@@ -24,11 +16,19 @@ namespace BarbaGames.Game.Menu
         }
 
         /// <summary>
-        /// Loads the required scene from the current scene.
+        /// Loads the scene saved in SceneName.
         /// </summary>
-        private void LoadSceneByName()
+        public void LoadSceneByName()
         {
             SceneManager.LoadScene(SceneName);
+        }
+        
+        /// <summary>
+        /// Loads the required scene by the Id introduced.
+        /// </summary>
+        public void LoadSceneById(int id)
+        {
+            SceneManager.LoadScene(id);
         }
     }
 }
