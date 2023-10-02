@@ -16,6 +16,6 @@ MonoBehaviour:
   timerMax: 0.5
   levelUpCostIncrease: 2.5
   levelUpCost: 300
-  currencyGenerated: 6
+  currencyGenerated: 15
   currencyGeneratedIncrease: 2
   description: fiuuuumba
