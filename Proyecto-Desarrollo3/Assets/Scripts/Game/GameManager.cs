@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using UnityEngine;
 using BarbaGames.Game.Generators;
-using BarbaGames.Game.UI;
-using UnityEngine.Serialization;
+using UI;
+using UnityEngine;
 
-namespace BarbaGames.Game
+namespace Game
 {
     /// <summary>
     /// Manages game elements such as the player, generators and upgrades.
@@ -14,18 +13,18 @@ namespace BarbaGames.Game
         [SerializeField] private GameObject generatorPrefab = null;
         [SerializeField] private GeneratorSO generatorSoData = null;
         [SerializeField] private GameplayView gameplayView = null;
+        [SerializeField] private ButtonsController upgradeButtons = null;
 
-        private const string energyKey = "energy";
+        private const string EnergyKey = "energy";
         private long energy = 0;
-        private Generator playerClick = null;
         private List<Generator> generators = null;
-        public static int id { get; set; }
+        public static int ID { get; set; }
 
         private void Start()
         {
-            if (FileHandler.FileExist(energyKey))
+            if (FileHandler.FileExist(EnergyKey))
             {
-                if (FileHandler.TryLoadFileRaw(energyKey, out string data))
+                if (FileHandler.TryLoadFileRaw(EnergyKey, out string data))
                 {
                     AddCurrency(long.Parse(data));
                 }
@@ -34,6 +33,7 @@ namespace BarbaGames.Game
             gameplayView.Init(generatorSoData.generators, BuyGenerator, PlayerClick);
 
             generators = new List<Generator>();
+
             for (int i = 0; i < generatorSoData.generators.Count; i++)
             {
                 Generator generator = Instantiate(generatorPrefab, transform).GetComponent<Generator>();
@@ -49,6 +49,7 @@ namespace BarbaGames.Game
                 if (!generators[i].IsActive) continue;
 
                 long generated = generators[i].Generate();
+                
                 if (generated <= 0) continue;
                 AddCurrency(generated);
             }
@@ -58,8 +59,9 @@ namespace BarbaGames.Game
         {
             if (energy > price)
             {
-                generators[id].GeneratorData.currencyGenerated *= 2;
+                generators[ID].GeneratorData.currencyGenerated *= 2;
                 RemoveCurrency(price);
+                upgradeButtons.DisableButton(ID);
             }
         }
 
@@ -75,11 +77,30 @@ namespace BarbaGames.Game
             gameplayView.UpdateEnergy(energy);
         }
 
+        private void UpdateEnergyPerSecond()
+        {
+            long generationPerSec = 0;
+
+            for (int i = 0; i < generators.Count; i++)
+            {
+                if(i == 0) continue;
+                if(!generators[i].IsActive) continue;
+                
+                generationPerSec +=
+                    (long)(generators[i].GeneratorData.currencyGenerated / generators[i].GeneratorData.timerMax);
+            }
+
+            gameplayView.UpdateEnergyPerSec(generationPerSec);
+        }
+
         private void PlayerClick()
         {
             long energyGenerated = generators[0].Generate();
+            
             if (energyGenerated <= 0) return;
+            
             AddCurrency(energyGenerated);
+            
             gameplayView.SpawnFlyingText(energyGenerated);
         }
 
@@ -102,6 +123,8 @@ namespace BarbaGames.Game
                 }
 
                 gameplayView.UpdateGenerator(generator.GeneratorData);
+                
+                UpdateEnergyPerSecond();
             }
         }
 

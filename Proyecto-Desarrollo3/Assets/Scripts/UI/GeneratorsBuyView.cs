@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-
 using BarbaGames.Game.Generators;
-
 using UnityEngine;
 
-namespace BarbaGames.Game.UI
+namespace UI
 {
     public class GeneratorsBuyView : MonoBehaviour
     {

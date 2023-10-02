@@ -1,17 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-
 using BarbaGames.Game.Animations;
 using BarbaGames.Game.Generators;
-
+using BarbaGames.Game.UI;
 using TMPro;
-
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.UI;
 
-namespace BarbaGames.Game.UI
+namespace UI
 {
     public class GameplayView : MonoBehaviour
     {
@@ -19,6 +17,7 @@ namespace BarbaGames.Game.UI
         [Header("MAIN CONFIG")]
         [SerializeField] private Button btnClick = null;
         [SerializeField] private TMP_Text txtEnergy = null;
+        [SerializeField] private TMP_Text txtEnergyPerSec = null;
         [SerializeField] private GameObject flyingTextPrefab = null;
         [SerializeField] private Transform flyingTextSpawnPos = null;
         
@@ -39,9 +38,14 @@ namespace BarbaGames.Game.UI
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);
         }
 
-        public void UpdateEnergy(double newEnergy)
+        public void UpdateEnergy(long newEnergy)
         {
             txtEnergy.text = newEnergy.ToString(CultureInfo.InvariantCulture);
+        }
+        
+        public void UpdateEnergyPerSec(long newEnergy)
+        {
+            txtEnergyPerSec.text = newEnergy.ToString(CultureInfo.InvariantCulture) + " E/s";
         }
 
         public void UpdateGenerator(GeneratorData generatorData)
@@ -49,7 +53,7 @@ namespace BarbaGames.Game.UI
             generatorsBuyView.UpdateGenerator(generatorData);
         }
 
-        public void SpawnFlyingText(double energyGenerated)
+        public void SpawnFlyingText(long energyGenerated)
         {
             var text = flyingTextPool.Get();
             text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
