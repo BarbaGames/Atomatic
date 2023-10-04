@@ -12,5 +12,6 @@ namespace BarbaGames.Game.Generators
         [SerializeField] public long currencyGenerated;
         [SerializeField] public long currencyGeneratedIncrease;
         [SerializeField] public string description;
+        public int level = 1;
     }
 }

@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+
 using BarbaGames.Game.Animations;
 using BarbaGames.Game.Generators;
-using BarbaGames.Game.UI;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
@@ -23,6 +24,7 @@ namespace UI
         
         [Header("VIEWS")]
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
+        [SerializeField] private TooltipView tooltipView = null;
         #endregion
 
         #region PRIVATE_FIELDS
@@ -32,7 +34,7 @@ namespace UI
         #region PUBLIC_METHODS
         public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator, Action onPlayerClick)
         {
-            generatorsBuyView.Init(generatorStats, onTryBuyGenerator);
+            generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             btnClick.onClick.AddListener(onPlayerClick.Invoke);
 
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);

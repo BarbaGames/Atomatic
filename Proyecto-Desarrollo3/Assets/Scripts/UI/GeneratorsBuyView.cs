@@ -11,14 +11,14 @@ namespace UI
         [SerializeField] private GameObject generatorViewPrefab = null;
 
         private List<GeneratorBuyView> generatorBuyViews = null;
-        
-        public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator)
+
+        public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             generatorBuyViews = new List<GeneratorBuyView>();
             for (int i = 0; i < generatorStats.Count; i++)
             {
                 GeneratorBuyView generatorBuyView = Instantiate(generatorViewPrefab, scrollViewHolder).GetComponent<GeneratorBuyView>();
-                generatorBuyView.Init(generatorStats[i].id, generatorStats[i].name, generatorStats[i].levelUpCost, onTryBuyGenerator);
+                generatorBuyView.Init(generatorStats[i], onTryBuyGenerator, onEnableTooltip, onDisableTooltip);
                 generatorBuyViews.Add(generatorBuyView);
             }
         }
@@ -29,7 +29,7 @@ namespace UI
             {
                 if (generatorBuyViews[i].Id == generatorData.id)
                 {
-                    generatorBuyViews[i].UpdateData(generatorData.levelUpCost);
+                    generatorBuyViews[i].UpdateData(generatorData);
                     return;
                 }
             }

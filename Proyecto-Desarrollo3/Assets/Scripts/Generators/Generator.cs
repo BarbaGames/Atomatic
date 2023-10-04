@@ -5,13 +5,15 @@ namespace BarbaGames.Game.Generators
     public class Generator : MonoBehaviour
     {
         private GeneratorData generatorData;
-        private int level = 1;
         private float timer = 0;
 
         public GeneratorData GeneratorData { get => generatorData; }
         public bool IsActive { get; set; }
 
-        public void Init(GeneratorData generatorData) { this.generatorData = generatorData; }
+        public void Init(GeneratorData generatorData)
+        {
+            this.generatorData = generatorData;
+        }
 
         /// <summary>
         /// After a certain time or condition, returns currency generated.
@@ -46,11 +48,10 @@ namespace BarbaGames.Game.Generators
         /// <param name="currency"> Player's currency </param>
         public void Upgrade()
         {
-            level++;
+            generatorData.level++;
             long cost = generatorData.levelUpCost;
             generatorData.levelUpCost =  (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
-            generatorData.currencyGenerated = generatorData.currencyGeneratedIncrease * level;
-            
+            generatorData.currencyGenerated = generatorData.currencyGeneratedIncrease * generatorData.level;
         }
     }
 }

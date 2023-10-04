@@ -1,12 +1,16 @@
 using System;
 using System.Globalization;
+
+using BarbaGames.Game.Generators;
+
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI
 {
-    public class GeneratorBuyView : MonoBehaviour
+    public class GeneratorBuyView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Button btnBuy = null;
         [SerializeField] private TMP_Text txtName = null;
@@ -14,14 +18,20 @@ namespace UI
         [SerializeField] private Image imgIcon = null;
 
         private string id = null;
+        private Action<GeneratorData> onEnableTooltip;
+        private Action onDisableTooltip;
+        private GeneratorData generatorData;
     
         public string Id { get => id; }
-    
-        public void Init(string id, string name, double price, Action<string> onTryBuyGenerator)
+
+        public void Init(GeneratorData generatorData, Action<string> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
-            this.id = id;
-            txtName.text = name;
-            txtPrice.text = price.ToString(CultureInfo.InvariantCulture);
+            this.generatorData = generatorData;
+            id = this.generatorData.id;
+            txtName.text = this.generatorData.name;
+            txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            this.onEnableTooltip = onEnableTooltip;
+            this.onDisableTooltip = onDisableTooltip;
         
             btnBuy.onClick.AddListener( () =>
             {
@@ -29,9 +39,21 @@ namespace UI
             });
         }
 
-        public void UpdateData(double price)
+        public void UpdateData(GeneratorData generatorData)
         {
-            txtPrice.text = price.ToString(CultureInfo.InvariantCulture);
+            this.generatorData = generatorData;
+            txtPrice.text = generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            onEnableTooltip.Invoke(this.generatorData);
+        }
+        
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            onEnableTooltip.Invoke(generatorData);
+        }
+        
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            onDisableTooltip.Invoke();
         }
     }
 }
