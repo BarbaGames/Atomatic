@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BarbaGames.Game.Generators;
 using UI;
@@ -13,12 +14,10 @@ namespace Game
         [SerializeField] private GameObject generatorPrefab = null;
         [SerializeField] private GeneratorSO generatorSoData = null;
         [SerializeField] private GameplayView gameplayView = null;
-        [SerializeField] private ButtonsController upgradeButtons = null;
 
         private const string EnergyKey = "energy";
         private long energy = 0;
         private List<Generator> generators = null;
-        public static int ID { get; set; }
 
         private void Start()
         {
@@ -42,6 +41,16 @@ namespace Game
             }
         }
 
+        private void OnEnable()
+        {
+            ButtonsController.onUpgradeUnlocked += UpgradeGenerator;
+        }
+
+        private void OnDisable()
+        {
+            ButtonsController.onUpgradeUnlocked -= UpgradeGenerator;
+        }
+
         private void Update()
         {
             for (int i = 1; i < generators.Count; i++)
@@ -55,13 +64,15 @@ namespace Game
             }
         }
 
-        public void UpgradeGenerator(int price)
+        public void UpgradeGenerator(long price, int id)
         {
+            const int multiplier = 2;
             if (energy > price)
             {
-                generators[ID].GeneratorData.currencyGenerated *= 2;
+                generators[id].GeneratorData.currencyGenerated *= multiplier;
+                generators[id].GeneratorData.currencyGeneratedIncrease *= multiplier;
                 RemoveCurrency(price);
-                upgradeButtons.DisableButton(ID);
+                UpdateEnergyPerSecond();
             }
         }
 

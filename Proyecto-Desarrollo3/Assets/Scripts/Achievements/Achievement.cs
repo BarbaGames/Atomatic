@@ -1,4 +1,4 @@
-using BarbaGames.Game.UI;
+using UI;
 
 namespace BarbaGames.Game.Achievements
 {
