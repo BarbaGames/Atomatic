@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: generator_player
   m_EditorClassIdentifier: 
   id: player
+  icon: {fileID: 21300000, guid: 6e724da5121ee4e489eaff810b0ba0ea, type: 3}
   timerMax: 0
   levelUpCostIncrease: 1.7
   levelUpCost: 5
   currencyGenerated: 1
   currencyGeneratedIncrease: 1
   description: player generator
+  level: 1

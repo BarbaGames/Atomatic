@@ -6,6 +6,7 @@ namespace BarbaGames.Game.Generators
     public class GeneratorData : ScriptableObject
     {
         [SerializeField] public string id;
+        [SerializeField] public Sprite icon;
         [SerializeField] public float timerMax;
         [SerializeField] public float levelUpCostIncrease;
         [SerializeField] public long levelUpCost;

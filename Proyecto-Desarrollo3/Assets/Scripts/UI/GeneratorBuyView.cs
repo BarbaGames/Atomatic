@@ -27,6 +27,7 @@ namespace UI
         public void Init(GeneratorData generatorData, Action<string> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             this.generatorData = generatorData;
+            imgIcon.sprite = this.generatorData.icon;
             id = this.generatorData.id;
             txtName.text = this.generatorData.name;
             txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
