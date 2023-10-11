@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
-namespace BarbaGames.Game.Menu
+namespace Menu
 {
     public class VolumeSlider : MonoBehaviour
     {

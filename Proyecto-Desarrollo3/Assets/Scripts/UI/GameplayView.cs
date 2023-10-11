@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-
-using BarbaGames.Game.Animations;
-using BarbaGames.Game.Generators;
-
+using Animations;
+using Generators;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;

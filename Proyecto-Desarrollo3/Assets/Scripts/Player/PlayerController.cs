@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BarbaGames.Game.Player
+namespace Player
 {
     public class PlayerController : MonoBehaviour
     {

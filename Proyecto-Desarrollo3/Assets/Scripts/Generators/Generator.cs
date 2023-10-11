@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
-namespace BarbaGames.Game.Generators
+namespace Generators
 {
     public class Generator : MonoBehaviour
     {
         private GeneratorData generatorData;
-        private float timer = 0;
 
-        public GeneratorData GeneratorData { get => generatorData; }
+        public GeneratorData GeneratorData
+        {
+            get => generatorData;
+        }
+
         public bool IsActive { get; set; }
 
         public void Init(GeneratorData generatorData)
@@ -21,25 +24,7 @@ namespace BarbaGames.Game.Generators
         /// <returns> currency generated </returns>
         public long Generate()
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                timer = generatorData.timerMax;
-                // foreach (GameObject textHolder in GameManager.textHolderPool)
-                // {
-                //     if (!textHolder.activeSelf)
-                //     {
-                //         // textHolder.SetActive(true);
-                //         // textHolder.transform.position = transform.position;
-                //         // textHolder.GetComponent<TextManager>().SetText("+" + generatorData.currencyGenerated.ToString(CultureInfo.InvariantCulture));
-                //         // break;
-                //     }
-                // }
-
-                return generatorData.currencyGenerated;
-            }
-
-            return 0;
+            return generatorData.currencyGenerated;
         }
 
         /// <summary>
@@ -50,8 +35,8 @@ namespace BarbaGames.Game.Generators
         {
             generatorData.level++;
             long cost = generatorData.levelUpCost;
-            generatorData.levelUpCost =  (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
-            generatorData.currencyGenerated = generatorData.currencyGeneratedIncrease * generatorData.level;
+            generatorData.levelUpCost = (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
+            generatorData.currencyGenerated = generatorData.baseCurrencyGenerated * generatorData.level;
         }
     }
 }

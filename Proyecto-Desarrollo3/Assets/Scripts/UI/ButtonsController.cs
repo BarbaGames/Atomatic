@@ -17,8 +17,10 @@ namespace UI
             for (int i = 0; i < upgrades.Length ; i++)
             {
                 var instance = Instantiate(buttonPrefab, gameObject.transform);
+                
                 instance.GetComponentsInChildren<Image>()[1].sprite = upgrades[i].icon;
                 instance.GetComponent<Button>().onClick.AddListener(()=>onUpgradeUnlocked(upgrades[i].price, upgrades[i].id));
+                
                 buttons[i] = instance;
             }
 

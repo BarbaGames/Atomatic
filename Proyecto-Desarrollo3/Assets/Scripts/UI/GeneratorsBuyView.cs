@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using BarbaGames.Game.Generators;
+using Generators;
 using UnityEngine;
 
 namespace UI

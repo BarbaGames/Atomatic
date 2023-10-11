@@ -1,5 +1,4 @@
-using BarbaGames.Game.Generators;
-
+using Generators;
 using TMPro;
 
 using UnityEngine;

@@ -1,10 +1,8 @@
 using System;
-
+using TMPro;
 using UnityEngine;
 
-using TMPro;
-
-namespace BarbaGames.Game.Animations
+namespace Animations
 {
     public class AnimationController : MonoBehaviour
     {

@@ -1,10 +1,8 @@
 ﻿using System.Globalization;
-
 using TMPro;
-
 using UnityEngine;
 
-namespace BarbaGames.Game.Player
+namespace Player
 {
     public class PlayerView : MonoBehaviour
     {

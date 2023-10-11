@@ -1,8 +1,7 @@
+using TMPro;
 using UnityEngine;
 
-using TMPro;
-
-namespace BarbaGames.Game.Generators
+namespace UI
 {
     public class TextManager : MonoBehaviour
     {

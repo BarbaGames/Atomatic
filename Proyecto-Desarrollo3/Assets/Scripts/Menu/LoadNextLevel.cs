@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BarbaGames.Game.Menu
+namespace Menu
 {
     public class LoadNextLevel : MonoBehaviour
     {

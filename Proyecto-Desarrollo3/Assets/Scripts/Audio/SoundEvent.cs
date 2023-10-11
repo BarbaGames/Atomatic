@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using UnityEngine;
 
-namespace BarbaGames.Game.Audio
+namespace Audio
 {
     [CreateAssetMenu(fileName = "SoundEvent")]
     public class SoundEvent : ScriptableObject

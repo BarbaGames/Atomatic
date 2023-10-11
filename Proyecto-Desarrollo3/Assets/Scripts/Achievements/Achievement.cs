@@ -1,6 +1,6 @@
 using UI;
 
-namespace BarbaGames.Game.Achievements
+namespace Achievements
 {
     public abstract class Achievement : IFloatModifier
     {

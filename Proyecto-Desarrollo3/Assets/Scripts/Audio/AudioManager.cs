@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BarbaGames.Game.Audio
+namespace Audio
 {
     public class AudioManager : MonoBehaviourSingleton<AudioManager>
     {

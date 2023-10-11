@@ -1,10 +1,9 @@
-using System.Linq;
 using System.Collections.Generic;
-
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace BarbaGames.Game.Audio
+namespace Audio
 {
     public class SoundEventListener : MonoBehaviourSingleton<SoundEventListener>
     {

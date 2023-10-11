@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-
 using UnityEngine;
 
-namespace BarbaGames.Game.Generators
+namespace Generators
 {
     [CreateAssetMenu(fileName = "Generators")]
     public class GeneratorSO : ScriptableObject

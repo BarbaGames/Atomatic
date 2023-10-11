@@ -1,8 +1,6 @@
 using System;
 using System.Globalization;
-
-using BarbaGames.Game.Generators;
-
+using Generators;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;

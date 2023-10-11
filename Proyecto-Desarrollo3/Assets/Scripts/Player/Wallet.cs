@@ -1,10 +1,9 @@
 ﻿using System.Globalization;
-
+using Achievements;
+using Progress;
 using UnityEngine;
 
-using BarbaGames.Game.Achievements;
-
-namespace BarbaGames.Game.Player
+namespace Player
 {
     public class Wallet : MonoBehaviour
     {
