@@ -4,7 +4,7 @@ namespace Achievements
 {
     public abstract class Achievement : IFloatModifier
     {
-        public Configuration config;
+        public Upgrade config;
         protected double modifier;
         public abstract void Modify(ref double originalValue);
     }

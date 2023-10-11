@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-namespace Animations
+namespace BarbaGames.Game.Animations
 {
     public class AnimationController : MonoBehaviour
     {

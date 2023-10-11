@@ -15,6 +15,12 @@ namespace UI
             infoText.text = generatorData.id + ", Owned: " + generatorData.level + ", Cost: " + generatorData.levelUpCost;
             holder.gameObject.SetActive(true);
         }
+        
+        public void OnTooltipEnable(Upgrade upgrade)
+        {
+            infoText.text = upgrade.description + ", Cost: " + upgrade.price;
+            holder.gameObject.SetActive(true);
+        }
 
         public void OnToolTipDisable()
         {

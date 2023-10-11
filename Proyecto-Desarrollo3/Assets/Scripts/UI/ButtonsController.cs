@@ -7,7 +7,7 @@ namespace UI
     public class ButtonsController : MonoBehaviour
     {
         [SerializeField] private GameObject buttonPrefab;
-        [SerializeField] private Configuration[] upgrades;
+        [SerializeField] private Upgrade[] upgrades;
         public static Action<long, int> onUpgradeUnlocked;
         private GameObject[] buttons;
         

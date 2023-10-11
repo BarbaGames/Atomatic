@@ -13,11 +13,13 @@ namespace Game
     {
         [SerializeField] private GameObject generatorPrefab = null;
         [SerializeField] private GeneratorSO generatorSoData = null;
+        [SerializeField] private Upgrades upgradesData = null;
         [SerializeField] private GameplayView gameplayView = null;
 
         private const string EnergyKey = "energy";
         private long energy = 0;
         private List<Generator> generators = null;
+        private List<Upgrade> upgrades = null;
         private const int MaxTime = 1;
         private float timer = MaxTime;
 
@@ -31,7 +33,13 @@ namespace Game
                 }
             }
 
-            gameplayView.Init(generatorSoData.generators, BuyGenerator, PlayerClick);
+            upgrades = new List<Upgrade>();
+            for (int i = 0; i < upgradesData.upgrades.Count; i++)
+            {
+                upgrades.Add(Instantiate(upgradesData.upgrades[i]));
+            }
+
+            gameplayView.Init(generatorSoData.generators, upgrades, BuyGenerator, BuyUpgrade, PlayerClick);
 
             generators = new List<Generator>();
 
@@ -150,6 +158,21 @@ namespace Game
                 gameplayView.UpdateGenerator(generator.GeneratorData);
 
                 UpdateEnergyPerSecond();
+            }
+        }
+
+        private void BuyUpgrade(int id)
+        {
+            for (int i = 0; i < upgrades.Count; i++)
+            {
+                if (upgrades[i].id == id)
+                {
+                    if (energy < upgrades[i].price) return;
+                    
+                    RemoveCurrency(upgrades[i].price);
+                    upgrades[i].bought = true;
+                    gameplayView.UpdateUpgrade(upgrades[i]);
+                }
             }
         }
 

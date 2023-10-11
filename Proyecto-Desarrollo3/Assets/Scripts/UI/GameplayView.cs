@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Animations;
+
+using BarbaGames.Game.Animations;
+
 using Generators;
 using TMPro;
 using UnityEngine;
@@ -24,6 +26,7 @@ namespace UI
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
         [SerializeField] private TooltipView tooltipView = null;
         [SerializeField] private GeneratorsView generatorsView = null;
+        [SerializeField] private UpgradeBuyView upgradeBuyView = null;
         #endregion
 
         #region PRIVATE_FIELDS
@@ -31,10 +34,11 @@ namespace UI
         #endregion
 
         #region PUBLIC_METHODS
-        public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator, Action onPlayerClick)
+        public void Init(List<GeneratorData> generatorStats, List<Upgrade> upgrades, Action<string> onTryBuyGenerator,Action<int> onTryBuyUpgrade, Action onPlayerClick)
         {
             generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             generatorsView.Init();
+            upgradeBuyView.Init(upgrades, onTryBuyUpgrade, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             btnClick.onClick.AddListener(onPlayerClick.Invoke);
 
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);
@@ -54,6 +58,11 @@ namespace UI
         {
             generatorsBuyView.UpdateGenerator(generatorData);
             generatorsView.UpdateGenerator(generatorData);
+        }
+
+        public void UpdateUpgrade(Upgrade upgrade)
+        {
+            upgradeBuyView.UpdateUpgrade(upgrade);
         }
 
         public void UnlockGenerator(GeneratorData generatorData)
