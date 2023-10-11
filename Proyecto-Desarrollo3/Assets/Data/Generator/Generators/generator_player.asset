@@ -20,4 +20,5 @@ MonoBehaviour:
   currencyGenerated: 1
   currencyGeneratedIncrease: 1
   description: player generator
-  level: 1
+  level: 0
+  unlocked: 0

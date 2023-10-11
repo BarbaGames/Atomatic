@@ -25,6 +25,7 @@ namespace UI
         [Header("VIEWS")]
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
         [SerializeField] private TooltipView tooltipView = null;
+        [SerializeField] private GeneratorsView generatorsView = null;
         #endregion
 
         #region PRIVATE_FIELDS
@@ -35,6 +36,7 @@ namespace UI
         public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator, Action onPlayerClick)
         {
             generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
+            generatorsView.Init();
             btnClick.onClick.AddListener(onPlayerClick.Invoke);
 
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);
@@ -53,6 +55,12 @@ namespace UI
         public void UpdateGenerator(GeneratorData generatorData)
         {
             generatorsBuyView.UpdateGenerator(generatorData);
+            generatorsView.UpdateGenerator(generatorData);
+        }
+
+        public void UnlockGenerator(GeneratorData generatorData)
+        {
+            generatorsView.AddGenerator(generatorData, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
         }
 
         public void SpawnFlyingText(long energyGenerated)

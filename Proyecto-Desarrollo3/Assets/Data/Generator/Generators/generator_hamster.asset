@@ -20,4 +20,5 @@ MonoBehaviour:
   currencyGenerated: 15
   currencyGeneratedIncrease: 2
   description: fiuuuumba
-  level: 1
+  level: 0
+  unlocked: 0

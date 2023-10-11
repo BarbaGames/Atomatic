@@ -20,4 +20,5 @@ MonoBehaviour:
   currencyGenerated: 50
   currencyGeneratedIncrease: 2
   description: Gen 4
-  level: 1
+  level: 0
+  unlocked: 0

@@ -126,6 +126,7 @@ namespace Game
                 if (!generator.IsActive)
                 {
                     UnlockGenerator(generator);
+                    gameplayView.UnlockGenerator(generator.GeneratorData);
                 }
                 else
                 {
@@ -142,6 +143,7 @@ namespace Game
         private void UnlockGenerator(Generator generator)
         {
             RemoveCurrency(generator.GeneratorData.levelUpCost);
+            generator.GeneratorData.unlocked = true;
             generator.Upgrade();
             generator.IsActive = true;
             generator.gameObject.SetActive(true);
