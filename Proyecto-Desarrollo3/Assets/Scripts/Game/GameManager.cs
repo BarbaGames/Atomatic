@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
-using BarbaGames.Game.Generators;
+using Generators;
+using Progress;
 using UI;
 using UnityEngine;
 
@@ -18,6 +18,8 @@ namespace Game
         private const string EnergyKey = "energy";
         private long energy = 0;
         private List<Generator> generators = null;
+        private const int MaxTime = 1;
+        private float timer = MaxTime;
 
         private void Start()
         {
@@ -53,15 +55,7 @@ namespace Game
 
         private void Update()
         {
-            for (int i = 1; i < generators.Count; i++)
-            {
-                if (!generators[i].IsActive) continue;
-
-                long generated = generators[i].Generate();
-                
-                if (generated <= 0) continue;
-                AddCurrency(generated);
-            }
+            GeneratorsLoop();
         }
 
         public void UpgradeGenerator(long price, int id)
@@ -70,10 +64,30 @@ namespace Game
             if (energy > price)
             {
                 generators[id].GeneratorData.currencyGenerated *= multiplier;
-                generators[id].GeneratorData.currencyGeneratedIncrease *= multiplier;
+                generators[id].GeneratorData.baseCurrencyGenerated *= multiplier;
                 RemoveCurrency(price);
                 UpdateEnergyPerSecond();
             }
+        }
+
+        private void GeneratorsLoop()
+        {
+            timer -= Time.deltaTime;
+
+            if (timer > 0) return;
+
+            timer = MaxTime;
+            
+            long generated = 0;
+            
+            for (int i = 1; i < generators.Count; i++)
+            {
+                if (!generators[i].IsActive) continue;
+
+                generated += generators[i].Generate();
+            }
+
+            if(generated > 0) AddCurrency(generated);
         }
 
         private void AddCurrency(long energyToAdd)
@@ -94,11 +108,10 @@ namespace Game
 
             for (int i = 0; i < generators.Count; i++)
             {
-                if(i == 0) continue;
-                if(!generators[i].IsActive) continue;
-                
-                generationPerSec +=
-                    (long)(generators[i].GeneratorData.currencyGenerated / generators[i].GeneratorData.timerMax);
+                if (i == 0) continue;
+                if (!generators[i].IsActive) continue;
+
+                generationPerSec += generators[i].GeneratorData.currencyGenerated;
             }
 
             gameplayView.UpdateEnergyPerSec(generationPerSec);
@@ -107,11 +120,11 @@ namespace Game
         private void PlayerClick()
         {
             long energyGenerated = generators[0].Generate();
-            
+
             if (energyGenerated <= 0) return;
-            
+
             AddCurrency(energyGenerated);
-            
+
             gameplayView.SpawnFlyingText(energyGenerated);
         }
 
@@ -135,7 +148,7 @@ namespace Game
                 }
 
                 gameplayView.UpdateGenerator(generator.GeneratorData);
-                
+
                 UpdateEnergyPerSecond();
             }
         }
