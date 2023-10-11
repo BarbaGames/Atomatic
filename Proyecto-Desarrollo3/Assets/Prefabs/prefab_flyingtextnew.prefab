@@ -46,16 +46,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_fontSize
-      value: 4.95
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 523521bb4724a2f41a03683656c68965, type: 2}
+      objectReference: {fileID: 11400000, guid: ff32eb0a5755d7a4d99257e37acb67bd, type: 2}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -4603817454934140051, guid: 523521bb4724a2f41a03683656c68965, type: 2}
+      objectReference: {fileID: -4603817454934140051, guid: ff32eb0a5755d7a4d99257e37acb67bd, type: 2}
+    - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1432501702207495992, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -63,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 2957006679415453055, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -4603817454934140051, guid: 523521bb4724a2f41a03683656c68965, type: 2}
+      objectReference: {fileID: -4603817454934140051, guid: ff32eb0a5755d7a4d99257e37acb67bd, type: 2}
     - target: {fileID: 4861559942317231522, guid: 77770ad0ff0abea419a5da69b5521dbb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
