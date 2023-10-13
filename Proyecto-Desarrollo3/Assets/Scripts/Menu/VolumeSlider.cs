@@ -23,7 +23,7 @@ namespace Menu
         /// <param name="volume"> new volume </param>
         public void SetVolume(float volume)
         {
-            mainMixer.SetFloat(MixerVolume, volume);
+            mainMixer.SetFloat("Volume", Mathf.Log10(volume) * 20); 
         }
     }
 }

@@ -46,12 +46,12 @@ namespace UI
 
         public void UpdateEnergy(long newEnergy)
         {
-            txtEnergy.text = newEnergy.ToString(CultureInfo.InvariantCulture);
+            txtEnergy.text = newEnergy.ToString("N3");
         }
         
         public void UpdateEnergyPerSec(long newEnergy)
         {
-            txtEnergyPerSec.text = newEnergy.ToString(CultureInfo.InvariantCulture) + " E/s";
+            txtEnergyPerSec.text = newEnergy.ToString("N0") + " E/s";
         }
 
         public void UpdateGenerator(GeneratorData generatorData)

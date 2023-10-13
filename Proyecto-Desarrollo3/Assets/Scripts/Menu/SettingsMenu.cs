@@ -35,23 +35,40 @@ namespace Menu
         {
             int resID = 0;
             resolutions = Screen.resolutions;
-            
+
             resDropdown.ClearOptions();
-            
+
             List<string> resOptions = new List<string>();
+            List<Resolution> uniqueResolutions = new List<Resolution>();
 
-            for (int i = 0; i < resolutions.Length; i++)
+            foreach (Resolution res in resolutions)
             {
-                string option = resolutions[i].width + " x " + resolutions[i].height;
-                resOptions.Add(option);
+                bool isDuplicate = false;
+                Resolution currentRes = res;
 
-                if (resolutions[i].width == Screen.currentResolution.width &&
-                    resolutions[i].height == Screen.currentResolution.height)
+                foreach (Resolution uniqueRes in uniqueResolutions)
                 {
-                    resID = i;
+                    if (uniqueRes.width == currentRes.width && uniqueRes.height == currentRes.height)
+                    {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+
+                if (!isDuplicate)
+                {
+                    uniqueResolutions.Add(currentRes);
+
+                    string option = currentRes.width + " x " + currentRes.height + " @ " + currentRes.refreshRate + " Hz";
+                    resOptions.Add(option);
+
+                    if (currentRes.width == Screen.width && currentRes.height == Screen.height)
+                    {
+                        resID = uniqueResolutions.Count - 1;
+                    }
                 }
             }
-            
+
             resDropdown.AddOptions(resOptions);
             resDropdown.value = resID;
             resDropdown.RefreshShownValue();

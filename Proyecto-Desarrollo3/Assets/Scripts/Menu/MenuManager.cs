@@ -10,7 +10,7 @@ namespace Menu
         /// <summary>
         /// Quits the application
         /// </summary>
-        public void OnExitButtonClick()
+        public void QuitApplication()
         {
             Application.Quit();
         }
