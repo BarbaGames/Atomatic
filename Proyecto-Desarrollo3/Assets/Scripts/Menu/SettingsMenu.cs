@@ -39,39 +39,36 @@ namespace Menu
             resDropdown.ClearOptions();
 
             List<string> resOptions = new List<string>();
-            List<Resolution> uniqueResolutions = new List<Resolution>();
+            Dictionary<string, int> uniqueResolutions = new Dictionary<string, int>();
 
-            foreach (Resolution res in resolutions)
+            foreach (var resolution in resolutions)
             {
-                bool isDuplicate = false;
-                Resolution currentRes = res;
+                string resolutionString = resolution.width + " x " + resolution.height;
+                int refreshRate = (int)resolution.refreshRateRatio.value;
 
-                foreach (Resolution uniqueRes in uniqueResolutions)
+                if (uniqueResolutions.ContainsKey(resolutionString))
                 {
-                    if (uniqueRes.width == currentRes.width && uniqueRes.height == currentRes.height)
+                    if (refreshRate > uniqueResolutions[resolutionString])
                     {
-                        isDuplicate = true;
-                        break;
+                        uniqueResolutions[resolutionString] = refreshRate;
                     }
                 }
-
-                if (!isDuplicate)
+                else
                 {
-                    uniqueResolutions.Add(currentRes);
-
-                    string option = currentRes.width + " x " + currentRes.height + " @ " + currentRes.refreshRate + " Hz";
-                    resOptions.Add(option);
-
-                    if (currentRes.width == Screen.width && currentRes.height == Screen.height)
-                    {
-                        resID = uniqueResolutions.Count - 1;
-                    }
+                    uniqueResolutions.Add(resolutionString, refreshRate);
                 }
+            }
+
+            foreach (var kvp in uniqueResolutions)
+            {
+                string option = kvp.Key + " @ " + kvp.Value + " Hz";
+                resOptions.Add(option);
             }
 
             resDropdown.AddOptions(resOptions);
             resDropdown.value = resID;
             resDropdown.RefreshShownValue();
         }
+
     }
 }
