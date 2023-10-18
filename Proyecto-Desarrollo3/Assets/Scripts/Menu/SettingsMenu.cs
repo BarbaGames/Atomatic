@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,14 +35,14 @@ namespace Menu
         private void Init()
         {
             int resID = 0;
-            resolutions = Screen.resolutions;
-
+            Resolution[] auxResolutions = Screen.resolutions;
+            resolutions = new Resolution[auxResolutions.Length];
             resDropdown.ClearOptions();
 
             List<string> resOptions = new List<string>();
             Dictionary<string, int> uniqueResolutions = new Dictionary<string, int>();
-
-            foreach (var resolution in resolutions)
+            int i = 0;
+            foreach (var resolution in auxResolutions)
             {
                 string resolutionString = resolution.width + " x " + resolution.height;
                 int refreshRate = (int)resolution.refreshRateRatio.value;
@@ -56,6 +57,12 @@ namespace Menu
                 else
                 {
                     uniqueResolutions.Add(resolutionString, refreshRate);
+                    resolutions[i] = resolution;
+                    i++;
+                }
+                if (resolution.width == Screen.width && resolution.height == Screen.height)
+                {
+                    resID = uniqueResolutions.Count - 1;
                 }
             }
 
@@ -69,6 +76,5 @@ namespace Menu
             resDropdown.value = resID;
             resDropdown.RefreshShownValue();
         }
-
     }
 }
