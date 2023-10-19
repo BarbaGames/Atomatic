@@ -8,7 +8,9 @@ using Generators;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace UI
 {
@@ -20,7 +22,8 @@ namespace UI
         [SerializeField] private TMP_Text txtEnergy = null;
         [SerializeField] private TMP_Text txtEnergyPerSec = null;
         [SerializeField] private GameObject flyingTextPrefab = null;
-        [SerializeField] private Transform flyingTextSpawnPos = null;
+        [SerializeField] private Transform flyingTextSpawnPosSmaller = null;
+        [SerializeField] private Transform flyingTextSpawnPosBigger = null;
         
         [Header("VIEWS")]
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
@@ -74,7 +77,10 @@ namespace UI
         {
             var text = flyingTextPool.Get();
             text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
-            text.transform.parent.position = flyingTextSpawnPos.position;
+            Vector3 pos = new Vector3( 0,0,flyingTextSpawnPosSmaller.position.z);
+            pos.x = Random.Range(flyingTextSpawnPosSmaller.position.x, flyingTextSpawnPosBigger.position.x);
+            pos.y = Random.Range(flyingTextSpawnPosSmaller.position.y, flyingTextSpawnPosBigger.position.y);
+            text.transform.parent.position = pos;
         }
 
         private void OnFlyingTextFinish(TMP_Text tmpText)

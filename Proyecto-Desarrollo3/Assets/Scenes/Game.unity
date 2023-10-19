@@ -908,6 +908,37 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &127970564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127970565}
+  m_Layer: 0
+  m_Name: flying text position (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127970565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127970564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 1.6, z: -0.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705824775}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137329625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1413,8 @@ MonoBehaviour:
   txtEnergy: {fileID: 451301963}
   txtEnergyPerSec: {fileID: 540602698}
   flyingTextPrefab: {fileID: 2840037898535521750, guid: 6ed9e47161ddbfa4ba78055a504e8a6a, type: 3}
-  flyingTextSpawnPos: {fileID: 325794940}
+  flyingTextSpawnPosSmaller: {fileID: 325794940}
+  flyingTextSpawnPosBigger: {fileID: 127970565}
   generatorsBuyView: {fileID: 776989417}
   tooltipView: {fileID: 1542940278}
   generatorsView: {fileID: 152942741}
@@ -2479,7 +2511,7 @@ Transform:
   m_GameObject: {fileID: 325794939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: 1.3, z: -0.552}
+  m_LocalPosition: {x: -0.5, y: 0.9, z: -0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4557,6 +4589,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d30f85e7a8ec70f44b9755f1bb6feb51, type: 3}
       insertIndex: -1
       addedObject: {fileID: 325794940}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d30f85e7a8ec70f44b9755f1bb6feb51, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 127970565}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5994721076960434074, guid: d30f85e7a8ec70f44b9755f1bb6feb51, type: 3}
       insertIndex: -1
