@@ -1519,9 +1519,9 @@ RectTransform:
   - {fileID: 495140433}
   - {fileID: 546095027}
   - {fileID: 960580482}
-  - {fileID: 36538083}
   - {fileID: 1513485871}
   - {fileID: 1305705794175467688}
+  - {fileID: 36538083}
   - {fileID: 867380491}
   - {fileID: 1277909962}
   m_Father: {fileID: 0}
@@ -7152,6 +7152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7063df5ec67fc4a4fa398fdec6d93aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullscreenToggle: {fileID: 1366790244}
   resDropdown: {fileID: 159873349}
 --- !u!1 &1291794638
 GameObject:

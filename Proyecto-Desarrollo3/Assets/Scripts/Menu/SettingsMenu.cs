@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +6,11 @@ namespace Menu
 {
     public class SettingsMenu : MonoBehaviour
     {
-
+        [SerializeField] private Toggle fullscreenToggle;
         public Dropdown resDropdown;
+        private const string FullscreenKey = "fullscreen";
+        private const string ResWidthKey = "width";
+        private const string ResHeightKey = "height";
         private Resolution[] resolutions;
         private void Start()
         {
@@ -20,11 +21,14 @@ namespace Menu
         {
             Resolution res = resolutions[resolutionId];
             Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+            PlayerPrefs.SetInt(ResWidthKey, res.width);
+            PlayerPrefs.SetInt(ResHeightKey, res.height);
         }
         
         public void SetFullscreen(bool isFullscreen)
         {
             Screen.fullScreen = isFullscreen;
+            PlayerPrefs.SetInt(FullscreenKey, isFullscreen ? 1 : 0);
         }
 
         public void SetQuality(int qualityId)
@@ -33,6 +37,12 @@ namespace Menu
         }
         
         private void Init()
+        {
+            InitResolutionDropdown();
+            InitSettingsValues();
+        }
+
+        private void InitResolutionDropdown()
         {
             int resID = 0;
             Resolution[] auxResolutions = Screen.resolutions;
@@ -75,6 +85,30 @@ namespace Menu
             resDropdown.AddOptions(resOptions);
             resDropdown.value = resID;
             resDropdown.RefreshShownValue();
+
+        }
+
+        void InitSettingsValues()
+        {
+            if (PlayerPrefs.HasKey(FullscreenKey))
+            {
+                Screen.fullScreen = PlayerPrefs.GetInt(FullscreenKey) == 1;
+            }
+            else
+            {
+                PlayerPrefs.SetInt(FullscreenKey, Screen.fullScreen ? 1 : 0);
+            }
+
+            fullscreenToggle.isOn = Screen.fullScreen;
+            if (PlayerPrefs.HasKey(ResWidthKey) && PlayerPrefs.HasKey(ResHeightKey))
+            {
+                Screen.SetResolution(PlayerPrefs.GetInt(ResWidthKey), PlayerPrefs.GetInt(ResHeightKey), Screen.fullScreen);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(ResWidthKey, Screen.currentResolution.width);
+                PlayerPrefs.SetInt(ResHeightKey, Screen.currentResolution.height);
+            }
         }
     }
 }
