@@ -24,11 +24,6 @@ namespace Generators
         /// <returns> currency generated </returns>
         public long Generate()
         {
-            generatorData.timer -= Time.deltaTime;
-            
-            if (generatorData.timer > 0) return 0;
-            
-            generatorData.timer = generatorData.MaxTimer;
             return generatorData.currencyGenerated;
         }
 
@@ -39,6 +34,7 @@ namespace Generators
         public void Upgrade()
         {
             generatorData.level++;
+            long cost = generatorData.levelUpCost;
             generatorData.levelUpCost = (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
             generatorData.currencyGenerated = generatorData.baseCurrencyGenerated * generatorData.level;
         }

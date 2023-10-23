@@ -34,7 +34,6 @@ namespace Game
             }
 
             upgrades = new List<Upgrade>();
-            
             for (int i = 0; i < upgradesData.upgrades.Count; i++)
             {
                 upgrades.Add(Instantiate(upgradesData.upgrades[i]));
@@ -70,7 +69,6 @@ namespace Game
         public void UpgradeGenerator(long price, int id)
         {
             const int multiplier = 2;
-            
             if (energy > price)
             {
                 generators[id].GeneratorData.currencyGenerated *= multiplier;
@@ -82,6 +80,11 @@ namespace Game
 
         private void GeneratorsLoop()
         {
+            timer -= Time.deltaTime;
+
+            if (timer > 0) return;
+
+            timer = MaxTime;
             
             long generated = 0;
             

@@ -18,7 +18,6 @@ MonoBehaviour:
   levelUpCost: 5
   currencyGenerated: 1
   baseCurrencyGenerated: 1
-  MaxTimer: 0
+  description: Manufactured with help from the alien, it will help in this jouney
   level: 1
-  timer: 1
   unlocked: 0
