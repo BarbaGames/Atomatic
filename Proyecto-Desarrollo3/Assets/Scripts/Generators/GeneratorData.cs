@@ -12,6 +12,8 @@ namespace Generators
         [SerializeField] public long currencyGenerated;
         [SerializeField] public long baseCurrencyGenerated;
         [SerializeField] public string description;
+        [SerializeField] public int maxTimer = 1;
+        public float timer;
         public int level = 0;
         public bool unlocked = false;
     }

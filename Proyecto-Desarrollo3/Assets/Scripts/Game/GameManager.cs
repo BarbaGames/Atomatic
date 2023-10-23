@@ -20,8 +20,6 @@ namespace Game
         private long energy = 0;
         private List<Generator> generators = null;
         private List<Upgrade> upgrades = null;
-        private const int MaxTime = 1;
-        private float timer = MaxTime;
 
         private void Start()
         {
@@ -50,17 +48,6 @@ namespace Game
                 generators.Add(generator);
             }
         }
-
-        private void OnEnable()
-        {
-            ButtonsController.onUpgradeUnlocked += UpgradeGenerator;
-        }
-
-        private void OnDisable()
-        {
-            ButtonsController.onUpgradeUnlocked -= UpgradeGenerator;
-        }
-
         private void Update()
         {
             GeneratorsLoop();
@@ -80,12 +67,6 @@ namespace Game
 
         private void GeneratorsLoop()
         {
-            timer -= Time.deltaTime;
-
-            if (timer > 0) return;
-
-            timer = MaxTime;
-            
             long generated = 0;
             
             for (int i = 1; i < generators.Count; i++)
