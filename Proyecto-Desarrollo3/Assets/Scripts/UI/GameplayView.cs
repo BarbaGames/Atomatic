@@ -77,9 +77,11 @@ namespace UI
         {
             var text = flyingTextPool.Get();
             text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
-            Vector3 pos = new Vector3( 0,0,flyingTextSpawnPosSmaller.position.z);
-            pos.x = Random.Range(flyingTextSpawnPosSmaller.position.x, flyingTextSpawnPosBigger.position.x);
-            pos.y = Random.Range(flyingTextSpawnPosSmaller.position.y, flyingTextSpawnPosBigger.position.y);
+            var position = flyingTextSpawnPosSmaller.position;
+            Vector3 pos = new Vector3( 0,0,position.z);
+            var position1 = flyingTextSpawnPosBigger.position;
+            pos.x = Random.Range(position.x, position1.x);
+            pos.y = Random.Range(position.y, position1.y);
             text.transform.parent.position = pos;
         }
 
