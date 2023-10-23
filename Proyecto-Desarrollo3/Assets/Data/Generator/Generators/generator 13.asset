@@ -19,5 +19,7 @@ MonoBehaviour:
   currencyGenerated: 50
   baseCurrencyGenerated: 50
   description: The emperah defends
+  maxTimer: 1
+  timer: 1
   level: 0
   unlocked: 0

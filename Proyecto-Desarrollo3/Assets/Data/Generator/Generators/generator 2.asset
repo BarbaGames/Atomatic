@@ -20,5 +20,7 @@ MonoBehaviour:
   baseCurrencyGenerated: 15
   description: Made from scrap and gathers energy from the enviroment, people wont
     bother you now
+  maxTimer: 1
+  timer: 1
   level: 0
   unlocked: 0

@@ -19,5 +19,7 @@ MonoBehaviour:
   currencyGenerated: 1
   baseCurrencyGenerated: 1
   description: Perfect for third world countries
+  maxTimer: 1
+  timer: 1
   level: 0
   unlocked: 0
