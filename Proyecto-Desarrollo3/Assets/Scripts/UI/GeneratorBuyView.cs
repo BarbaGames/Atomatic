@@ -27,7 +27,7 @@ namespace UI
             this.generatorData = generatorData;
             imgIcon.sprite = this.generatorData.icon;
             id = this.generatorData.id;
-            txtName.text = this.generatorData.name;
+            txtName.text = this.generatorData.id;
             txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;

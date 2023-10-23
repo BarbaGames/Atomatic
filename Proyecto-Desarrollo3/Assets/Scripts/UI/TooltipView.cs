@@ -12,7 +12,7 @@ namespace UI
         
         public void OnTooltipEnable(GeneratorData generatorData)
         {
-            infoText.text = generatorData.id + ", Owned: " + generatorData.level + ", Cost: " + generatorData.levelUpCost;
+            infoText.text = "Generates " + generatorData.currencyGenerated + (generatorData.name == "generator 0" ? " per click" : " E/s") + " , Owned: " + generatorData.level + ", Cost: " + generatorData.levelUpCost;
             holder.gameObject.SetActive(true);
         }
         
