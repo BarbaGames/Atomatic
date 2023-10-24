@@ -2,14 +2,22 @@ using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeBuyView : MonoBehaviour
 {
     [SerializeField] private Transform scrollViewHolder = null;
     [SerializeField] private GameObject upgradeViewPrefab = null;
+    [SerializeField] private Scrollbar scrollbar = null;
+
 
     private List<UpgradeButtonView> upgradeButtonViews = null;
 
+    private void Update()
+    {
+        scrollbar.size = 0.1f;
+    }
+    
     public void Init(List<Upgrade> upgrades, Action<int> onTryBuyUpgrade, Action<Upgrade> onEnableTooltip, Action onDisableTooltip)
     {
         upgradeButtonViews = new List<UpgradeButtonView>();

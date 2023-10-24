@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+
 using Generators;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -9,8 +12,14 @@ namespace UI
     {
         [SerializeField] private Transform scrollViewHolder = null;
         [SerializeField] private GameObject generatorViewPrefab = null;
-
+        [SerializeField] private Scrollbar scrollbar = null;
+        
         private List<GeneratorBuyView> generatorBuyViews = null;
+
+        private void Update()
+        {
+            scrollbar.size = 0.1f;
+        }
 
         public void Init(List<GeneratorData> generatorStats, Action<string> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
