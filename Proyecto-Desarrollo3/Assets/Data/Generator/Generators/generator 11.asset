@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Alien Energy
   icon: {fileID: 21300000, guid: 0c9c1e2f4d1824940b25a785cc8c3878, type: 3}
+  background: {fileID: 21300000, guid: 91722120078277745a3a5b4c68eaefba, type: 3}
   levelUpCostIncrease: 3.3
   levelUpCost: 1000
   currencyGenerated: 50

@@ -3,21 +3,24 @@ using Generators;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class GeneratorView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private TMP_Text counterTxt = null;
+        [SerializeField] private Image background;
         private GeneratorData generatorData = null;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
         public string Id { get => generatorData.id; }
 
-        public void Init(GeneratorData generatorData, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
+        public void Init(GeneratorData generatorData, Sprite background, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             this.generatorData = generatorData;
             counterTxt.text = generatorData.level.ToString();
+            this.background.sprite = background;
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
         }

@@ -20,7 +20,7 @@ namespace UI
         public void AddGenerator(GeneratorData generatorStats, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             GeneratorView generatorView = Instantiate(generatorViewGo, scrollViewHolder).GetComponent<GeneratorView>();
-            generatorView.Init(generatorStats, onEnableTooltip, onDisableTooltip);
+            generatorView.Init(generatorStats, generatorStats.background, onEnableTooltip, onDisableTooltip);
             generatorViews.Add(generatorView);
         }
     

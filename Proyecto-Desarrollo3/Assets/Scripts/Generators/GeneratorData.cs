@@ -7,6 +7,7 @@ namespace Generators
     {
         [SerializeField] public string id;
         [SerializeField] public Sprite icon;
+        [SerializeField] public Sprite background;
         [SerializeField] public float levelUpCostIncrease;
         [SerializeField] public long levelUpCost;
         [SerializeField] public long currencyGenerated;
