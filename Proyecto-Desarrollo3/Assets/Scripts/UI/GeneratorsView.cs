@@ -11,7 +11,7 @@ namespace UI
         [SerializeField] private GameObject generatorViewGo = null;
         [SerializeField] private Transform scrollViewHolder = null;
         [SerializeField] private Scrollbar scrollbar = null;
-
+        [SerializeField] private GameObject[] scientistsPrefab = null;
         private List<GeneratorView> generatorViews = null;
 
         private void Update()
@@ -19,18 +19,27 @@ namespace UI
             scrollbar.size = 0.1f;
         }
         
+        enum ScientistTypes
+        {
+            Tall,
+            Fat,
+            Strong
+        }
+
         public void Init()
         {
             generatorViews = new List<GeneratorView>();
         }
 
-        public void AddGenerator(GeneratorData generatorStats, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
+        public void AddGenerator(GeneratorData generatorStats, Action<GeneratorData> onEnableTooltip,
+            Action onDisableTooltip)
         {
             GeneratorView generatorView = Instantiate(generatorViewGo, scrollViewHolder).GetComponent<GeneratorView>();
-            generatorView.Init(generatorStats, generatorStats.background, onEnableTooltip, onDisableTooltip);
+            generatorView.Init(generatorStats, scientistsPrefab[(int)ScientistTypes.Tall], onEnableTooltip,
+                onDisableTooltip);
             generatorViews.Add(generatorView);
         }
-    
+
         public void UpdateGenerator(GeneratorData generatorData)
         {
             for (int i = 0; i < generatorViews.Count; i++)
