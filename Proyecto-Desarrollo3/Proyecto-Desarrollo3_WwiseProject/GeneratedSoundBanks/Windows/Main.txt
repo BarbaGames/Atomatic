@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	199363535	UIHover			\Default Work Unit\UIHover	
+	1397303698	ClickGenerator			\Default Work Unit\ClickGenerator	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1240427665	ClickStatus			\Default Work Unit\ClickStatus	
+
+Switch	ID	Name	Switch Group			Notes
+	1206986080	ClickA	ClickStatus			
+	1206986082	ClickC	ClickStatus			
+	1206986083	ClickB	ClickStatus			
+	2281549183	DobleClick	ClickStatus			
+	3938304779	DobleClickReversa	ClickStatus			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	104214849	Click-004	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\Click-004		6704
+	375050747	clicksimplon2	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\clicksimplon2_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon2		4262
+	423723300	Click-003	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-003		3428
+	569766503	Click-002	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-002_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-002		1994
+	616632917	UIButtonHover	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\UIButtonHover_10C4C929.wem		\Actor-Mixer Hierarchy\UI\UIButtonHover		9218
+	787848516	Click-005	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-005_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\Click-005		5450
+	840620083	dobleClick-004	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClick-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-004		13146
+	876522381	clicksimplon1	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\clicksimplon1_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon1		3872
+	920639229	dobleClick-003	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClick-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-003		17992
+	1002903760	dobleClickReversa	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClickReversa_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\dobleClickReversa		13950
+

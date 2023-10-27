@@ -11,6 +11,30 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID CLICKGENERATOR = 1397303698U;
+        static const AkUniqueID UIHOVER = 199363535U;
+    } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace CLICKSTATUS
+        {
+            static const AkUniqueID GROUP = 1240427665U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CLICKA = 1206986080U;
+                static const AkUniqueID CLICKB = 1206986083U;
+                static const AkUniqueID CLICKC = 1206986082U;
+                static const AkUniqueID DOBLECLICK = 2281549183U;
+                static const AkUniqueID DOBLECLICKREVERSA = 3938304779U;
+            } // namespace SWITCH
+        } // namespace CLICKSTATUS
+
+    } // namespace SWITCHES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

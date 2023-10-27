@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,10 +16,103 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1077138683">
+		<SoundBank Id="3161908922" Language="SFX" Hash="573643770">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1397303698" Name="ClickGenerator" ObjectPath="\Events\Default Work Unit\ClickGenerator" DurationType="OneShot" DurationMin="0.020104" DurationMax="0.18675">
+					<IncludedMemoryFiles>
+						<File Id="104214849" Language="SFX">
+							<ShortName>Click-004.wav</ShortName>
+							<Path>SFX\Click-004_10C4C929.wem</Path>
+						</File>
+						<File Id="375050747" Language="SFX">
+							<ShortName>clicksimplon2.wav</ShortName>
+							<Path>SFX\clicksimplon2_10C4C929.wem</Path>
+						</File>
+						<File Id="423723300" Language="SFX">
+							<ShortName>Click-003.wav</ShortName>
+							<Path>SFX\Click-003_10C4C929.wem</Path>
+						</File>
+						<File Id="569766503" Language="SFX">
+							<ShortName>Click-002.wav</ShortName>
+							<Path>SFX\Click-002_10C4C929.wem</Path>
+						</File>
+						<File Id="787848516" Language="SFX">
+							<ShortName>Click-005.wav</ShortName>
+							<Path>SFX\Click-005_10C4C929.wem</Path>
+						</File>
+						<File Id="840620083" Language="SFX">
+							<ShortName>dobleClick-004.wav</ShortName>
+							<Path>SFX\dobleClick-004_10C4C929.wem</Path>
+						</File>
+						<File Id="876522381" Language="SFX">
+							<ShortName>clicksimplon1.wav</ShortName>
+							<Path>SFX\clicksimplon1_10C4C929.wem</Path>
+						</File>
+						<File Id="920639229" Language="SFX">
+							<ShortName>dobleClick-003.wav</ShortName>
+							<Path>SFX\dobleClick-003_10C4C929.wem</Path>
+						</File>
+						<File Id="1002903760" Language="SFX">
+							<ShortName>dobleClickReversa.wav</ShortName>
+							<Path>SFX\dobleClickReversa_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}">
+							<Media>
+								<File Id="375050747"/>
+								<File Id="876522381"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{624F653B-6450-46E1-960E-FA5B22D4DD9A}">
+							<Media>
+								<File Id="104214849"/>
+								<File Id="787848516"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{4E8E7D62-9D06-4843-B24F-9A5FF66ECB5D}">
+							<Media>
+								<File Id="423723300"/>
+								<File Id="569766503"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{CFA91971-E567-4C24-B995-A45230BE1A90}">
+							<Media>
+								<File Id="1002903760"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7DE62BB7-33B8-43B3-A3E9-5AAA94874FFF}">
+							<Media>
+								<File Id="840620083"/>
+								<File Id="920639229"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="199363535" Name="UIHover" ObjectPath="\Events\Default Work Unit\UIHover" DurationType="OneShot" DurationMin="0.095354" DurationMax="0.095354">
+					<IncludedMemoryFiles>
+						<File Id="616632917" Language="SFX">
+							<ShortName>UIButtonHover.wav</ShortName>
+							<Path>SFX\UIButtonHover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="1240427665" Name="ClickStatus" ObjectPath="\Switches\Default Work Unit\ClickStatus" GUID="{E7C6216F-4810-4017-A316-326190C4D216}">
+					<Switches>
+						<Switch Id="1206986080" Name="ClickA" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickA" GUID="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}"/>
+						<Switch Id="1206986083" Name="ClickB" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickB" GUID="{4E8E7D62-9D06-4843-B24F-9A5FF66ECB5D}"/>
+						<Switch Id="1206986082" Name="ClickC" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickC" GUID="{624F653B-6450-46E1-960E-FA5B22D4DD9A}"/>
+						<Switch Id="2281549183" Name="DobleClick" ObjectPath="\Switches\Default Work Unit\ClickStatus\DobleClick" GUID="{7DE62BB7-33B8-43B3-A3E9-5AAA94874FFF}"/>
+						<Switch Id="3938304779" Name="DobleClickReversa" ObjectPath="\Switches\Default Work Unit\ClickStatus\DobleClickReversa" GUID="{CFA91971-E567-4C24-B995-A45230BE1A90}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
