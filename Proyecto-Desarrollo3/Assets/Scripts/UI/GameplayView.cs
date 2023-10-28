@@ -49,7 +49,7 @@ namespace UI
 
         public void UpdateEnergy(long newEnergy)
         {
-            txtEnergy.text = newEnergy.ToString("N3");
+            txtEnergy.text = newEnergy.ToString("N0");
         }
         
         public void UpdateEnergyPerSec(long newEnergy)
