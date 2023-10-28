@@ -1281,6 +1281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154531645}
   - component: {fileID: 154531646}
+  - component: {fileID: 154531647}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1319,6 +1320,22 @@ MonoBehaviour:
   generatorSoData: {fileID: 11400000, guid: e5bedf7df3c92404ca9690f82f7441ee, type: 2}
   upgradesData: {fileID: 11400000, guid: 054763118b1298d40835233c4541099c, type: 2}
   gameplayView: {fileID: 178045003}
+--- !u!114 &154531647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154531644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e8273b481df594083efeea670d3cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
+  audioSource: {fileID: 0}
+  winSound: {fileID: 0}
+  loseSound: {fileID: 0}
 --- !u!1 &155217874
 GameObject:
   m_ObjectHideFlags: 0
