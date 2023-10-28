@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2948602592	Fart			\Music\Fart	
+	3818917316	PlayAtStart			\Music\PlayAtStart	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	696967885	Farts_Designed_Sudden_Explode_SND23024	G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Farts_Designed_Sudden_Explode_SND23024_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Farts_Designed_Sudden_Explode_SND23024		282228
+

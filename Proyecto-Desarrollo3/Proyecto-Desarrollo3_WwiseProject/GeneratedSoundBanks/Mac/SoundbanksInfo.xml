@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="2572860236">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2948602592" Name="Fart" ObjectPath="\Events\Music\Fart" DurationType="OneShot" DurationMin="1.469615" DurationMax="1.469615">
+					<IncludedMemoryFiles>
+						<File Id="696967885" Language="SFX">
+							<ShortName>Farts_Designed_Sudden_Explode_SND23024.wav</ShortName>
+							<Path>SFX\Farts_Designed_Sudden_Explode_SND23024_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3818917316" Name="PlayAtStart" ObjectPath="\Events\Music\PlayAtStart" DurationType="Infinite"/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
