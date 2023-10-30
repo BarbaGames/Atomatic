@@ -79,7 +79,7 @@ namespace Game
             if(generated > 0) AddCurrency(generated);
         }
 
-        private void AddCurrency(long energyToAdd)
+        public void AddCurrency(long energyToAdd)
         {
             energy += energyToAdd;
             gameplayView.UpdateEnergy(energy);
