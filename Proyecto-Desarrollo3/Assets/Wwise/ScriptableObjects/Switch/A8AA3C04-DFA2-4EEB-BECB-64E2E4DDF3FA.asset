@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043bb212db5cd324783a2a891bc10d2a, type: 3}
+  m_Name: A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA
+  m_EditorClassIdentifier: 
+  objectName: ClickA
+  id: 1206986080
+  guid: A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 4e481325a005da74f941149391fbe1c5, type: 2}

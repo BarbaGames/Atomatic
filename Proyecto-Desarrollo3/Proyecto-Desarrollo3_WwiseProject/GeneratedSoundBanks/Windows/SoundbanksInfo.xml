@@ -11,21 +11,46 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1621786688">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="573643770">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1883161337">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1397303698" Name="ClickGenerator" ObjectPath="\Events\Default Work Unit\ClickGenerator" DurationType="OneShot" DurationMin="0.020104" DurationMax="0.18675">
+				<Event Id="3608800070" Name="BuyNegative" ObjectPath="\Events\Default Work Unit\Gameplay\BuyNegative" DurationType="OneShot" DurationMin="0.379312" DurationMax="0.379312">
 					<IncludedMemoryFiles>
-						<File Id="104214849" Language="SFX">
-							<ShortName>Click-004.wav</ShortName>
-							<Path>SFX\Click-004_10C4C929.wem</Path>
+						<File Id="338355016" Language="SFX">
+							<ShortName>BuyNegative.wav</ShortName>
+							<Path>SFX\BuyNegative_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2590312237" Name="BuyScenario" ObjectPath="\Events\Default Work Unit\Gameplay\BuyScenario" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="469262491" Name="BuyShop" ObjectPath="\Events\Default Work Unit\Gameplay\BuyShop" DurationType="OneShot" DurationMin="0.940833" DurationMax="0.940833">
+					<IncludedMemoryFiles>
+						<File Id="630233695" Language="SFX">
+							<ShortName>BuyShopTest.wav</ShortName>
+							<Path>SFX\BuyShopTest_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3532703493" Name="BuyUpgrade" ObjectPath="\Events\Default Work Unit\Gameplay\BuyUpgrade" DurationType="OneShot" DurationMin="0.888896" DurationMax="0.888896">
+					<IncludedMemoryFiles>
+						<File Id="2067128" Language="SFX">
+							<ShortName>BuyUpgradeTest.wav</ShortName>
+							<Path>SFX\BuyUpgradeTest_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1397303698" Name="ClickGenerator" ObjectPath="\Events\Default Work Unit\Gameplay\ClickGenerator" DurationType="OneShot" DurationMin="0.020104" DurationMax="0.18675">
+					<IncludedMemoryFiles>
+						<File Id="87999183" Language="SFX">
+							<ShortName>ClickSeco-001.wav</ShortName>
+							<Path>SFX\ClickSeco-001_10C4C929.wem</Path>
 						</File>
 						<File Id="375050747" Language="SFX">
 							<ShortName>clicksimplon2.wav</ShortName>
@@ -35,13 +60,17 @@
 							<ShortName>Click-003.wav</ShortName>
 							<Path>SFX\Click-003_10C4C929.wem</Path>
 						</File>
+						<File Id="531003080" Language="SFX">
+							<ShortName>ClickSeco-003.wav</ShortName>
+							<Path>SFX\ClickSeco-003_10C4C929.wem</Path>
+						</File>
 						<File Id="569766503" Language="SFX">
 							<ShortName>Click-002.wav</ShortName>
 							<Path>SFX\Click-002_10C4C929.wem</Path>
 						</File>
-						<File Id="787848516" Language="SFX">
-							<ShortName>Click-005.wav</ShortName>
-							<Path>SFX\Click-005_10C4C929.wem</Path>
+						<File Id="723593182" Language="SFX">
+							<ShortName>ClickSeco-004.wav</ShortName>
+							<Path>SFX\ClickSeco-004_10C4C929.wem</Path>
 						</File>
 						<File Id="840620083" Language="SFX">
 							<ShortName>dobleClick-004.wav</ShortName>
@@ -50,6 +79,10 @@
 						<File Id="876522381" Language="SFX">
 							<ShortName>clicksimplon1.wav</ShortName>
 							<Path>SFX\clicksimplon1_10C4C929.wem</Path>
+						</File>
+						<File Id="912092126" Language="SFX">
+							<ShortName>ClickSeco-002.wav</ShortName>
+							<Path>SFX\ClickSeco-002_10C4C929.wem</Path>
 						</File>
 						<File Id="920639229" Language="SFX">
 							<ShortName>dobleClick-003.wav</ShortName>
@@ -60,7 +93,7 @@
 							<Path>SFX\dobleClickReversa_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
-					<DefaultSwitchValue>{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}</DefaultSwitchValue>
+					<DefaultSwitchValue>{624F653B-6450-46E1-960E-FA5B22D4DD9A}</DefaultSwitchValue>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}">
 							<Media>
@@ -70,8 +103,10 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{624F653B-6450-46E1-960E-FA5B22D4DD9A}">
 							<Media>
-								<File Id="104214849"/>
-								<File Id="787848516"/>
+								<File Id="87999183"/>
+								<File Id="531003080"/>
+								<File Id="723593182"/>
+								<File Id="912092126"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{4E8E7D62-9D06-4843-B24F-9A5FF66ECB5D}">
@@ -93,7 +128,19 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="199363535" Name="UIHover" ObjectPath="\Events\Default Work Unit\UIHover" DurationType="OneShot" DurationMin="0.095354" DurationMax="0.095354">
+				<Event Id="271697268" Name="GeneratorAmbience" ObjectPath="\Events\Default Work Unit\Gameplay\GeneratorAmbience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1513208197" Name="MenuNegative" ObjectPath="\Events\Default Work Unit\Main Menu\MenuNegative" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2496648897" Name="MenuPositive" ObjectPath="\Events\Default Work Unit\Main Menu\MenuPositive" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Gameplay\Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1210207003" Name="UIHoverShop" ObjectPath="\Events\Default Work Unit\Gameplay\UIHoverShop" DurationType="OneShot" DurationMin="0.101479" DurationMax="0.101479">
+					<IncludedMemoryFiles>
+						<File Id="918529064" Language="SFX">
+							<ShortName>UIHover.wav</ShortName>
+							<Path>SFX\UIHover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3234855557" Name="UIHoverUpgrade" ObjectPath="\Events\Default Work Unit\Gameplay\UIHoverUpgrade" DurationType="OneShot" DurationMin="0.095354" DurationMax="0.095354">
 					<IncludedMemoryFiles>
 						<File Id="616632917" Language="SFX">
 							<ShortName>UIButtonHover.wav</ShortName>

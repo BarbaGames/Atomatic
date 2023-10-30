@@ -1,7 +1,36 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2948602592	Fart			\Music\Fart	
-	3818917316	PlayAtStart			\Music\PlayAtStart	
+	271697268	GeneratorAmbience			\Default Work Unit\Gameplay\GeneratorAmbience	
+	469262491	BuyShop			\Default Work Unit\Gameplay\BuyShop	
+	1210207003	UIHoverShop			\Default Work Unit\Gameplay\UIHoverShop	
+	1397303698	ClickGenerator			\Default Work Unit\Gameplay\ClickGenerator	
+	1513208197	MenuNegative			\Default Work Unit\Main Menu\MenuNegative	
+	2496648897	MenuPositive			\Default Work Unit\Main Menu\MenuPositive	
+	2590312237	BuyScenario			\Default Work Unit\Gameplay\BuyScenario	
+	3234855557	UIHoverUpgrade			\Default Work Unit\Gameplay\UIHoverUpgrade	
+	3532703493	BuyUpgrade			\Default Work Unit\Gameplay\BuyUpgrade	
+	3991942870	Music			\Default Work Unit\Gameplay\Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1240427665	ClickStatus			\Default Work Unit\ClickStatus	
+
+Switch	ID	Name	Switch Group			Notes
+	1206986080	ClickA	ClickStatus			
+	1206986082	ClickC	ClickStatus			
+	1206986083	ClickB	ClickStatus			
+	2281549183	DobleClick	ClickStatus			
+	3938304779	DobleClickReversa	ClickStatus			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	696967885	Farts_Designed_Sudden_Explode_SND23024	G:\Users\Contres\Documents\Unity\Game Audio 2023\TSDV-4C-D3\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Farts_Designed_Sudden_Explode_SND23024_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Farts_Designed_Sudden_Explode_SND23024		282228
+	2067128	BuyUpgradeTest	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\BuyUpgradeTest_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\BuyUpgrade\BuyUpgradeTest		85398
+	104214849	Click-004	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Click-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\Click-004		6704
+	375050747	clicksimplon2	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\clicksimplon2_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon2		4262
+	423723300	Click-003	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Click-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-003		3428
+	569766503	Click-002	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Click-002_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-002		1994
+	616632917	UIButtonHover	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\UIButtonHover_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\UIButtonHover		9218
+	630233695	BuyShopTest	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\BuyShopTest_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\BuyShop\BuyShopTest		90384
+	787848516	Click-005	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\Click-005_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\Click-005		5450
+	840620083	dobleClick-004	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\dobleClick-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-004		13146
+	876522381	clicksimplon1	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\clicksimplon1_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon1		3872
+	920639229	dobleClick-003	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\dobleClick-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-003		17992
+	1002903760	dobleClickReversa	D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Mac\SFX\dobleClickReversa_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\dobleClickReversa		13950
 

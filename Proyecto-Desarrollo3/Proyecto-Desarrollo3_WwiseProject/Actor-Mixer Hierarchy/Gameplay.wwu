@@ -174,10 +174,16 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -190,7 +196,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Click-005" ID="{5EFE3AE6-7037-40BA-9596-CCD4FA18D583}" ShortID="248977518">
+								<Sound Name="ClickSeco-001" ID="{F3FF6B8D-B9A6-4C57-9686-F7A52D651688}" ShortID="660142389">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
@@ -200,20 +206,20 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Click-005" ID="{DCC05DE8-C442-4CAD-92C0-467A86BCFBB1}">
+										<AudioFileSource Name="ClickSeco-001" ID="{6080BB31-0F94-4688-8A51-DF9F68783370}">
 											<Language>SFX</Language>
-											<AudioFile>Click-005.wav</AudioFile>
+											<AudioFile>ClickSeco-001.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="787848516"/>
+												<MediaID ID="87999183"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Click-005" ID="{DCC05DE8-C442-4CAD-92C0-467A86BCFBB1}" Platform="Linked"/>
+										<ActiveSource Name="ClickSeco-001" ID="{6080BB31-0F94-4688-8A51-DF9F68783370}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Click-004" ID="{3D048AD6-283D-4A7E-8B7F-40D5CEB2A17E}" ShortID="700227731">
+								<Sound Name="ClickSeco-002" ID="{A8BF2EA2-8DC0-4B09-9A6A-C6AACA9A2E73}" ShortID="1038114412">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
@@ -223,17 +229,63 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Click-004" ID="{DB28C006-AA93-4F01-9177-DD6F47505F3B}">
+										<AudioFileSource Name="ClickSeco-002" ID="{747CB958-6095-4CE9-93AC-29AF931F481B}">
 											<Language>SFX</Language>
-											<AudioFile>Click-004.wav</AudioFile>
+											<AudioFile>ClickSeco-002.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="104214849"/>
+												<MediaID ID="912092126"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="Click-004" ID="{DB28C006-AA93-4F01-9177-DD6F47505F3B}" Platform="Linked"/>
+										<ActiveSource Name="ClickSeco-002" ID="{747CB958-6095-4CE9-93AC-29AF931F481B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ClickSeco-003" ID="{A3DB4E9D-9145-4DD7-A0B5-45620C43C055}" ShortID="517873404">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ClickSeco-003" ID="{12B2702D-DC53-4757-8B86-637C8B451BCC}">
+											<Language>SFX</Language>
+											<AudioFile>ClickSeco-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="531003080"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="ClickSeco-003" ID="{12B2702D-DC53-4757-8B86-637C8B451BCC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ClickSeco-004" ID="{C641C1AC-D4C1-4028-886F-E1E6EC0C2910}" ShortID="307404248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ClickSeco-004" ID="{EF58F8C4-649E-47F2-BB91-357FB6D394AA}">
+											<Language>SFX</Language>
+											<AudioFile>ClickSeco-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="723593182"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="ClickSeco-004" ID="{EF58F8C4-649E-47F2-BB91-357FB6D394AA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -406,10 +458,108 @@
 								<ActiveSource Name="dobleClickReversa" ID="{59B5B8D7-57A4-47E7-9C54-C9ABF6A9571E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="ClickD" ID="{C6FC7623-E51C-4C61-ACA4-B7A73AD5BD25}" ShortID="220362599">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ClickD-001" ID="{7A71728B-D480-4649-97B0-8830C67D3C81}" ShortID="1018899015">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ClickD-001" ID="{E0BE3FDE-55B9-425C-B774-4AC155F8B19E}">
+											<Language>SFX</Language>
+											<AudioFile>ClickD-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="315506197"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="ClickD-001" ID="{E0BE3FDE-55B9-425C-B774-4AC155F8B19E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ClickD-002" ID="{6E016239-192F-4B46-9B00-12B41831ABFD}" ShortID="517643722">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ClickD-002" ID="{A206708D-332D-4AD7-A54B-2E831EDD7EC6}">
+											<Language>SFX</Language>
+											<AudioFile>ClickD-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="92488118"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="ClickD-002" ID="{A206708D-332D-4AD7-A54B-2E831EDD7EC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ClickD-003" ID="{2F8E8AA3-1A5B-46FB-B648-773EE59F1F58}" ShortID="817078800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ClickD-003" ID="{76BF3259-D2CC-43A0-A8A9-DCEC93AE25BB}">
+											<Language>SFX</Language>
+											<AudioFile>ClickD-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="755711202"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="ClickD-003" ID="{76BF3259-D2CC-43A0-A8A9-DCEC93AE25BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists/>
 					<GroupingInfo>
 						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="ClickD" ID="{C6FC7623-E51C-4C61-ACA4-B7A73AD5BD25}"/>
+							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="dobleClickReversa" ID="{23BCA082-CB4A-4796-B095-83D982EC28D4}"/>
 							</GroupingBehavior>
@@ -463,6 +613,7 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<WorkUnit Name="UI" ID="{1A0E1174-3346-4568-9D65-ED255BDC120D}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
