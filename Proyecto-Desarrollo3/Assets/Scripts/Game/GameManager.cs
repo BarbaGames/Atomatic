@@ -79,6 +79,14 @@ namespace Game
             if(generated > 0) AddCurrency(generated);
         }
 
+        /// <summary>
+        /// The purpose is to use this function in a button for debugging purposes.
+        /// </summary>
+        public void DebugAddCurrency()
+        {
+            energy += 1000000;
+            gameplayView.UpdateEnergy(energy);
+        }
         public void AddCurrency(long energyToAdd)
         {
             energy += energyToAdd;
