@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b3151d2d43801468e173571d31c32e, type: 3}
+  m_Name: E7C6216F-4810-4017-A316-326190C4D216
+  m_EditorClassIdentifier: 
+  objectName: ClickStatus
+  id: 1240427665
+  guid: E7C6216F-4810-4017-A316-326190C4D216

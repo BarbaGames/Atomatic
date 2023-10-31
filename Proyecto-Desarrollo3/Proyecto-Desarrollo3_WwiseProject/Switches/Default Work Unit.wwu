@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A1358BBE-7BEF-461E-A166-CE1B5734310F}" SchemaVersion="103">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{A1358BBE-7BEF-461E-A166-CE1B5734310F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A1358BBE-7BEF-461E-A166-CE1B5734310F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="ClickStatus" ID="{E7C6216F-4810-4017-A316-326190C4D216}">
+					<ChildrenList>
+						<Switch Name="ClickA" ID="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}"/>
+						<Switch Name="ClickB" ID="{4E8E7D62-9D06-4843-B24F-9A5FF66ECB5D}"/>
+						<Switch Name="ClickC" ID="{624F653B-6450-46E1-960E-FA5B22D4DD9A}"/>
+						<Switch Name="DobleClick" ID="{7DE62BB7-33B8-43B3-A3E9-5AAA94874FFF}"/>
+						<Switch Name="DobleClickReversa" ID="{CFA91971-E567-4C24-B995-A45230BE1A90}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

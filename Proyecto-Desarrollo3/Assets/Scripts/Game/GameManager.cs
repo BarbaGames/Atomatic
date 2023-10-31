@@ -79,7 +79,15 @@ namespace Game
             if(generated > 0) AddCurrency(generated);
         }
 
-        private void AddCurrency(long energyToAdd)
+        /// <summary>
+        /// The purpose is to use this function in a button for debugging purposes.
+        /// </summary>
+        public void DebugAddCurrency()
+        {
+            energy += 1000000;
+            gameplayView.UpdateEnergy(energy);
+        }
+        public void AddCurrency(long energyToAdd)
         {
             energy += energyToAdd;
             gameplayView.UpdateEnergy(energy);
@@ -115,6 +123,7 @@ namespace Game
             AddCurrency(energyGenerated);
 
             gameplayView.SpawnFlyingText(energyGenerated);
+            AkSoundEngine.PostEvent("ClickGenerator", gameObject); // Wwise evento de click
         }
 
         private void BuyGenerator(string id)
@@ -123,7 +132,11 @@ namespace Game
 
             if (generator != null)
             {
-                if (energy < generator.GeneratorData.levelUpCost) return;
+                if (energy < generator.GeneratorData.levelUpCost)
+                {
+                    AkSoundEngine.PostEvent("BuyNegative", gameObject); // Wwise evento de BuyNegative
+                    return;
+                }
 
                 if (!generator.IsActive)
                 {
@@ -135,7 +148,7 @@ namespace Game
                     RemoveCurrency(generator.GeneratorData.levelUpCost);
                     generator.Upgrade();
                 }
-
+                AkSoundEngine.PostEvent("BuyShop", gameObject); // Wwise evento de BuyShop
                 gameplayView.UpdateGenerator(generator.GeneratorData);
 
                 UpdateEnergyPerSecond();
@@ -148,11 +161,17 @@ namespace Game
             {
                 if (upgrades[i].id == id)
                 {
-                    if (energy < upgrades[i].price) return;
-                    
+                    if (energy < upgrades[i].price)
+                    {
+                        AkSoundEngine.PostEvent("BuyNegative", gameObject); // Wwise evento de BuyNegative
+                        return;
+                    }
+
                     RemoveCurrency(upgrades[i].price);
                     upgrades[i].bought = true;
                     gameplayView.UpdateUpgrade(upgrades[i]);
+                    //AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
+                    return;
                 }
             }
         }

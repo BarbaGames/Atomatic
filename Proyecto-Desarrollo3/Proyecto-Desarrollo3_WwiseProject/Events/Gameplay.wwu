@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0E424C4E-EC9A-4E45-864D-20825F271E28}" SchemaVersion="103" RootDocumentID="{A1FA10B1-4174-4083-B13B-809950744FAF}" ParentDocumentID="{A1FA10B1-4174-4083-B13B-809950744FAF}">
+	<Events>
+		<WorkUnit Name="Gameplay" ID="{0E424C4E-EC9A-4E45-864D-20825F271E28}" OwnerID="{A1FA10B1-4174-4083-B13B-809950744FAF}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="ClickGenerator" ID="{251E6EF7-87E3-4D33-9700-D352A8A9EF3C}">
+					<ChildrenList>
+						<Action Name="" ID="{48A81442-DC47-4254-9647-1CFDC2525BE7}" ShortID="576905524">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click" ID="{FA45FBE7-56D9-49A8-B0B9-B147D22C017D}" WorkUnitID="{AF2F3420-039F-4594-B406-C0AC5B59FF3B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UIHoverShop" ID="{78CE34B5-A851-46E1-A6F7-9D53D6BC3C16}">
+					<ChildrenList>
+						<Action Name="" ID="{2AAD540B-BBED-4615-ACBA-74A09E0838F1}" ShortID="439151763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UIButtonHoverShop" ID="{9730FD8E-9344-420B-935E-63CAED914094}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuyUpgrade" ID="{B546EEAA-5926-43AD-8A64-6B518E7B5E63}">
+					<ChildrenList>
+						<Action Name="" ID="{63C50F86-E5BA-45D2-936C-730689C6C743}" ShortID="465511013">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyUpgrade" ID="{8CAA7EEA-966F-4C47-B1BC-8F9DB7186D2E}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{47E9B433-FD84-4F55-9E10-18D6C47C2385}" ShortID="184138758">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyUpgrade" ID="{8CAA7EEA-966F-4C47-B1BC-8F9DB7186D2E}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuyShop" ID="{BAB0EBE3-5E87-4595-9500-62AE2F881AB7}">
+					<ChildrenList>
+						<Action Name="" ID="{E543AA99-3476-44A5-A6B7-CE9E622FAF53}" ShortID="287555614">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyShopTest" ID="{FFE27AEF-EFBA-4BF4-A888-1CEFF874A5D7}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7037B420-F545-47E4-A831-22612FC26380}" ShortID="857784568">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyShopTest" ID="{FFE27AEF-EFBA-4BF4-A888-1CEFF874A5D7}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="BuyScenario" ID="{94F31768-FB8C-40C7-87C2-43CDF0F9AD98}"/>
+				<Event Name="UIHoverUpgrade" ID="{ED5FED33-07F3-4329-B18A-64EE195CB31C}">
+					<ChildrenList>
+						<Action Name="" ID="{DCBB6416-F17E-4497-85F7-DE010DE6B14E}" ShortID="526004724">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UIButtonHoverUpgrade" ID="{94578065-65BF-4832-890E-1055883AE4DC}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GeneratorAmbience" ID="{D3A36A4D-DEEB-4727-B040-D0F6203CB91B}"/>
+				<Event Name="Music" ID="{482C2FD0-4A14-421A-90D5-E1B9283A82F9}"/>
+				<Event Name="BuyNegative" ID="{DF1082BB-13FC-45A8-A49F-1A3D4DE3E0E1}">
+					<ChildrenList>
+						<Action Name="" ID="{C6C155D4-AF22-4B3B-A27D-725A26B482C9}" ShortID="409406230">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyNegative" ID="{D5E06D82-3711-46FA-8E68-DBA2B54C13E3}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5C3B1CC3-62BF-4B31-A2DD-DE63515C2B9B}" ShortID="569143626">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BuyNegative" ID="{D5E06D82-3711-46FA-8E68-DBA2B54C13E3}" WorkUnitID="{1A0E1174-3346-4568-9D65-ED255BDC120D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

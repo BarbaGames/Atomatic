@@ -14,6 +14,7 @@ namespace UI
         [SerializeField] private TMP_Text txtName = null;
         [SerializeField] private TMP_Text txtPrice = null;
         [SerializeField] private Image imgIcon = null;
+        [SerializeField] private Image imgIconShadow = null;
 
         private string id = null;
         private Action<GeneratorData> onEnableTooltip;
@@ -26,6 +27,7 @@ namespace UI
         {
             this.generatorData = generatorData;
             imgIcon.sprite = this.generatorData.icon;
+            imgIconShadow.sprite = this.generatorData.icon;
             id = this.generatorData.id;
             txtName.text = this.generatorData.id;
             txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);

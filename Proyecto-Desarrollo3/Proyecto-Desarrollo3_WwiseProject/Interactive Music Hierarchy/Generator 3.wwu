@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" SchemaVersion="103" RootDocumentID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" ParentDocumentID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}">
+	<InteractiveMusic>
+		<WorkUnit Name="Generator 3" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" OwnerID="{0EF60662-A536-48B1-A074-B0175C4CE13F}" PersistMode="Nested">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Generator 3" ID="{A29EF400-49F7-4B2F-AFCD-9163E40BD27D}" ShortID="166203830">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="A" ID="{FA5CB454-50C4-4EC5-87C5-BA3F82A98626}" ShortID="756454230">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="20645.1666666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Batería A completa" ID="{6DF378DC-F492-405E-8F76-FB801592F94D}" ShortID="947881581">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Batería A completa" ID="{D3BCB2D7-C6D5-4566-B8C0-E36431DE34FC}">
+											<Language>SFX</Language>
+											<AudioFile>Batería A completa.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="357408021"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Batería A sin hihat" ID="{6AD402B5-3E80-4A87-9A81-E33A6D845936}">
+											<Language>SFX</Language>
+											<AudioFile>Batería A sin hihat.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="308500214"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Batería A sin snare" ID="{9E855811-4552-42E7-BF9E-C3D1B60E17F2}">
+											<Language>SFX</Language>
+											<AudioFile>Batería A sin snare.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="34199969"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{28D94759-589D-4D25-AB32-BABABE52DED2}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{909E136F-E95E-4FAD-8907-02147A0B07E5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería A completa" ID="{D48EAF5F-34BD-4394-A49F-E80116FBDE6F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería A completa" ID="{D3BCB2D7-C6D5-4566-B8C0-E36431DE34FC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{56F66948-3240-4AD4-B559-EF10D9525BA3}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería A sin hihat" ID="{F5D76F77-352B-4747-8D06-9AC76B94BA85}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería A sin hihat" ID="{6AD402B5-3E80-4A87-9A81-E33A6D845936}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{57AC03C4-D1EE-45AF-ACB7-3E0D9A6939AE}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería A sin snare" ID="{29A80D04-3687-480E-9FA9-A04E9FF4AD4D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería A sin snare" ID="{9E855811-4552-42E7-BF9E-C3D1B60E17F2}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Guitarra A 1 con rever" ID="{55A8F2D8-48EE-4A6B-A935-8D3D9ED771B3}" ShortID="841316518">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Guitarra A 1 con rever" ID="{4A7C08FB-009E-418E-9EC2-47156B350800}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra A 1 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="460881786"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Guitarra A 2 con rever" ID="{9FFAB9C9-2638-446A-98BF-08D89F5BC0BC}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra A 2 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="655826575"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Guitarra A 3 con rever" ID="{95E5D0D4-897A-4CEC-82EB-95C6A2627816}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra A 3 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="530466622"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{6EB5FEBF-8F9C-4DFA-8BA6-36928B197398}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9B17B7B1-5676-4664-89DC-810D672471A4}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra A 1 con rever" ID="{FEAE95B9-DD5C-4C32-8E17-DE822467B4FE}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra A 1 con rever" ID="{4A7C08FB-009E-418E-9EC2-47156B350800}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{125C7112-A6AC-472E-8AE1-4BF6EFE0C981}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra A 2 con rever" ID="{0E97539A-FC73-4EBF-9A40-17C704BF37AA}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra A 2 con rever" ID="{9FFAB9C9-2638-446A-98BF-08D89F5BC0BC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{7CA187D5-73EE-4E0F-8EE6-4F9C9768DABA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra A 3 con rever" ID="{338221E5-455E-43F1-B4B8-A8F48807FAFE}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra A 3 con rever" ID="{95E5D0D4-897A-4CEC-82EB-95C6A2627816}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Teclado Acordes A" ID="{2F7E41E7-557B-4E42-B429-573B7A9D18EB}" ShortID="349906160">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Teclado Acordes A" ID="{38D230F3-138A-4CFB-AE1F-4E71EE0ED1A0}">
+											<Language>SFX</Language>
+											<AudioFile>Teclado Acordes A.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="620534225"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{6FEF7C28-EC7D-4578-9D22-BBE9EA7153F4}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D0AC86E8-8EF8-4DED-97FE-9CD90B5C5A16}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Teclado Acordes A" ID="{12D142C0-CA8C-46D3-ADDC-25D2E47ECFC0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Teclado Acordes A" ID="{38D230F3-138A-4CFB-AE1F-4E71EE0ED1A0}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B725ECDF-5F32-4F7B-8B12-22B4FAE0F911}">
+														<ObjectLists/>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{D65DF5FE-1264-42C2-932E-71E09DF06CC0}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{0E4C7964-C7B6-4D0D-85E1-35975B8663D1}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="10318.4713375796"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="B" ID="{DE677136-F135-4B48-B650-B807C60F2E84}" ShortID="147994719">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="20645.1666666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Batería B completa" ID="{FEFC75EF-5588-4A2D-96FA-7C3AD09A37B1}" ShortID="492824627">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Batería B completa" ID="{C458A87D-2C4C-4668-83C8-A0002E4BEBB6}">
+											<Language>SFX</Language>
+											<AudioFile>Batería B completa.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="257834542"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Batería B sin hihat" ID="{FA10E94B-C880-48E4-ABD6-C4E4FEC3B3A9}">
+											<Language>SFX</Language>
+											<AudioFile>Batería B sin hihat.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="327312290"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Batería B sin snare" ID="{D7E01C13-89FA-4607-8BB4-3A587A3C7C9C}">
+											<Language>SFX</Language>
+											<AudioFile>Batería B sin snare.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="232526594"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{4494A4A4-4570-47CC-89CE-F09CF1704F43}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{6708422C-E493-4B51-B932-4029866204B5}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería B completa" ID="{76639666-3C11-4904-A781-59E3D34736AC}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería B completa" ID="{C458A87D-2C4C-4668-83C8-A0002E4BEBB6}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{711DB8A3-D38F-4F11-BFA1-D9D1585D7E2E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería B sin hihat" ID="{E38E7745-E9C6-42A6-B6CF-ECC1079B9579}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería B sin hihat" ID="{FA10E94B-C880-48E4-ABD6-C4E4FEC3B3A9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{53C9FCBB-00A9-4486-AD74-FA7CDE147698}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Batería B sin snare" ID="{9E19C9FB-A604-4382-990E-F2AFABD7C48F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Batería B sin snare" ID="{D7E01C13-89FA-4607-8BB4-3A587A3C7C9C}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Guitarra B 1 con rever" ID="{9C0AE68F-211B-4A72-AE10-5C6A623E8B06}" ShortID="801365034">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Guitarra B 1 con rever" ID="{F72E3603-146A-4007-BC32-E2A76686FBF5}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra B 1 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="199208059"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Guitarra B 2 con rever" ID="{1F3C6DC5-3E0D-4D4B-94C6-E5040AFB6138}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra B 2 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="306570316"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Guitarra B 3 con rever" ID="{78CB52F6-FB86-4EA2-9105-37266C6BFAD0}">
+											<Language>SFX</Language>
+											<AudioFile>Guitarra B 3 con rever.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="768624693"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{60073361-02B1-487F-9075-742861FDA025}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{1D049CC5-2C1B-4E82-ABBE-0CA299971A8C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra B 1 con rever" ID="{B4D4C958-10C9-4685-B821-A973CD37392D}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra B 1 con rever" ID="{F72E3603-146A-4007-BC32-E2A76686FBF5}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F40F6B5F-3743-4458-9F77-F67819AB7BF0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra B 2 con rever" ID="{39E362DA-9809-455F-96F4-1EBD2063386A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra B 2 con rever" ID="{1F3C6DC5-3E0D-4D4B-94C6-E5040AFB6138}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E5810068-1C2D-4EFF-9A7E-751FBBF4F5D2}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Guitarra B 3 con rever" ID="{77154A32-52FB-4B04-8EA3-EB175B6D17D2}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="20645.1666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Guitarra B 3 con rever" ID="{78CB52F6-FB86-4EA2-9105-37266C6BFAD0}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Teclado Acordes B" ID="{0C23BA93-405E-4FE8-B7E6-F03A93F9C8E7}" ShortID="694532448">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Teclado Acordes B" ID="{13DB642A-6A59-4F22-A09A-0EA01C6D46A0}">
+											<Language>SFX</Language>
+											<AudioFile>Teclado Acordes B.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="8634741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{A7F83931-3791-4BFE-BC78-1A3D8DCB76FF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{7A9F53DF-97B5-4088-9ABD-D92A51F4CF4A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Teclado Acordes B" ID="{F606ECE4-A174-4DC1-90F5-9AB5D741C8A6}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="10322.5833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Teclado Acordes B" ID="{13DB642A-6A59-4F22-A09A-0EA01C6D46A0}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{E259B957-1DC9-4C4D-9B22-08B0FAA88797}">
+														<ObjectLists/>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{0D3C096B-289F-4C1A-8E28-3989BFAA8F96}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{47241CF4-8C9D-4CE9-88BB-E35B004C756C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="1000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{458D91F3-DEF4-4D39-8ECD-B26C335AFC08}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{3E941012-CEE2-4578-B82B-C892498ED275}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{6A679662-8D2A-4463-9A84-5791C10D38E5}" ShortID="898863981">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{1CCE11BF-8F5E-490B-B928-653D67CE2B91}" ShortID="776887155">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="2"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="A" ID="{FA5CB454-50C4-4EC5-87C5-BA3F82A98626}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{357E4ED4-2913-411D-AF84-48463ED5AE83}" ShortID="783466042">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="2"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="B" ID="{DE677136-F135-4B48-B650-B807C60F2E84}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
