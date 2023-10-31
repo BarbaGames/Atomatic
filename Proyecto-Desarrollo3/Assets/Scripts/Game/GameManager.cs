@@ -170,7 +170,8 @@ namespace Game
                     RemoveCurrency(upgrades[i].price);
                     upgrades[i].bought = true;
                     gameplayView.UpdateUpgrade(upgrades[i]);
-                    AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
+                    //AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
+                    return;
                 }
             }
         }
