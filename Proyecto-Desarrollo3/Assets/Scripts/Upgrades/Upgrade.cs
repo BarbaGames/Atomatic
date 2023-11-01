@@ -1,11 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+
+using Newtonsoft.Json;
+
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "Upgrade")]
+[Serializable]
 public class Upgrade : ScriptableObject
 {
-    public string description;
-    public Sprite icon;
-    public long price;
-    public int id;
-    public bool bought;
+    [SerializeField] public string description;
+    [JsonIgnore] public Sprite icon;
+    [SerializeField] public long price;
+    [SerializeField] public int id;
+    [SerializeField] public bool bought;
 }

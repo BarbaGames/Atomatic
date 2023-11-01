@@ -1,8 +1,16 @@
+using System;
 using System.Collections.Generic;
+
 using Generators;
+
+using Newtonsoft.Json;
+
 using Progress;
+
 using UI;
+
 using UnityEngine;
+
 
 namespace Game
 {
@@ -17,20 +25,15 @@ namespace Game
         [SerializeField] private GameplayView gameplayView = null;
 
         private const string EnergyKey = "energy";
+        private const string GeneratorsKey = "generators";
+        private const string UpgradesKey = "upgrades";
+
         private long energy = 0;
         private List<Generator> generators = null;
         private List<Upgrade> upgrades = null;
 
         private void Start()
         {
-            if (FileHandler.FileExist(EnergyKey))
-            {
-                if (FileHandler.TryLoadFileRaw(EnergyKey, out string data))
-                {
-                    AddCurrency(long.Parse(data));
-                }
-            }
-
             upgrades = new List<Upgrade>();
             for (int i = 0; i < upgradesData.upgrades.Count; i++)
             {
@@ -47,10 +50,67 @@ namespace Game
                 generator.Init(Instantiate(generatorSoData.generators[i]));
                 generators.Add(generator);
             }
+
+            if (FileHandler.FileExist(EnergyKey))
+            {
+                if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
+                {
+                    AddCurrency(long.Parse(energyDataString));
+                }
+
+                if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
+                {
+                    List<GeneratorData> generatorsData = JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
+
+                    for (int i = 0; i < generatorsData.Count; i++)
+                    {
+                        Generator generator = generators.Find(g => g.GeneratorData.id == generatorsData[i].id);
+                        if (generator != null && generatorsData[i].unlocked)
+                        {
+                            generator.SetData(generatorsData[i]);
+                            generator.GeneratorData.unlocked = true;
+                            generator.IsActive = true;
+                            generator.gameObject.SetActive(true);
+                            gameplayView.UnlockGenerator(generator.GeneratorData);
+                            gameplayView.UpdateGenerator(generator.GeneratorData);
+                        }
+                    }
+                }
+
+                if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
+                {
+                    List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
+
+                    for (int i = 0; i < upgrades.Count; i++)
+                    {
+                        Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
+
+                        if (upgrade != null && upgrade.bought)
+                        {
+                            upgrades[i] = upgrade;
+                            gameplayView.UpdateUpgrade(upgrades[i]);
+                        }
+                    }
+                }
+            }
         }
-        private void Update()
+        private void Update() { GeneratorsLoop(); }
+
+        private void OnApplicationQuit()
         {
-            GeneratorsLoop();
+            FileHandler.SaveFile(EnergyKey, energy.ToString());
+
+            List<GeneratorData> generatorsData = new List<GeneratorData>();
+            for (int i = 0; i < generators.Count; i++)
+            {
+                if (generators[i].GeneratorData.unlocked)
+                {
+                    generatorsData.Add(generators[i].GeneratorData);
+                }
+            }
+
+            FileHandler.SaveFile(GeneratorsKey, JsonConvert.SerializeObject(generatorsData));
+            FileHandler.SaveFile(UpgradesKey, JsonConvert.SerializeObject(upgrades));
         }
 
         public void UpgradeGenerator(long price, int id)
@@ -68,7 +128,7 @@ namespace Game
         private void GeneratorsLoop()
         {
             long generated = 0;
-            
+
             for (int i = 1; i < generators.Count; i++)
             {
                 if (!generators[i].IsActive) continue;
@@ -76,7 +136,7 @@ namespace Game
                 generated += generators[i].Generate();
             }
 
-            if(generated > 0) AddCurrency(generated);
+            if (generated > 0) AddCurrency(generated);
         }
 
         /// <summary>
@@ -87,6 +147,7 @@ namespace Game
             energy += 1000000;
             gameplayView.UpdateEnergy(energy);
         }
+
         public void AddCurrency(long energyToAdd)
         {
             energy += energyToAdd;

@@ -37,7 +37,7 @@ namespace UI
         #endregion
 
         #region PUBLIC_METHODS
-        public void Init(List<GeneratorData> generatorStats, List<Upgrade> upgrades, Action<string> onTryBuyGenerator,Action<int> onTryBuyUpgrade, Action onPlayerClick)
+        public void Init(List<GeneratorData> generatorStats, List<Upgrade> upgrades, Action<string> onTryBuyGenerator, Action<int> onTryBuyUpgrade, Action onPlayerClick)
         {
             generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             generatorsView.Init();

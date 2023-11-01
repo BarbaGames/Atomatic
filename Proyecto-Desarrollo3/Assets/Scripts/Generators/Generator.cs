@@ -18,6 +18,13 @@ namespace Generators
             this.generatorData = generatorData;
         }
 
+        public void SetData(GeneratorData generatorData)
+        {
+            this.generatorData.level = generatorData.level;
+            this.generatorData.levelUpCost = generatorData.levelUpCost;
+            this.generatorData.currencyGenerated = generatorData.currencyGenerated;
+        }
+        
         /// <summary>
         /// After a certain time or condition, returns currency generated.
         /// </summary>
