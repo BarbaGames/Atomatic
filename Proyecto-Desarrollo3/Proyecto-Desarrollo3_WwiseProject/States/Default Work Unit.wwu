@@ -10,6 +10,21 @@
 						<State Name="Three" ID="{7FAB38DC-18E6-44C6-97C0-00B698AB032E}"/>
 						<State Name="One" ID="{1F110991-2F4D-4515-8EF3-2B18B441869A}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{44053EC0-9FA7-47E0-BD5B-267C20217E0F}"/>
+							<EndState Name="One" ID="{1F110991-2F4D-4515-8EF3-2B18B441869A}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="GameScene" ID="{3C8ABC27-1715-4D28-8872-03A50C4D9F0F}">
+					<ChildrenList>
+						<State Name="None" ID="{FF7DF97F-E5F1-4A6E-827F-D6E2B2144DF0}"/>
+						<State Name="MainMenu" ID="{37A238E3-64E7-4F09-AF51-CE27EAFAF85D}"/>
+						<State Name="InGame" ID="{70B33D6D-9E0A-41D1-B411-396B96E50138}"/>
+					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

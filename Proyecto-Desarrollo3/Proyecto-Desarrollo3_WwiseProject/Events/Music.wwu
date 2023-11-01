@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D771042E-9892-4FDF-A02D-E79D6A8E6ADC}" SchemaVersion="103" RootDocumentID="{A1FA10B1-4174-4083-B13B-809950744FAF}" ParentDocumentID="{A1FA10B1-4174-4083-B13B-809950744FAF}">
+	<Events>
+		<WorkUnit Name="Music" ID="{D771042E-9892-4FDF-A02D-E79D6A8E6ADC}" OwnerID="{A1FA10B1-4174-4083-B13B-809950744FAF}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="StartMusic" ID="{A6B03025-374B-453C-ACAE-45A7A089E630}">
+					<ChildrenList>
+						<Action Name="" ID="{B4CA157A-95B1-42E0-A613-380456731628}" ShortID="129076973">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main Switch" ID="{521F663F-17E3-4DDD-918E-A9DF0AB161F6}" WorkUnitID="{D500F8CE-190D-48A9-A2C7-EF341B208EFC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5FC24836-1587-4A75-8455-F61D377BE1CF}" ShortID="284526413">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMenu" ID="{37A238E3-64E7-4F09-AF51-CE27EAFAF85D}" WorkUnitID="{9703BCDC-DB4C-44E3-8E84-05B4F82E0FF2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0E9B3FE7-C36E-4CF9-BBF0-FC81C8A6CE6A}" ShortID="498498737">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="One" ID="{1F110991-2F4D-4515-8EF3-2B18B441869A}" WorkUnitID="{9703BCDC-DB4C-44E3-8E84-05B4F82E0FF2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayAtEnd" ID="{322B0C2F-AEC0-46DD-9053-5723A71B3504}">
+					<ChildrenList>
+						<Action Name="" ID="{BD7F1564-B16D-46FF-AD44-7EBF9D98CD2D}" ShortID="1002171763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music Switch" ID="{0EF60662-A536-48B1-A074-B0175C4CE13F}" WorkUnitID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{148C0528-DD9B-4754-A898-9C7194733F96}" ShortID="995391287">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="98"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music Switch" ID="{0EF60662-A536-48B1-A074-B0175C4CE13F}" WorkUnitID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

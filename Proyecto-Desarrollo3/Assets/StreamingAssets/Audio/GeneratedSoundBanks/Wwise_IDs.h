@@ -21,7 +21,8 @@ namespace AK
         static const AkUniqueID GENERATORAMBIENCE = 271697268U;
         static const AkUniqueID MENUNEGATIVE = 1513208197U;
         static const AkUniqueID MENUPOSITIVE = 2496648897U;
-        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PLAYATEND = 393478359U;
+        static const AkUniqueID STARTMUSIC = 3827058668U;
         static const AkUniqueID UIHOVERSHOP = 1210207003U;
         static const AkUniqueID UIHOVERUPGRADE = 3234855557U;
     } // namespace EVENTS
@@ -40,6 +41,18 @@ namespace AK
                 static const AkUniqueID TWO = 678209053U;
             } // namespace STATE
         } // namespace CURRENTGENERATOR
+
+        namespace GAMESCENE
+        {
+            static const AkUniqueID GROUP = 2859421969U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID MAINMENU = 3604647259U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace GAMESCENE
 
     } // namespace STATES
 

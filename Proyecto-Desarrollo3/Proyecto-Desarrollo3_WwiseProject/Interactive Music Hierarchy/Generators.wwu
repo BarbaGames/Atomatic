@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" SchemaVersion="103" RootDocumentID="{D500F8CE-190D-48A9-A2C7-EF341B208EFC}" ParentDocumentID="{D500F8CE-190D-48A9-A2C7-EF341B208EFC}">
 	<InteractiveMusic>
-		<WorkUnit Name="Generators" ID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" PersistMode="Standalone">
+		<WorkUnit Name="Generators" ID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" OwnerID="{521F663F-17E3-4DDD-918E-A9DF0AB161F6}" PersistMode="Nested">
 			<PropertyList>
 				<Property Name="Color" Type="int16" Value="13"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -22,6 +22,7 @@
 					<ChildrenList>
 						<WorkUnit Name="Generator 2" ID="{28A928C0-01CB-4DF3-B868-8CC853D483A3}" PersistMode="Reference"/>
 						<WorkUnit Name="Generator 3" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" PersistMode="Reference"/>
+						<WorkUnit Name="Generator 1" ID="{37FD8DDA-46E8-4648-8CD6-99640391B884}" PersistMode="Reference"/>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{A71CCFAB-C0B0-4E04-AA46-2EBE0BC95203}">
@@ -30,6 +31,18 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{4B8B83E1-CBC2-4C29-B8BF-DD2F43BCD762}">
+									<TransitionInfo/>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{CD540F22-C34F-41E4-A2B8-FC7687E679A0}">
+									<PropertyList>
+										<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Generator 1" ID="{472925CA-B6BD-4EA9-978F-D73360F0D21B}" WorkUnitID="{37FD8DDA-46E8-4648-8CD6-99640391B884}"/>
+										</Reference>
+									</ReferenceList>
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
@@ -55,6 +68,14 @@
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Generator 3" ID="{A29EF400-49F7-4B2F-AFCD-9163E40BD27D}" WorkUnitID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="One" ID="{1F110991-2F4D-4515-8EF3-2B18B441869A}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Generator 1" ID="{472925CA-B6BD-4EA9-978F-D73360F0D21B}" WorkUnitID="{37FD8DDA-46E8-4648-8CD6-99640391B884}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

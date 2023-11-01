@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="Main Menu" ID="{ED3446A0-9237-4339-8C78-D3FB6CDB9527}" PersistMode="Reference"/>
 				<WorkUnit Name="Gameplay" ID="{0E424C4E-EC9A-4E45-864D-20825F271E28}" PersistMode="Reference"/>
+				<WorkUnit Name="Music" ID="{D771042E-9892-4FDF-A02D-E79D6A8E6ADC}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

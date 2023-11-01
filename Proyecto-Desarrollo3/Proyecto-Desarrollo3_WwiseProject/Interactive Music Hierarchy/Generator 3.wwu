@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" SchemaVersion="103" RootDocumentID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}" ParentDocumentID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}">
+<WwiseDocument Type="WorkUnit" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" SchemaVersion="103" RootDocumentID="{D500F8CE-190D-48A9-A2C7-EF341B208EFC}" ParentDocumentID="{D9601AE7-12B8-4901-B35C-0CF75F7C3CC9}">
 	<InteractiveMusic>
 		<WorkUnit Name="Generator 3" ID="{4EEE41EE-CBA7-4B71-B944-B1AAF29EEFCB}" OwnerID="{0EF60662-A536-48B1-A074-B0175C4CE13F}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Generator 3" ID="{A29EF400-49F7-4B2F-AFCD-9163E40BD27D}" ShortID="166203830">
 					<ReferenceList>

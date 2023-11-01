@@ -1,11 +1,15 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	1548521311	CurrentGenerator			\Default Work Unit\CurrentGenerator	
+	2859421969	GameScene			\Default Work Unit\GameScene	
 
 State	ID	Name	State Group			Notes
 	678209053	Two	CurrentGenerator			
 	748895195	None	CurrentGenerator			
 	912956111	Three	CurrentGenerator			
 	1064933119	One	CurrentGenerator			
+	748895195	None	GameScene			
+	984691642	InGame	GameScene			
+	3604647259	MainMenu	GameScene			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

@@ -80,7 +80,6 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="GeneratorAmbience" ID="{D3A36A4D-DEEB-4727-B040-D0F6203CB91B}"/>
-				<Event Name="Music" ID="{482C2FD0-4A14-421A-90D5-E1B9283A82F9}"/>
 				<Event Name="BuyNegative" ID="{DF1082BB-13FC-45A8-A49F-1A3D4DE3E0E1}">
 					<ChildrenList>
 						<Action Name="" ID="{C6C155D4-AF22-4B3B-A27D-725A26B482C9}" ShortID="409406230">
