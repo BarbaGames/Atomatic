@@ -24,7 +24,7 @@ namespace Scenary
                 transform.Rotate(0, 180, 0);
             }
 
-            if (transform.position.x < start.position.x)
+            if (transform.position.x <start.position.x)
             {
                 _direction *= -1;
                 transform.Rotate(0, 180, 0);
