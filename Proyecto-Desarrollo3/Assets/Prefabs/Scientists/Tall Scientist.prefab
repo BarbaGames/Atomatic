@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3230888597970882055}
   - component: {fileID: 1992579884952203704}
   - component: {fileID: 4216379731339066471}
+  - component: {fileID: -6576838918826860547}
   m_Layer: 5
   m_Name: Tall Scientist
   m_TagString: Untagged
@@ -35,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 961.4142, y: 177.3327}
   m_SizeDelta: {x: 37.2136, y: 62.2064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3230888597970882055
@@ -97,3 +98,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6576838918826860547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611153438775650723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e56ab45342589429c9a1d4bc01f99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: -385, y: 0, z: 0}
+  targetScale: {x: 1, y: 1, z: 1}
+  xPositionRange: {x: 419, y: -419}
+  lerpSpeed: 1
+  lerpSpeedX: 10
+  startPoint: {x: -419, y: 0, z: 0}
+  endPoint: {x: 419, y: 0, z: 0}
+  speed: 0.1

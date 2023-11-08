@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 using Generators;
 using TMPro;
 using UnityEngine;
@@ -11,24 +13,23 @@ namespace UI
     {
         [SerializeField] private TMP_Text counterTxt = null;
         [SerializeField] private Image background;
-        private GameObject scientist;
+        private List<ScientistController> scientists;
         private GeneratorData generatorData = null;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
+        private GameObject scientist;
         public string Id { get => generatorData.id; }
 
         public void Init(GeneratorData generatorData, GameObject scientist, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
+            this.scientist = scientist;
             this.generatorData = generatorData;
             counterTxt.text = generatorData.level.ToString();
             background.sprite = generatorData.background;
-            this.scientist = scientist;
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
-            // Test
-            GameObject testScientist = Instantiate(this.scientist, transform);
-            testScientist.transform.position = transform.position;
-            //testScientist.transform.position.x += transform.position.
+
+            scientists = new List<ScientistController>();
         }
 
         public void UpdateData(GeneratorData generatorData)
@@ -36,11 +37,19 @@ namespace UI
             this.generatorData = generatorData;
             counterTxt.text = generatorData.level.ToString();
             //instanciate new scientist per level
+
+            for (int i = 0; i < this.generatorData.level; i++)
+            {
+                ScientistController go = Instantiate(scientist, transform).GetComponent<ScientistController>();
+                go.transform.localPosition = new Vector3(-385, 20, 0);
+                go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                go.StartYScaleLerp();
+                scientists.Add(go);
+            }
         }
         public void OnPointerEnter(PointerEventData eventData)
         {
             onEnableTooltip.Invoke(generatorData);
-
         }
         public void OnPointerExit(PointerEventData eventData)
         {
