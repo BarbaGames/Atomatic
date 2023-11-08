@@ -54,6 +54,7 @@ namespace Menu
             int i = 0;
             foreach (var resolution in auxResolutions)
             {
+                if (resolution.width % 16 != 0 && resolution.height % 9 != 0) continue;
                 string resolutionString = resolution.width + " x " + resolution.height;
                 int refreshRate = (int)resolution.refreshRateRatio.value;
 
