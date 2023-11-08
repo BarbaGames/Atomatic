@@ -1,3 +1,7 @@
+using Newtonsoft.Json;
+
+using Progress;
+
 using TMPro;
 using UnityEngine;
 
@@ -15,11 +19,25 @@ namespace Tutorial
         private int previousDialogues = 0;
         private int i = 0;
 
+        private const string TutorialKey = "watchedTutorial";
+
         private void Start()
         {
+            if (FileHandler.TryLoadFileRaw(TutorialKey, out string tutorialDataString))
+            {
+                bool watchedTutorial = JsonConvert.DeserializeObject<bool>(tutorialDataString);
+
+                if (watchedTutorial)
+                {
+                    CloseTutorial();
+                    return;
+                }
+            }
+            
             if (dialogues.Length > 0)
             {
                 dialogue.text = dialogues[0];
+                tutorialSteps[currentStep].SetActive(true);
             }
             else
             {
@@ -80,6 +98,7 @@ namespace Tutorial
 
         public void CloseTutorial()
         {
+            FileHandler.SaveFile(TutorialKey,JsonConvert.SerializeObject(true));
             tutorialObject.SetActive(false);
         }
     }
