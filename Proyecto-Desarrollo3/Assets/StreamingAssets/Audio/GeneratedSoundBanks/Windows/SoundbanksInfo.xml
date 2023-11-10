@@ -3,7 +3,7 @@
 	<RootPaths>
 		<ProjectRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
 		<SourceFilesRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<SoundBanksRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3864350052">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3018779415">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -30,7 +30,120 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2590312237" Name="BuyScenario" ObjectPath="\Events\Default Work Unit\Gameplay\BuyScenario" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="469262491" Name="BuyShop" ObjectPath="\Events\Default Work Unit\Gameplay\BuyShop" DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="469262491" Name="BuyShop" ObjectPath="\Events\Default Work Unit\Gameplay\BuyShop" DurationType="OneShot" DurationMin="0.5" DurationMax="1.5">
+					<IncludedMemoryFiles>
+						<File Id="68095229" Language="SFX">
+							<ShortName>IncrementalBuyShop-012.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-012_10C4C929.wem</Path>
+						</File>
+						<File Id="129408635" Language="SFX">
+							<ShortName>IncrementalBuyShop-011.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-011_10C4C929.wem</Path>
+						</File>
+						<File Id="148512564" Language="SFX">
+							<ShortName>IncrementalBuyShop-006.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-006_10C4C929.wem</Path>
+						</File>
+						<File Id="237945014" Language="SFX">
+							<ShortName>IncrementalBuyShop-008.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-008_10C4C929.wem</Path>
+						</File>
+						<File Id="297939225" Language="SFX">
+							<ShortName>IncrementalBuyShop-002.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-002_10C4C929.wem</Path>
+						</File>
+						<File Id="333392990" Language="SFX">
+							<ShortName>IncrementalBuyShop-001.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-001_10C4C929.wem</Path>
+						</File>
+						<File Id="528173449" Language="SFX">
+							<ShortName>IncrementalBuyShop-007.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-007_10C4C929.wem</Path>
+						</File>
+						<File Id="648263188" Language="SFX">
+							<ShortName>IncrementalBuyShop-004.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-004_10C4C929.wem</Path>
+						</File>
+						<File Id="722503634" Language="SFX">
+							<ShortName>IncrementalBuyShop-009.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-009_10C4C929.wem</Path>
+						</File>
+						<File Id="754984195" Language="SFX">
+							<ShortName>IncrementalBuyShop-005.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-005_10C4C929.wem</Path>
+						</File>
+						<File Id="773978567" Language="SFX">
+							<ShortName>IncrementalBuyShop-010.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-010_10C4C929.wem</Path>
+						</File>
+						<File Id="1025011006" Language="SFX">
+							<ShortName>IncrementalBuyShop-003.wav</ShortName>
+							<Path>SFX\IncrementalBuyShop-003_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{5B3DAC0C-E578-494B-967E-CE325D454B62}">
+							<Media>
+								<File Id="1025011006"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{84080E0E-A0ED-4542-8996-225B26556C71}">
+							<Media>
+								<File Id="773978567"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{35F97130-B368-452B-A32E-1EC1C9053B19}">
+							<Media>
+								<File Id="237945014"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AA094146-91D7-41D1-A764-CFCBA3487B45}">
+							<Media>
+								<File Id="297939225"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{438FA561-FF8D-4714-B509-D696F7CBF000}">
+							<Media>
+								<File Id="148512564"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{739C066E-EB5D-4BCE-A2A7-BCC7D61C7E41}">
+							<Media>
+								<File Id="528173449"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9391328B-7E2F-4B86-91AC-A4C1C6C766CA}">
+							<Media>
+								<File Id="754984195"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5E322ABF-B6BE-4CAF-9475-81D9067889AC}">
+							<Media>
+								<File Id="333392990"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{EA9460C6-D75B-4ADD-B44E-F47412B09F5F}">
+							<Media>
+								<File Id="648263188"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5DE629D9-5C50-4523-93C9-2877E98E0267}">
+							<Media>
+								<File Id="68095229"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{DDE642E6-C7BC-4EA9-BD76-E02756A53CC1}">
+							<Media>
+								<File Id="722503634"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{532905F0-ECDD-4E5A-938E-EB56203605DA}">
+							<Media>
+								<File Id="129408635"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="3532703493" Name="BuyUpgrade" ObjectPath="\Events\Default Work Unit\Gameplay\BuyUpgrade" DurationType="OneShot" DurationMin="0.888896" DurationMax="0.888896">
 					<IncludedMemoryFiles>
 						<File Id="2067128" Language="SFX">
@@ -143,6 +256,22 @@
 				</Event>
 			</IncludedEvents>
 			<SwitchGroups>
+				<SwitchGroup Id="624697073" Name="IncrementalBuyShopSwitches" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches" GUID="{B4DE843F-22B0-4DAC-87B3-7CAFF5CF45E4}">
+					<Switches>
+						<Switch Id="2775272882" Name="IncrementalBuyShop1" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop1" GUID="{5E322ABF-B6BE-4CAF-9475-81D9067889AC}"/>
+						<Switch Id="2775272881" Name="IncrementalBuyShop2" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop2" GUID="{AA094146-91D7-41D1-A764-CFCBA3487B45}"/>
+						<Switch Id="2775272880" Name="IncrementalBuyShop3" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop3" GUID="{5B3DAC0C-E578-494B-967E-CE325D454B62}"/>
+						<Switch Id="2775272887" Name="IncrementalBuyShop4" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop4" GUID="{EA9460C6-D75B-4ADD-B44E-F47412B09F5F}"/>
+						<Switch Id="2775272886" Name="IncrementalBuyShop5" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop5" GUID="{9391328B-7E2F-4B86-91AC-A4C1C6C766CA}"/>
+						<Switch Id="2775272885" Name="IncrementalBuyShop6" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop6" GUID="{438FA561-FF8D-4714-B509-D696F7CBF000}"/>
+						<Switch Id="2775272884" Name="IncrementalBuyShop7" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop7" GUID="{739C066E-EB5D-4BCE-A2A7-BCC7D61C7E41}"/>
+						<Switch Id="2775272891" Name="IncrementalBuyShop8" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop8" GUID="{35F97130-B368-452B-A32E-1EC1C9053B19}"/>
+						<Switch Id="2775272890" Name="IncrementalBuyShop9" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop9" GUID="{DDE642E6-C7BC-4EA9-BD76-E02756A53CC1}"/>
+						<Switch Id="434851590" Name="IncrementalBuyShop10" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop10" GUID="{84080E0E-A0ED-4542-8996-225B26556C71}"/>
+						<Switch Id="434851591" Name="IncrementalBuyShop11" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop11" GUID="{532905F0-ECDD-4E5A-938E-EB56203605DA}"/>
+						<Switch Id="434851588" Name="IncrementalBuyShop12" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop12" GUID="{5DE629D9-5C50-4523-93C9-2877E98E0267}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="1240427665" Name="ClickStatus" ObjectPath="\Switches\Default Work Unit\ClickStatus" GUID="{E7C6216F-4810-4017-A316-326190C4D216}">
 					<Switches>
 						<Switch Id="1206986080" Name="ClickA" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickA" GUID="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}"/>
