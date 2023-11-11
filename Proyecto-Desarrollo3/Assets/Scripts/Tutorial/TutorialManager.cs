@@ -100,6 +100,7 @@ namespace Tutorial
         {
             FileHandler.SaveFile(TutorialKey,JsonConvert.SerializeObject(true));
             tutorialObject.SetActive(false);
+            // final music start tener en cuenta la segunda vez que se abre le tuto. 
         }
     }
 }
