@@ -13,7 +13,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+							<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -36,7 +36,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+							<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -46,7 +46,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 								</Reference>
 							</ReferenceList>
 							<ObjectLists/>
@@ -57,7 +57,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 								</Reference>
 							</ReferenceList>
 							<ObjectLists/>
@@ -68,7 +68,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 								</Reference>
 							</ReferenceList>
 							<ObjectLists/>
@@ -79,7 +79,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -105,7 +105,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+							<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -115,7 +115,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -148,7 +148,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+							<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -171,7 +171,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+							<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -188,6 +188,412 @@
 						<ActiveSource Name="BuyNegative" ID="{479F6FC2-F5E1-4291-98E0-5F69F9E59EF3}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<SwitchContainer Name="IncrementalBuyShop" ID="{6BD76B4B-2892-4AC3-87D1-416F13B49B3A}" ShortID="332525389">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{FC020452-54EE-4891-A249-EA78C4F9C779}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="IncrementalBuyShopSwitches" ID="{57F900B6-0284-4D8D-88AF-FF93C3E8507C}" WorkUnitID="{A1358BBE-7BEF-461E-A166-CE1B5734310F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="IncrementalBuyShop-001" ID="{651A5F42-62F9-4B0A-897E-62414D365515}" ShortID="805171171">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-001" ID="{B4CC94DB-BAAD-4CD1-A3F8-E4AA1E256537}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="513999840"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-001" ID="{B4CC94DB-BAAD-4CD1-A3F8-E4AA1E256537}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-002" ID="{EB41D5C8-6560-4F46-BDF0-34781BD62E5E}" ShortID="713521970">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-002" ID="{C282D949-9C80-4874-9549-CC274F165135}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="526061857"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-002" ID="{C282D949-9C80-4874-9549-CC274F165135}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-003" ID="{D35D9B44-CE5C-4720-9707-004ED0FDF935}" ShortID="171416833">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-003" ID="{BD760448-A43C-44E6-972B-73BFC0FC399A}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="279390958"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-003" ID="{BD760448-A43C-44E6-972B-73BFC0FC399A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-004" ID="{C8A03686-AB23-4B81-88EF-9FF0D396060A}" ShortID="759135609">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-004" ID="{165EDE73-2CF3-4737-97A7-8C91045B353B}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="517272824"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-004" ID="{165EDE73-2CF3-4737-97A7-8C91045B353B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-005" ID="{A30A70EE-2D25-4B25-9753-994969A99A4B}" ShortID="1052973535">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-005" ID="{6B4D193F-8608-483C-8AAD-58F6A22250B8}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-005.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="36248279"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-005" ID="{6B4D193F-8608-483C-8AAD-58F6A22250B8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-006" ID="{64DC40E0-CE09-4812-B69B-953DB654B545}" ShortID="862979601">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-006" ID="{5AB7CF60-2181-4210-867C-8E3B181C4A08}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-006.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="818809562"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-006" ID="{5AB7CF60-2181-4210-867C-8E3B181C4A08}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-007" ID="{0D9DFE3E-FE26-44CA-A110-DAB2B3E49F99}" ShortID="265888532">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-007" ID="{176198CB-8739-4DE2-88A3-416C12743929}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-007.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="459744073"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-007" ID="{176198CB-8739-4DE2-88A3-416C12743929}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-008" ID="{5C735CE7-8801-40BF-983F-54AEDFC23E5D}" ShortID="403957761">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-008" ID="{75D02BCF-0210-4C3B-AD22-52F62F46EE88}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-008.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="372631238"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-008" ID="{75D02BCF-0210-4C3B-AD22-52F62F46EE88}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-009" ID="{359E77D7-315E-43D9-BDBD-2FD47816E55C}" ShortID="589266134">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-009" ID="{34EBEBDB-1F5E-4099-AABE-7CE0BEB59748}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-009.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="817649442"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-009" ID="{34EBEBDB-1F5E-4099-AABE-7CE0BEB59748}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-010" ID="{9278597D-1AB6-4D78-89D1-88B3BAFD17D8}" ShortID="682704184">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-010" ID="{0B654A0F-6F7E-4067-BA14-778AF9876E75}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-010.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="65535487"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-010" ID="{0B654A0F-6F7E-4067-BA14-778AF9876E75}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-011" ID="{05F6F2F0-6421-4F09-BBAF-E990216DC741}" ShortID="260682887">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-011" ID="{D94C3E91-EB92-4771-A5C1-5A667594D162}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-011.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="572697371"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-011" ID="{D94C3E91-EB92-4771-A5C1-5A667594D162}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IncrementalBuyShop-012" ID="{BA2DD717-016E-4DC9-B4EF-DBAA365A2993}" ShortID="894224806">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{87D00681-2FAC-4A29-9AD3-8E3F7312FFF2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Musica" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{352CBA97-5881-4F47-B88D-10EDF2F50C6D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IncrementalBuyShop-012" ID="{742F7B00-808B-48C2-94F9-A36F2DB6F702}">
+									<Language>SFX</Language>
+									<AudioFile>IncrementalBuyShop-012.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="142403242"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="IncrementalBuyShop-012" ID="{742F7B00-808B-48C2-94F9-A36F2DB6F702}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-012" ID="{BA2DD717-016E-4DC9-B4EF-DBAA365A2993}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-007" ID="{0D9DFE3E-FE26-44CA-A110-DAB2B3E49F99}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-001" ID="{651A5F42-62F9-4B0A-897E-62414D365515}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-003" ID="{D35D9B44-CE5C-4720-9707-004ED0FDF935}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-010" ID="{9278597D-1AB6-4D78-89D1-88B3BAFD17D8}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-004" ID="{C8A03686-AB23-4B81-88EF-9FF0D396060A}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-002" ID="{EB41D5C8-6560-4F46-BDF0-34781BD62E5E}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-009" ID="{359E77D7-315E-43D9-BDBD-2FD47816E55C}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-006" ID="{64DC40E0-CE09-4812-B69B-953DB654B545}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-008" ID="{5C735CE7-8801-40BF-983F-54AEDFC23E5D}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-005" ID="{A30A70EE-2D25-4B25-9753-994969A99A4B}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="IncrementalBuyShop-011" ID="{05F6F2F0-6421-4F09-BBAF-E990216DC741}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop10" ID="{E4AF800A-C034-4F1D-8507-85730716D4D6}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-010" ID="{9278597D-1AB6-4D78-89D1-88B3BAFD17D8}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop7" ID="{3CC3FF16-D666-407C-B8AC-FD7A73F9C8F6}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-007" ID="{0D9DFE3E-FE26-44CA-A110-DAB2B3E49F99}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop1" ID="{AD062219-ECEB-400B-95B4-123A69B6DB6A}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-001" ID="{651A5F42-62F9-4B0A-897E-62414D365515}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop4" ID="{7A2CB62C-6FBD-4DF6-BDD6-9F434106E3F1}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-004" ID="{C8A03686-AB23-4B81-88EF-9FF0D396060A}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop11" ID="{479A672D-C134-4684-A3DB-B587BE896E09}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-011" ID="{05F6F2F0-6421-4F09-BBAF-E990216DC741}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop6" ID="{EFA91A6A-9563-4574-9507-76FA5E21EE1C}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-006" ID="{64DC40E0-CE09-4812-B69B-953DB654B545}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop8" ID="{B83F0E81-8A4A-42BF-9653-8C2CEE3A3547}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-008" ID="{5C735CE7-8801-40BF-983F-54AEDFC23E5D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop5" ID="{A6C249CD-0161-4277-876B-E2913230436D}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-005" ID="{A30A70EE-2D25-4B25-9753-994969A99A4B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop3" ID="{3F6648D5-9189-4452-A0FE-11E300B7A7BC}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-003" ID="{D35D9B44-CE5C-4720-9707-004ED0FDF935}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop12" ID="{0E5AD5E0-8BF8-438D-BE0F-6FF6F6E2B7C3}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-012" ID="{BA2DD717-016E-4DC9-B4EF-DBAA365A2993}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop2" ID="{A29C3DE3-A334-4A9B-B188-60877B78869A}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-002" ID="{EB41D5C8-6560-4F46-BDF0-34781BD62E5E}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="IncrementalBuyShop9" ID="{5FE687F5-DC76-49FC-986A-0D8AC5ACE6C5}"/>
+								<ItemList>
+									<ItemRef Name="IncrementalBuyShop-009" ID="{359E77D7-315E-43D9-BDBD-2FD47816E55C}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

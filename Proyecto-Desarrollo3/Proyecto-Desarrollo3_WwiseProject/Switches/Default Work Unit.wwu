@@ -12,6 +12,22 @@
 						<Switch Name="DobleClickReversa" ID="{CFA91971-E567-4C24-B995-A45230BE1A90}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="IncrementalBuyShopSwitches" ID="{57F900B6-0284-4D8D-88AF-FF93C3E8507C}">
+					<ChildrenList>
+						<Switch Name="IncrementalBuyShop1" ID="{AD062219-ECEB-400B-95B4-123A69B6DB6A}"/>
+						<Switch Name="IncrementalBuyShop2" ID="{A29C3DE3-A334-4A9B-B188-60877B78869A}"/>
+						<Switch Name="IncrementalBuyShop3" ID="{3F6648D5-9189-4452-A0FE-11E300B7A7BC}"/>
+						<Switch Name="IncrementalBuyShop4" ID="{7A2CB62C-6FBD-4DF6-BDD6-9F434106E3F1}"/>
+						<Switch Name="IncrementalBuyShop5" ID="{A6C249CD-0161-4277-876B-E2913230436D}"/>
+						<Switch Name="IncrementalBuyShop6" ID="{EFA91A6A-9563-4574-9507-76FA5E21EE1C}"/>
+						<Switch Name="IncrementalBuyShop7" ID="{3CC3FF16-D666-407C-B8AC-FD7A73F9C8F6}"/>
+						<Switch Name="IncrementalBuyShop8" ID="{B83F0E81-8A4A-42BF-9653-8C2CEE3A3547}"/>
+						<Switch Name="IncrementalBuyShop9" ID="{5FE687F5-DC76-49FC-986A-0D8AC5ACE6C5}"/>
+						<Switch Name="IncrementalBuyShop10" ID="{E4AF800A-C034-4F1D-8507-85730716D4D6}"/>
+						<Switch Name="IncrementalBuyShop11" ID="{479A672D-C134-4684-A3DB-B587BE896E09}"/>
+						<Switch Name="IncrementalBuyShop12" ID="{0E5AD5E0-8BF8-438D-BE0F-6FF6F6E2B7C3}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
