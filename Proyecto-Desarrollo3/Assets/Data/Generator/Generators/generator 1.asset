@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: generator 1
   m_EditorClassIdentifier: 
   id: Generator
+  numId: 2
   icon: {fileID: 21300000, guid: 5107ee78f3887b044bb56f2daeff3358, type: 3}
   background: {fileID: 21300000, guid: fbefc842ef921f44582d6be1f02702a3, type: 3}
   levelUpCostIncrease: 1.3

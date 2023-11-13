@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: generator 10
   m_EditorClassIdentifier: 
   id: Star Harvester
+  numId: 10
   icon: {fileID: 21300000, guid: 6e724da5121ee4e489eaff810b0ba0ea, type: 3}
   background: {fileID: 21300000, guid: f644db8e3b81dbe46a904f5f85f546f3, type: 3}
   levelUpCostIncrease: 3.3

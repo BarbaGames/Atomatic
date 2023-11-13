@@ -11,6 +11,7 @@ namespace Generators
     public class GeneratorData : ScriptableObject
     {
         [SerializeField] public string id;
+        [SerializeField] public int numId;
         [JsonIgnore] public Sprite icon;
         [JsonIgnore] public Sprite background;
         [SerializeField] public float levelUpCostIncrease;

@@ -8,19 +8,13 @@ namespace Tutorial
     {
         [SerializeField] private GeneratorData firstGenerator;
         [SerializeField] private GameManager gameManager;
-        private long energy = 5;
-        private bool added = false;
-        private void Start()
-        {
-            firstGenerator.level = 0;
-            energy = firstGenerator.levelUpCost;
-        }
+        private bool _added = false;
 
         private void OnEnable()
         {
-            if(added) return;
-            gameManager.AddCurrency(energy);
-            added = true;
+            if(_added) return;
+            gameManager.AddCurrency(firstGenerator.levelUpCost);
+            _added = true;
         }
     }
 }

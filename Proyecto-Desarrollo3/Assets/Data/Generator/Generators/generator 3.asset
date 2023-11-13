@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: generator 3
   m_EditorClassIdentifier: 
   id: Solar Panels
+  numId: 4
   icon: {fileID: 21300000, guid: 06712a2214f72ca4b971aa513c8b4b17, type: 3}
   background: {fileID: 21300000, guid: 31afe59dcd397b447bcf696eeaae45bc, type: 3}
   levelUpCostIncrease: 3.3

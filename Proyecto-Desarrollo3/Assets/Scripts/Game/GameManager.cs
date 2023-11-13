@@ -209,9 +209,7 @@ namespace Game
                     RemoveCurrency(generator.GeneratorData.levelUpCost);
                     generator.Upgrade();
                 }
-
-                GeneratorSwitchSFXChange(id);
-
+                
                 //AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop2", gameObject);
                 AkSoundEngine.PostEvent("BuyShop", gameObject); // Wwise evento de BuyShop
                 gameplayView.UpdateGenerator(generator.GeneratorData);
@@ -248,55 +246,6 @@ namespace Game
             generator.Upgrade();
             generator.IsActive = true;
             generator.gameObject.SetActive(true);
-
-        }
-        private void GeneratorSwitchSFXChange(string id)
-        {
-            switch (id)
-            {
-                case "Basic":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop1", gameObject);
-                    break;
-                case "Generator":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop2", gameObject);
-                    break;
-                case "Small Energy Plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop3", gameObject);
-                    break;
-                case "Solar Panels":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop4", gameObject);
-                    break;
-                case "Coal Plants":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop5", gameObject);
-                    break;
-                case "Nuclear Plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop6", gameObject);
-                    break;
-                case "Fusion plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop7", gameObject);
-                    break;
-                case "Geothermic plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop8", gameObject);
-                    break;
-                case "Dyson sphere":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop9", gameObject);
-                    break;
-                case "Star Harvester":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop10", gameObject);
-                    break;
-                case "Alien Energy":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop11", gameObject);
-                    break;
-                case "Black hole plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop12", gameObject);
-                    break;
-
-
-
-
-
-            }
-
 
         }
     }
