@@ -1,14 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
 	271697268	GeneratorAmbience			\Default Work Unit\Gameplay\GeneratorAmbience	
+	303266102	MenuHover			\Default Work Unit\Main Menu\MenuHover	
+	393478359	PlayAtEnd			\Default Work Unit\Music\PlayAtEnd	
 	469262491	BuyShop			\Default Work Unit\Gameplay\BuyShop	
 	1210207003	UIHoverShop			\Default Work Unit\Gameplay\UIHoverShop	
 	1397303698	ClickGenerator			\Default Work Unit\Gameplay\ClickGenerator	
 	1513208197	MenuNegative			\Default Work Unit\Main Menu\MenuNegative	
+	2079739518	MenuHoverExit			\Default Work Unit\Main Menu\MenuHoverExit	
 	2496648897	MenuPositive			\Default Work Unit\Main Menu\MenuPositive	
 	2590312237	BuyScenario			\Default Work Unit\Gameplay\BuyScenario	
+	2909695010	MenuStartGame			\Default Work Unit\Main Menu\MenuStartGame	
 	3234855557	UIHoverUpgrade			\Default Work Unit\Gameplay\UIHoverUpgrade	
 	3532703493	BuyUpgrade			\Default Work Unit\Gameplay\BuyUpgrade	
 	3608800070	BuyNegative			\Default Work Unit\Gameplay\BuyNegative	
+	3827058668	StartMusic			\Default Work Unit\Music\StartMusic	
 	3991942870	Music			\Default Work Unit\Gameplay\Music	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -34,32 +39,70 @@ Switch	ID	Name	Switch Group			Notes
 	2281549183	DobleClick	ClickStatus			
 	3938304779	DobleClickReversa	ClickStatus			
 
+State Group	ID	Name			Wwise Object Path	Notes
+	1548521311	CurrentGenerator			\Default Work Unit\CurrentGenerator	
+	2859421969	GameScene			\Default Work Unit\GameScene	
+
+State	ID	Name	State Group			Notes
+	678209053	Two	CurrentGenerator			
+	748895195	None	CurrentGenerator			
+	912956111	Three	CurrentGenerator			
+	1064933119	One	CurrentGenerator			
+	748895195	None	GameScene			
+	984691642	InGame	GameScene			
+	3604647259	MainMenu	GameScene			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	2067128	BuyUpgradeTest	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\BuyUpgradeTest_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\BuyUpgrade\BuyUpgradeTest		85398
+	8634741	Teclado Acordes B	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Teclado Acordes B_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Teclado Acordes B		1982000
+	34199969	Batería A completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería A sin snare_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Batería A completa		1982000
 	68095229	IncrementalBuyShop-012	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-012_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-012		288064
+	72920660	Block1-DnB-157BPM	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Block4-DnB-157BPM_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 2\Generator 2\Blocks\Block1-DnB-157BPM		4696116
 	87999183	ClickSeco-001	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\ClickSeco-001_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\ClickSeco-001		6428
 	129408635	IncrementalBuyShop-011	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-011_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-011		288064
 	148512564	IncrementalBuyShop-006	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-006_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-006		192064
+	195150515	MainMenuHover	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\MainMenuHover_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\MainMenuHover		2024
+	199208059	Guitarra B 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra B 1 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Guitarra B 1 con rever		3963936
+	232526594	Batería B completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería B sin snare_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Batería B completa		1982000
 	237945014	IncrementalBuyShop-008	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-008_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-008		192064
+	257834542	Batería B completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería B completa_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Batería B completa		1982000
 	297939225	IncrementalBuyShop-002	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-002_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-002		96064
+	306570316	Guitarra B 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra B 2 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Guitarra B 1 con rever		3963936
+	308500214	Batería A completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería A sin hihat_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Batería A completa		1982000
+	327312290	Batería B completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería B sin hihat_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Batería B completa		1982000
 	333392990	IncrementalBuyShop-001	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-001_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-001		96064
 	338355016	BuyNegative	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\BuyNegative_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\BuyNegative		72892
+	352214731	Full	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Generator1Full_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 1\Generator 1\Segment\Full		32873004
+	357408021	Batería A completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería A completa_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Batería A completa		1982000
+	368962797	MenuPositive	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\MenuPositive_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\MenuPositive		46632
 	375050747	clicksimplon2	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\clicksimplon2_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon2		4262
+	386022567	Block1-DnB-157BPM	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Block2-DnB-157BPM_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 2\Generator 2\Blocks\Block1-DnB-157BPM		4696116
 	423723300	Click-003	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-003		3428
+	432133021	Block1-DnB-157BPM	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Block5-DnB-157BPM_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 2\Generator 2\Blocks\Block1-DnB-157BPM		4696116
+	460881786	Guitarra A 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra A 1 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Guitarra A 1 con rever		3963936
+	487769136	Block1-DnB-157BPM	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Block1-DnB-157BPM_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 2\Generator 2\Blocks\Block1-DnB-157BPM		4696116
 	528173449	IncrementalBuyShop-007	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-007_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-007		192064
+	530466622	Guitarra A 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra A 3 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Guitarra A 1 con rever		3963936
 	531003080	ClickSeco-003	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\ClickSeco-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\ClickSeco-003		6608
 	569766503	Click-002	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Click-002_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickB\Click-002		1994
 	616632917	UIButtonHoverUpgrade	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\UIButtonHover_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\UIButtonHoverUpgrade		9218
+	620534225	Teclado Acordes A	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Teclado Acordes A_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Teclado Acordes A		1982000
 	648263188	IncrementalBuyShop-004	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-004		96064
+	655826575	Guitarra A 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra A 2 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\A\Guitarra A 1 con rever		3963936
+	718428150	MenuUIButtonHover	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\MenuUIButtonHover_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\MenuUIButtonHover		18372
 	722503634	IncrementalBuyShop-009	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-009_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-009		192064
 	723593182	ClickSeco-004	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\ClickSeco-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\ClickSeco-004		6840
 	754984195	IncrementalBuyShop-005	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-005_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-005		192064
+	768624693	Guitarra B 1 con rever	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Guitarra B 3 con rever_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 3\Generator 3\B\Guitarra B 1 con rever		3963936
 	773978567	IncrementalBuyShop-010	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-010_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-010		288064
+	780190575	MenuNegative	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\MenuNegative_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\MenuNegative		23884
 	840620083	dobleClick-004	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClick-004_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-004		13146
 	876522381	clicksimplon1	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\clicksimplon1_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickA\clicksimplon1		3872
 	912092126	ClickSeco-002	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\ClickSeco-002_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\ClickC\ClickSeco-002		6500
 	918529064	UIButtonHoverShop	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\UIHover_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\UIButtonHoverShop		9806
+	919586181	Placeholder	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\Placeholder		150342
 	920639229	dobleClick-003	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClick-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\DobleClickC\dobleClick-003		17992
+	988360710	Block1-DnB-157BPM	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Block3-DnB-157BPM_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 2\Generator 2\Blocks\Block1-DnB-157BPM		4696116
 	1002903760	dobleClickReversa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\dobleClickReversa_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\Click\dobleClickReversa		13950
 	1025011006	IncrementalBuyShop-003	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-003_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-003		96064
 
