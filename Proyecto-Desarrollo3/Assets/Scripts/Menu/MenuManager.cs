@@ -21,6 +21,7 @@ namespace Menu
         public void LoadSceneByName()
         {
             SceneManager.LoadScene(SceneName);
+            AudioManager.ChangeScene(SceneName);
         }
         
         /// <summary>
