@@ -1,14 +1,9 @@
 using System;
 using System.Collections.Generic;
-
 using Generators;
-
 using Newtonsoft.Json;
-
 using Progress;
-
 using UI;
-
 using UnityEngine;
 
 
@@ -60,7 +55,8 @@ namespace Game
 
                 if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
                 {
-                    List<GeneratorData> generatorsData = JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
+                    List<GeneratorData> generatorsData =
+                        JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
 
                     for (int i = 0; i < generatorsData.Count; i++)
                     {
@@ -94,7 +90,11 @@ namespace Game
                 }
             }
         }
-        private void Update() { GeneratorsLoop(); }
+
+        private void Update()
+        {
+            GeneratorsLoop();
+        }
 
         private void OnApplicationQuit()
         {
@@ -140,7 +140,7 @@ namespace Game
         }
 
         /// <summary>
-        /// The purpose is to use this function in a button for debugging purposes.
+        /// Function for debugging
         /// </summary>
         public void DebugAddCurrency()
         {
@@ -209,8 +209,8 @@ namespace Game
                     RemoveCurrency(generator.GeneratorData.levelUpCost);
                     generator.Upgrade();
                 }
-                
-                //AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop2", gameObject);
+
+                generator.PlayAudio(gameObject);
                 AkSoundEngine.PostEvent("BuyShop", gameObject); // Wwise evento de BuyShop
                 gameplayView.UpdateGenerator(generator.GeneratorData);
 
@@ -246,9 +246,6 @@ namespace Game
             generator.Upgrade();
             generator.IsActive = true;
             generator.gameObject.SetActive(true);
-
         }
     }
 }
-
-

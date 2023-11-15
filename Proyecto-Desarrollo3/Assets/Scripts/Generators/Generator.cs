@@ -46,13 +46,17 @@ namespace Generators
         /// </summary>
         public void Upgrade()
         {
-            const string audioGroup = "IncrementalBuyShopSwitches";
-            const string audioState = "IncrementalBuyShop";
-
             generatorData.level++;
             generatorData.levelUpCost = (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
             generatorData.currencyGenerated = generatorData.baseCurrencyGenerated * generatorData.level;
-            AkSoundEngine.SetSwitch(audioGroup, audioState + generatorData.numId, gameObject);
+        }
+
+        public void PlayAudio(GameObject manager)
+        {
+            const string audioGroup = "IncrementalBuyShopSwitches";
+            const string audioState = "IncrementalBuyShop";
+            string stateId = audioState + generatorData.numId.ToString();
+            AkSoundEngine.SetSwitch(audioGroup, stateId, manager);
         }
     }
 }
