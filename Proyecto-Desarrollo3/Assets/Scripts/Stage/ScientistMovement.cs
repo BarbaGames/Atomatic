@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Scenary
+namespace Stage
 {
     public class ScientistMovement : MonoBehaviour
     {

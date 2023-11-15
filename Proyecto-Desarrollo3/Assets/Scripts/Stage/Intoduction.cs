@@ -1,12 +1,8 @@
-﻿using System;
-
-using Newtonsoft.Json;
-
+﻿using Newtonsoft.Json;
 using Progress;
-
 using UnityEngine;
 
-namespace Scenary
+namespace Stage
 {
     public class Intoduction : MonoBehaviour
     {
