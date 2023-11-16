@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3731328740811281928}
   - component: {fileID: 2094677652887263156}
   - component: {fileID: 6507614540720250597}
+  - component: {fileID: 7921014775983863134}
   m_Layer: 5
   m_Name: Fat Scientist
   m_TagString: Untagged
@@ -36,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 54.2, y: -11.483997}
-  m_SizeDelta: {x: 62.8381, y: 77.032}
+  m_SizeDelta: {x: 32, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3731328740811281928
 CanvasRenderer:
@@ -97,3 +98,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7921014775983863134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5607850730232375134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e56ab45342589429c9a1d4bc01f99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: -385, y: 0, z: 0}
+  targetScale: {x: 1, y: 1, z: 1}
+  xPositionRange: {x: 419, y: -419}
+  lerpSpeed: 1
+  lerpSpeedX: 10
+  startPoint: {x: -419, y: 0, z: 0}
+  endPoint: {x: 419, y: 0, z: 0}
+  speed: 0.1

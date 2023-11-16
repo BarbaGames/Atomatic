@@ -35,8 +35,6 @@ namespace UI
         public void UpdateData(GeneratorData generatorData)
         {
             this.generatorData = generatorData;
-            counterTxt.text = generatorData.level.ToString();
-            //instanciate new scientist per level
 
             for (int i = 0; i < this.generatorData.level; i++)
             {

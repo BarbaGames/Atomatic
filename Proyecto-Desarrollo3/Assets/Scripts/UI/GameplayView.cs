@@ -22,8 +22,8 @@ namespace UI
         [SerializeField] private TMP_Text txtEnergy = null;
         [SerializeField] private TMP_Text txtEnergyPerSec = null;
         [SerializeField] private GameObject flyingTextPrefab = null;
-        [SerializeField] private Transform flyingTextSpawnPosSmaller = null;
-        [SerializeField] private Transform flyingTextSpawnPosBigger = null;
+        [SerializeField] private Transform flyingTextSpawnBotCorner = null;
+        [SerializeField] private Transform flyingTextSpawnTopCorner = null;
         
         [Header("VIEWS")]
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
@@ -77,9 +77,9 @@ namespace UI
         {
             var text = flyingTextPool.Get();
             text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
-            var position = flyingTextSpawnPosSmaller.position;
+            var position = flyingTextSpawnBotCorner.position;
             Vector3 pos = new Vector3( 0,0,position.z);
-            var position1 = flyingTextSpawnPosBigger.position;
+            var position1 = flyingTextSpawnTopCorner.position;
             pos.x = Random.Range(position.x, position1.x);
             pos.y = Random.Range(position.y, position1.y);
             text.transform.parent.position = pos;

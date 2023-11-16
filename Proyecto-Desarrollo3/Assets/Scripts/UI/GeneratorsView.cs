@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Generators;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace UI
 {
@@ -18,13 +19,6 @@ namespace UI
         {
             scrollbar.size = 0.1f;
         }
-        
-        enum ScientistTypes
-        {
-            Tall,
-            Fat,
-            Strong
-        }
 
         public void Init()
         {
@@ -35,7 +29,8 @@ namespace UI
             Action onDisableTooltip)
         {
             GeneratorView generatorView = Instantiate(generatorViewGo, scrollViewHolder).GetComponent<GeneratorView>();
-            generatorView.Init(generatorStats, scientistsPrefab[(int)ScientistTypes.Tall], onEnableTooltip,
+            int randomScientist = Random.Range(0, scientistsPrefab.Length);
+            generatorView.Init(generatorStats, scientistsPrefab[randomScientist], onEnableTooltip,
                 onDisableTooltip);
             generatorViews.Add(generatorView);
         }
