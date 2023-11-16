@@ -37,7 +37,7 @@ namespace Generators
             if (generatorData.timer > 0) return 0;
 
             generatorData.timer = generatorData.maxTimer;
-
+            generatorData.totalCurrencyGenerated += generatorData.currencyGenerated; 
             return generatorData.currencyGenerated;
         }
 
