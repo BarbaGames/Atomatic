@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3211880038974494913}
   - component: {fileID: 3755400047300040786}
   m_Layer: 0
-  m_Name: Plano vacio
+  m_Name: Background plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
