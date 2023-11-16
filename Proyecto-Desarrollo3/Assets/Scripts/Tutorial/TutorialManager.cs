@@ -17,7 +17,7 @@ namespace Tutorial
         private int currentDialogue = 0;
         private int currentStep = 0;
         private int previousDialogues = 0;
-        private int i = 0;
+        private int i = -1;
 
         private const string TutorialKey = "watchedTutorial";
 

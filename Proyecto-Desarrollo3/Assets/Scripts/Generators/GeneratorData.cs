@@ -18,6 +18,7 @@ namespace Generators
         [SerializeField] public long levelUpCost;
         [SerializeField] public long currencyGenerated;
         [SerializeField] public long baseCurrencyGenerated;
+        [SerializeField] public long totalCurrencyGenerated;
         [SerializeField] public string description;
         [SerializeField] public int maxTimer = 1;
         [SerializeField] public float timer;
