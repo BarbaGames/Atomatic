@@ -25,13 +25,11 @@ namespace UI
             generatorViews = new List<GeneratorView>();
         }
 
-        public void AddGenerator(GeneratorData generatorStats, Action<GeneratorData> onEnableTooltip,
-            Action onDisableTooltip)
+        public void AddGenerator(GeneratorData genData, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             GeneratorView generatorView = Instantiate(generatorViewGo, scrollViewHolder).GetComponent<GeneratorView>();
             int randomScientist = Random.Range(0, scientistsPrefab.Length);
-            generatorView.Init(generatorStats, scientistsPrefab[randomScientist], onEnableTooltip,
-                onDisableTooltip);
+            generatorView.Init(genData, scientistsPrefab[randomScientist], onEnableTooltip, onDisableTooltip);
             generatorViews.Add(generatorView);
         }
 

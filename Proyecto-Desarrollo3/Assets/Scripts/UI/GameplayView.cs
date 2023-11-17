@@ -70,6 +70,7 @@ namespace UI
 
         public void UnlockGenerator(GeneratorData generatorData)
         {
+            if(generatorData.background == null) return;
             generatorsView.AddGenerator(generatorData, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
         }
 

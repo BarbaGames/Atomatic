@@ -30,7 +30,7 @@ namespace UI
             imgIconShadow.sprite = this.generatorData.icon;
             id = this.generatorData.id;
             txtName.text = this.generatorData.id;
-            txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            txtPrice.text = this.generatorData.levelUpCost.ToString("N0");
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
         
@@ -43,7 +43,7 @@ namespace UI
         public void UpdateData(GeneratorData generatorData)
         {
             this.generatorData = generatorData;
-            txtPrice.text = generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            txtPrice.text = generatorData.levelUpCost.ToString("N0");
             onEnableTooltip.Invoke(this.generatorData);
         }
         

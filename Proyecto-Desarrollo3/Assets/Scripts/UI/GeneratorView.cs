@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 using Generators;
 using TMPro;
 using UnityEngine;
@@ -18,17 +17,20 @@ namespace UI
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
         private GameObject scientist;
-        public string Id { get => generatorData.id; }
+
+        public string Id
+        {
+            get => generatorData.id;
+        }
 
         public void Init(GeneratorData generatorData, GameObject scientist, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             this.scientist = scientist;
             this.generatorData = generatorData;
-            counterTxt.text = generatorData.level.ToString();
+            counterTxt.text = ""; //generatorData.level.ToString();
             background.sprite = generatorData.background;
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
-
             scientists = new List<ScientistController>();
         }
 
@@ -45,10 +47,12 @@ namespace UI
                 scientists.Add(go);
             }
         }
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             onEnableTooltip.Invoke(generatorData);
         }
+
         public void OnPointerExit(PointerEventData eventData)
         {
             onDisableTooltip.Invoke();
