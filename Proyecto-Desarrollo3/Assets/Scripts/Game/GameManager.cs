@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+
 using Generators;
 using Newtonsoft.Json;
 using Progress;
@@ -146,6 +146,14 @@ namespace Game
         {
             energy += 1000000;
             gameplayView.UpdateEnergy(energy);
+        }
+        
+        /// <summary>
+        /// Function for debugging
+        /// </summary>
+        public void DebugClearLocalData()
+        {
+            FileHandler.DeleteAllFiles();
         }
 
         public void AddCurrency(long energyToAdd)

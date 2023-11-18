@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Generators;
 using TMPro;
 using UnityEngine;
@@ -12,7 +11,6 @@ namespace UI
     {
         [SerializeField] private TMP_Text counterTxt = null;
         [SerializeField] private Image background;
-        private List<ScientistController> scientists;
         private GeneratorData generatorData = null;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
@@ -31,7 +29,6 @@ namespace UI
             background.sprite = generatorData.background;
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
-            scientists = new List<ScientistController>();
         }
 
         public void UpdateData(GeneratorData generatorData)
@@ -40,11 +37,11 @@ namespace UI
 
             for (int i = 0; i < this.generatorData.level; i++)
             {
-                ScientistController go = Instantiate(scientist, transform).GetComponent<ScientistController>();
-                go.transform.localPosition = new Vector3(-385, 20, 0);
-                go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                go.StartYScaleLerp();
-                scientists.Add(go);
+                GameObject go = Instantiate(scientist, transform);
+                ScientistController scientistController = go.GetComponent<ScientistController>();
+                scientistController.transform.localPosition = new Vector3(-385, 20, 0);
+                scientistController.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                scientistController.StartYScaleLerp();
             }
         }
 
