@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+using Random = UnityEngine.Random;
+
 namespace UI
 {
     public class GeneratorView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -14,16 +16,14 @@ namespace UI
         private GeneratorData generatorData = null;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
-        private GameObject scientist;
 
         public string Id
         {
             get => generatorData.id;
         }
 
-        public void Init(GeneratorData generatorData, GameObject scientist, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
+        public void Init(GeneratorData generatorData, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
-            this.scientist = scientist;
             this.generatorData = generatorData;
             counterTxt.text = ""; //generatorData.level.ToString();
             background.sprite = generatorData.background;
@@ -31,13 +31,26 @@ namespace UI
             this.onDisableTooltip = onDisableTooltip;
         }
 
-        public void UpdateData(GeneratorData generatorData)
+        public void UpdateData(GeneratorData generatorData, GameObject[] scientist, bool fromSave)
         {
             this.generatorData = generatorData;
 
-            for (int i = 0; i < this.generatorData.level; i++)
+            int randomScientist = Random.Range(0, scientist.Length);
+            
+            if (fromSave)
             {
-                GameObject go = Instantiate(scientist, transform);
+                for (int i = 0; i < this.generatorData.level; i++)
+                {
+                    GameObject go = Instantiate(scientist[randomScientist], transform);
+                    ScientistController scientistController = go.GetComponent<ScientistController>();
+                    scientistController.transform.localPosition = new Vector3(-385, 20, 0);
+                    scientistController.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    scientistController.StartYScaleLerp();
+                }
+            }
+            else
+            {
+                GameObject go = Instantiate(scientist[randomScientist], transform);
                 ScientistController scientistController = go.GetComponent<ScientistController>();
                 scientistController.transform.localPosition = new Vector3(-385, 20, 0);
                 scientistController.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);

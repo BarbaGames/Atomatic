@@ -63,7 +63,7 @@ namespace Game
                         generator.gameObject.SetActive(true);
                         gameplayView.AddGenerator(generator.GeneratorData);
                         gameplayView.UnlockGenerator(generator.GeneratorData);
-                        gameplayView.UpdateGenerator(generator.GeneratorData);
+                        gameplayView.UpdateGenerator(generator.GeneratorData, true);
 
                         if (i == savedGeneratorsData.Count - 1)
                         {
@@ -237,7 +237,7 @@ namespace Game
 
                 generator.PlayAudio(gameObject);
                 AkSoundEngine.PostEvent("BuyShop", gameObject); // Wwise evento de BuyShop
-                gameplayView.UpdateGenerator(generator.GeneratorData);
+                gameplayView.UpdateGenerator(generator.GeneratorData, false);
 
                 UpdateEnergyPerSecond();
             }

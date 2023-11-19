@@ -5,7 +5,7 @@ public class ScientistController : MonoBehaviour
     public Vector3 targetPosition;
     public Vector3 targetScale;
     public float lerpSpeed = 1.0f;
-    public float speed = 2.0f;
+    public float speed = 0.1f;
 
     private Vector3 initialPosition;
     private Vector3 initialScale;
@@ -70,6 +70,7 @@ public class ScientistController : MonoBehaviour
 
     private void StartXPositionLerp()
     {
+        speed = Random.Range(0.1f, 0.5f);
         pointA = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         pointB = new Vector3(419, transform.localPosition.y, transform.localPosition.z);
         isXPositionLerping = true;

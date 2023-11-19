@@ -62,10 +62,10 @@ namespace UI
             txtEnergyPerSec.text = newEnergy.ToString("N0") + " E/s";
         }
 
-        public void UpdateGenerator(GeneratorData generatorData)
+        public void UpdateGenerator(GeneratorData generatorData, bool fromSave)
         {
             generatorsBuyView.UpdateGenerator(generatorData);
-            generatorsView.UpdateGenerator(generatorData);
+            generatorsView.UpdateGenerator(generatorData, fromSave);
         }
 
         public void UpdateUpgrade(Upgrade upgrade)
