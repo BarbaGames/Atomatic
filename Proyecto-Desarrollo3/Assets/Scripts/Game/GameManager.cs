@@ -35,8 +35,7 @@ namespace Game
                 upgrades.Add(Instantiate(upgradesData.upgrades[i]));
             }
 
-            gameplayView.Init(generatorSoData.generators, upgrades, BuyGenerator, BuyUpgrade, PlayerClick);
-
+            gameplayView.Init(upgrades, BuyUpgrade, PlayerClick);
             generators = new List<Generator>();
 
             for (int i = 0; i < generatorSoData.generators.Count; i++)
@@ -45,49 +44,62 @@ namespace Game
                 generator.Init(Instantiate(generatorSoData.generators[i]));
                 generators.Add(generator);
             }
-
-            if (FileHandler.FileExist(EnergyKey))
+            
+            if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
             {
-                if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
-                {
-                    AddCurrency(long.Parse(energyDataString));
-                }
+                List<GeneratorData> savedGeneratorsData =
+                    JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
+                
+                gameplayView.InitGeneratorsBuyView(generatorSoData.generators, BuyGenerator, false);
 
-                if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
+                for (int i = 0; i < savedGeneratorsData.Count; i++)
                 {
-                    List<GeneratorData> generatorsData =
-                        JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
-
-                    for (int i = 0; i < generatorsData.Count; i++)
+                    Generator generator = generators.Find(g => g.GeneratorData.id == savedGeneratorsData[i].id);
+                    if (generator != null && savedGeneratorsData[i].unlocked)
                     {
-                        Generator generator = generators.Find(g => g.GeneratorData.id == generatorsData[i].id);
-                        if (generator != null && generatorsData[i].unlocked)
+                        generator.SetData(savedGeneratorsData[i]);
+                        generator.GeneratorData.unlocked = true;
+                        generator.IsActive = true;
+                        generator.gameObject.SetActive(true);
+                        gameplayView.AddGenerator(generator.GeneratorData);
+                        gameplayView.UnlockGenerator(generator.GeneratorData);
+                        gameplayView.UpdateGenerator(generator.GeneratorData);
+
+                        if (i == savedGeneratorsData.Count - 1)
                         {
-                            generator.SetData(generatorsData[i]);
-                            generator.GeneratorData.unlocked = true;
-                            generator.IsActive = true;
-                            generator.gameObject.SetActive(true);
-                            gameplayView.UnlockGenerator(generator.GeneratorData);
-                            gameplayView.UpdateGenerator(generator.GeneratorData);
+                            if (i + 1 < generators.Count && !generators[i + 1].IsActive)
+                            {
+                                gameplayView.AddGenerator(generators[i + 1].GeneratorData);
+                            }
                         }
                     }
                 }
+            }
+            else
+            {
+                gameplayView.InitGeneratorsBuyView(generatorSoData.generators, BuyGenerator, true);
+            }
+        
 
-                if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
+            if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
+            {
+                List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
+
+                for (int i = 0; i < upgrades.Count; i++)
                 {
-                    List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
+                    Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
 
-                    for (int i = 0; i < upgrades.Count; i++)
+                    if (upgrade != null && upgrade.bought)
                     {
-                        Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
-
-                        if (upgrade != null && upgrade.bought)
-                        {
-                            upgrades[i] = upgrade;
-                            gameplayView.UpdateUpgrade(upgrades[i]);
-                        }
+                        upgrades[i] = upgrade;
+                        gameplayView.UpdateUpgrade(upgrades[i]);
                     }
                 }
+            }
+
+            if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
+            {
+                AddCurrency(long.Parse(energyDataString));
             }
         }
 
@@ -195,9 +207,9 @@ namespace Game
             AkSoundEngine.PostEvent("ClickGenerator", gameObject); // Wwise evento de click
         }
 
-        private void BuyGenerator(string id)
+        private void BuyGenerator(int id)
         {
-            Generator generator = generators.Find(i => i.GeneratorData.id == id);
+            Generator generator = generators.Find(i => i.GeneratorData.numId == id);
 
             if (generator != null)
             {
@@ -211,6 +223,11 @@ namespace Game
                 {
                     UnlockGenerator(generator);
                     gameplayView.UnlockGenerator(generator.GeneratorData);
+
+                    if (id + 1 < generators.Count && !generators[id + 1].IsActive) 
+                    {
+                        gameplayView.AddGenerator(generators[id + 1].GeneratorData);
+                    }
                 }
                 else
                 {

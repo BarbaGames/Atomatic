@@ -24,5 +24,6 @@ namespace Generators
         [SerializeField] public float timer;
         [SerializeField] public int level = 0;
         [SerializeField] public bool unlocked = false;
+        [SerializeField] public bool showData = false;
     }
 }

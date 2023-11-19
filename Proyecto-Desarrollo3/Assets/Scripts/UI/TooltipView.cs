@@ -19,13 +19,26 @@ namespace UI
         public void OnTooltipEnable(GeneratorData generatorData)
         {
             //title.text = "Generates " + generatorData.currencyGenerated + (generatorData.name == "generator 0" ? " per click" : " E/s") + " , Owned: " + generatorData.level + ", Cost: " + generatorData.levelUpCost;
-            title.text = generatorData.id;
-            description.text = generatorData.description;
-            quantity.text = "Owned: " + generatorData.level;
-            cost.text = "Cost: " + generatorData.levelUpCost.ToString("N0");
-            production.text = "Total E/s: " + generatorData.currencyGenerated.ToString("N0");
-            unitEfficiency.text = "Energy per unit: " + generatorData.baseCurrencyGenerated.ToString("N0");
-            historicalProduction.text = "Total generated: " + generatorData.totalCurrencyGenerated.ToString("N0");
+            if (generatorData.showData || generatorData.unlocked) 
+            {
+                title.text = generatorData.id;
+                description.text = generatorData.description;
+                quantity.text = "Owned: " + generatorData.level;
+                cost.text = "Cost: " + generatorData.levelUpCost.ToString("N0");
+                production.text = "Total E/s: " + generatorData.currencyGenerated.ToString("N0");
+                unitEfficiency.text = "Energy per unit: " + generatorData.baseCurrencyGenerated.ToString("N0");
+                historicalProduction.text = "Total generated: " + generatorData.totalCurrencyGenerated.ToString("N0");
+            }
+            else
+            {
+                title.text = "???";
+                description.text = "";
+                quantity.text = "";
+                cost.text = "";
+                production.text = "";
+                unitEfficiency.text = "";
+                historicalProduction.text = "";
+            }
             holder.gameObject.SetActive(true);
         }
 

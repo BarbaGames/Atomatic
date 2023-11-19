@@ -37,9 +37,8 @@ namespace UI
         #endregion
 
         #region PUBLIC_METHODS
-        public void Init(List<GeneratorData> generatorStats, List<Upgrade> upgrades, Action<string> onTryBuyGenerator, Action<int> onTryBuyUpgrade, Action onPlayerClick)
+        public void Init( List<Upgrade> upgrades, Action<int> onTryBuyUpgrade, Action onPlayerClick)
         {
-            generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             generatorsView.Init();
             upgradeBuyView.Init(upgrades, onTryBuyUpgrade, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             btnClick.onClick.AddListener(onPlayerClick.Invoke);
@@ -47,9 +46,15 @@ namespace UI
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);
         }
 
+        public void InitGeneratorsBuyView(List<GeneratorData> generatorStats, Action<int> onTryBuyGenerator, bool newGame)
+        {
+            generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable, newGame);
+        }
+
         public void UpdateEnergy(long newEnergy)
         {
             txtEnergy.text = newEnergy.ToString("N0");
+            generatorsBuyView.OnEnergyUpdate(newEnergy);
         }
         
         public void UpdateEnergyPerSec(long newEnergy)
@@ -72,6 +77,11 @@ namespace UI
         {
             if(generatorData.background == null) return;
             generatorsView.AddGenerator(generatorData, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
+        }
+
+        public void AddGenerator(GeneratorData generatorData)
+        {
+            generatorsBuyView.AddGenerator(generatorData);
         }
 
         public void SpawnFlyingText(long energyGenerated)

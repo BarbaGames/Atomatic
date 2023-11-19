@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: generator 2
   m_EditorClassIdentifier: 
   id: Small Energy Plant
-  numId: 3
+  numId: 2
   icon: {fileID: 21300000, guid: 822ad1e108e38764cb63d158bde36b30, type: 3}
   background: {fileID: 21300000, guid: fbefc842ef921f44582d6be1f02702a3, type: 3}
   levelUpCostIncrease: 2.5

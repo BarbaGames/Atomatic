@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: generator 7
   m_EditorClassIdentifier: 
   id: Geothermic plant
-  numId: 8
+  numId: 7
   icon: {fileID: 21300000, guid: fb640542ba7923146b3825a9cee38da0, type: 3}
   background: {fileID: 21300000, guid: 326edf9e8b69ab34ca8795ed91ea1aa4, type: 3}
   levelUpCostIncrease: 3.3
