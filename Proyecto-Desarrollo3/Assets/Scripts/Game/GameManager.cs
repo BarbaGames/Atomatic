@@ -27,6 +27,8 @@ namespace Game
         private List<Generator> generators = null;
         private List<Upgrade> upgrades = null;
 
+        private bool deleteSavedData = false;
+
         private void Start()
         {
             upgrades = new List<Upgrade>();
@@ -110,6 +112,12 @@ namespace Game
 
         private void OnApplicationQuit()
         {
+            if (deleteSavedData)
+            {
+                FileHandler.DeleteAllFiles();
+                return;
+            }
+            
             FileHandler.SaveFile(EnergyKey, energy.ToString());
 
             List<GeneratorData> generatorsData = new List<GeneratorData>();
@@ -165,7 +173,7 @@ namespace Game
         /// </summary>
         public void DebugClearLocalData()
         {
-            FileHandler.DeleteAllFiles();
+            deleteSavedData = true;
         }
 
         public void AddCurrency(long energyToAdd)
