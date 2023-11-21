@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Git\Atomatic\Proyecto-Desarrollo3\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\Atomatic\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\Atomatic\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\Atomatic\TSDV-4C-D3\Proyecto-Desarrollo3\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>G:\Users\Contres\Documents\Unity\Game Audio 2023\Atomatic\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1468761089">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4177631899">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -235,46 +235,8 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="271697268" Name="GeneratorAmbience" ObjectPath="\Events\Default Work Unit\Gameplay\GeneratorAmbience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="303266102" Name="MenuHover" ObjectPath="\Events\Default Work Unit\Main Menu\MenuHover" DurationType="OneShot" DurationMin="0.010208" DurationMax="0.010208">
-					<IncludedMemoryFiles>
-						<File Id="195150515" Language="SFX">
-							<ShortName>MainMenuHover.wav</ShortName>
-							<Path>SFX\MainMenuHover_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2079739518" Name="MenuHoverExit" ObjectPath="\Events\Default Work Unit\Main Menu\MenuHoverExit" DurationType="OneShot" DurationMin="0.381417" DurationMax="0.381417">
-					<IncludedMemoryFiles>
-						<File Id="718428150" Language="SFX">
-							<ShortName>MenuUIButtonHover.wav</ShortName>
-							<Path>SFX\MenuUIButtonHover_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1513208197" Name="MenuNegative" ObjectPath="\Events\Default Work Unit\Main Menu\MenuNegative" DurationType="OneShot" DurationMin="0.124063" DurationMax="0.124063">
-					<IncludedMemoryFiles>
-						<File Id="780190575" Language="SFX">
-							<ShortName>MenuNegative.wav</ShortName>
-							<Path>SFX\MenuNegative_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2496648897" Name="MenuPositive" ObjectPath="\Events\Default Work Unit\Main Menu\MenuPositive" DurationType="OneShot" DurationMin="0.242542" DurationMax="0.242542">
-					<IncludedMemoryFiles>
-						<File Id="368962797" Language="SFX">
-							<ShortName>MenuPositive.wav</ShortName>
-							<Path>SFX\MenuPositive_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2909695010" Name="MenuStartGame" ObjectPath="\Events\Default Work Unit\Main Menu\MenuStartGame" DurationType="OneShot" DurationMin="1.565396" DurationMax="1.565396">
-					<IncludedMemoryFiles>
-						<File Id="919586181" Language="SFX">
-							<ShortName>Placeholder.wav</ShortName>
-							<Path>SFX\Placeholder_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="1513208197" Name="MenuNegative" ObjectPath="\Events\Default Work Unit\Main Menu\MenuNegative" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2496648897" Name="MenuPositive" ObjectPath="\Events\Default Work Unit\Main Menu\MenuPositive" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Gameplay\Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="393478359" Name="PlayAtEnd" ObjectPath="\Events\Default Work Unit\Music\PlayAtEnd" DurationType="Infinite">
 					<IncludedMemoryFiles>

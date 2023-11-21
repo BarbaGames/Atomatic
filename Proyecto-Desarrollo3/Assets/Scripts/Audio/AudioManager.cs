@@ -1,48 +1,68 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-namespace Audio
+public class AudioManager : MonoBehaviour
 {
-    public class AudioManager : MonoBehaviourSingleton<AudioManager>
+
+    // Start is called before the first frame update
+    void Start()
     {
-        [SerializeField] private AudioSource audioSource;
-        [SerializeField] private AudioClip winSound;
-        [SerializeField] private AudioClip loseSound;
+        AkSoundEngine.PostEvent("StartMusic", gameObject);
+        ChangeScene(SceneManager.GetActiveScene().name);
+    }
 
-        private void Start()
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void Awake()
+    {
+        AudioManager[] duplicates = GameObject.FindObjectsOfType<AudioManager>();
+        if (duplicates.Length > 1)
         {
-            //GameManager.OnWinEvent += PlayWinSound;
-            //GameManager.OnDefeatEvent += PlayLoseSound;
+            Destroy(this.gameObject);
         }
 
-        private void OnDestroy()
-        {
-            //GameManager.OnWinEvent -= PlayWinSound;
-            //GameManager.OnDefeatEvent -= PlayLoseSound;   
-        }
+        DontDestroyOnLoad(gameObject);
+    }
 
-        /// <summary>
-        /// Plays an audioclip in the audio source
-        /// </summary>
-        /// <param name="audioClip"> Audio source in player </param>
-        public void PlaySound(AudioClip audioClip)
+    public enum Scenes { MAIN_MENU, GAME, TUTORIAL, WIN}
+    public static void ChangeScene(string scene)
+    {
+        Debug.Log(scene);
+        switch (scene)
         {
-            audioSource.PlayOneShot(audioClip);
+            case "MainMenu":
+                AkSoundEngine.SetState("GameScene", "MainMenu");
+                break;
+            case "Tutorial":
+            case "Game":
+                AkSoundEngine.SetState("GameScene", "InGame");
+                break;
+            case "Win":
+                //AkSoundEngine.SetState("GameScene", "Win");
+                //break;
+            default:
+                Debug.LogWarning("La escena" + scene.ToString() + " aún no tiene implementado un cambio de música, ¡notificar a los de audio!");
+                break;
+
+
         }
-        
-        /// <summary>
-        /// Play loseSound when LoseEvent gets invoked.
-        /// </summary>
-        private void PlayLoseSound()
+    }
+
+    public static void SetGenerator(int generator)
+    {
+        string generatorState = "";
+        switch (generator)
         {
-            audioSource.PlayOneShot(loseSound);
+            case 0: generatorState = "One"; break;
+            case 1: generatorState = "Two"; break;
+            case 2: generatorState = "Three"; break;
         }
-        
-        /// <summary>
-        /// Play winSound when WinEvent gets invoked.
-        /// </summary>
-        private void PlayWinSound()
-        {
-            audioSource.PlayOneShot(winSound);
-        }
+        AkSoundEngine.SetState("CurrentGenerator", generatorState);
     }
 }
