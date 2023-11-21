@@ -16,8 +16,13 @@ public class UpgradeButtonView : MonoBehaviour, IPointerEnterHandler, IPointerEx
     
     public int Id { get => id; }
 
-    public void Init(Upgrade upgradeData, Action<int> onTryBuyUpgrade, Action<Upgrade> onEnableTooltip, Action onDisableTooltip)
+    public void Init(Upgrade upgradeData, Action<int> onTryBuyUpgrade, Action<Upgrade> onEnableTooltip, Action onDisableTooltip, bool empty = false)
     {
+        if (empty)
+        {
+            imgIcon.enabled = false;
+            return;
+        }
         this.upgradeData = upgradeData;
         imgIcon.sprite = this.upgradeData.icon;
         id = this.upgradeData.id;

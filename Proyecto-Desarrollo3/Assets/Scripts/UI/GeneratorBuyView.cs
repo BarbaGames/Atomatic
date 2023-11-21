@@ -1,6 +1,6 @@
 using System;
-using System.Globalization;
 using Generators;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,21 +16,22 @@ namespace UI
         [SerializeField] private Image imgIcon = null;
         [SerializeField] private Image imgIconShadow = null;
 
-        private string id = null;
+        private int id = -1;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
         private GeneratorData generatorData;
     
-        public string Id { get => id; }
+        public int Id { get => id; }
 
-        public void Init(GeneratorData generatorData, Action<string> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
+        public void Init(GeneratorData generatorData, Action<int> onTryBuyGenerator, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             this.generatorData = generatorData;
             imgIcon.sprite = this.generatorData.icon;
+            imgIcon.enabled = generatorData.unlocked;
             imgIconShadow.sprite = this.generatorData.icon;
-            id = this.generatorData.id;
-            txtName.text = this.generatorData.id;
-            txtPrice.text = this.generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            id = this.generatorData.numId;
+            txtName.text = generatorData.unlocked ? this.generatorData.id : "???";
+            txtPrice.text = this.generatorData.levelUpCost.ToString("N0");
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
         
@@ -40,10 +41,26 @@ namespace UI
             });
         }
 
+        public void OnUpdateEnergy(long newEnergy)
+        {
+            if (newEnergy >= generatorData.levelUpCost)
+            {
+                generatorData.showData = true;
+                imgIcon.enabled = true;
+                txtName.text = generatorData.id;
+                txtPrice.color = Color.white;
+            }
+            else
+            {
+                generatorData.showData = false;
+                txtPrice.color = Color.red;
+            }
+        }
+        
         public void UpdateData(GeneratorData generatorData)
         {
             this.generatorData = generatorData;
-            txtPrice.text = generatorData.levelUpCost.ToString(CultureInfo.InvariantCulture);
+            txtPrice.text = generatorData.levelUpCost.ToString("N0");
             onEnableTooltip.Invoke(this.generatorData);
         }
         

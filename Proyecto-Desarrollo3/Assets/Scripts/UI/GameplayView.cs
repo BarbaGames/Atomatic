@@ -22,8 +22,8 @@ namespace UI
         [SerializeField] private TMP_Text txtEnergy = null;
         [SerializeField] private TMP_Text txtEnergyPerSec = null;
         [SerializeField] private GameObject flyingTextPrefab = null;
-        [SerializeField] private Transform flyingTextSpawnPosSmaller = null;
-        [SerializeField] private Transform flyingTextSpawnPosBigger = null;
+        [SerializeField] private Transform flyingTextSpawnBotCorner = null;
+        [SerializeField] private Transform flyingTextSpawnTopCorner = null;
         
         [Header("VIEWS")]
         [SerializeField] private GeneratorsBuyView generatorsBuyView = null;
@@ -37,9 +37,8 @@ namespace UI
         #endregion
 
         #region PUBLIC_METHODS
-        public void Init(List<GeneratorData> generatorStats, List<Upgrade> upgrades, Action<string> onTryBuyGenerator, Action<int> onTryBuyUpgrade, Action onPlayerClick)
+        public void Init(List<Upgrade> upgrades, Action<int> onTryBuyUpgrade, Action onPlayerClick)
         {
-            generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             generatorsView.Init();
             upgradeBuyView.Init(upgrades, onTryBuyUpgrade, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
             btnClick.onClick.AddListener(onPlayerClick.Invoke);
@@ -47,9 +46,15 @@ namespace UI
             flyingTextPool = new ObjectPool<TMP_Text>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool, OnDestroyPoolObject, true, 10);
         }
 
+        public void InitGeneratorsBuyView(List<GeneratorData> generatorStats, Action<int> onTryBuyGenerator, bool newGame)
+        {
+            generatorsBuyView.Init(generatorStats, onTryBuyGenerator, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable, newGame);
+        }
+
         public void UpdateEnergy(long newEnergy)
         {
             txtEnergy.text = newEnergy.ToString("N0");
+            generatorsBuyView.OnEnergyUpdate(newEnergy);
         }
         
         public void UpdateEnergyPerSec(long newEnergy)
@@ -57,10 +62,10 @@ namespace UI
             txtEnergyPerSec.text = newEnergy.ToString("N0") + " E/s";
         }
 
-        public void UpdateGenerator(GeneratorData generatorData)
+        public void UpdateGenerator(GeneratorData generatorData, bool fromSave)
         {
             generatorsBuyView.UpdateGenerator(generatorData);
-            generatorsView.UpdateGenerator(generatorData);
+            generatorsView.UpdateGenerator(generatorData, fromSave);
         }
 
         public void UpdateUpgrade(Upgrade upgrade)
@@ -70,16 +75,22 @@ namespace UI
 
         public void UnlockGenerator(GeneratorData generatorData)
         {
+            if(generatorData.background == null) return;
             generatorsView.AddGenerator(generatorData, tooltipView.OnTooltipEnable, tooltipView.OnToolTipDisable);
+        }
+
+        public void AddGenerator(GeneratorData generatorData)
+        {
+            generatorsBuyView.AddGenerator(generatorData);
         }
 
         public void SpawnFlyingText(long energyGenerated)
         {
             var text = flyingTextPool.Get();
             text.text = energyGenerated.ToString(CultureInfo.InvariantCulture);
-            var position = flyingTextSpawnPosSmaller.position;
+            var position = flyingTextSpawnBotCorner.position;
             Vector3 pos = new Vector3( 0,0,position.z);
-            var position1 = flyingTextSpawnPosBigger.position;
+            var position1 = flyingTextSpawnTopCorner.position;
             pos.x = Random.Range(position.x, position1.x);
             pos.y = Random.Range(position.y, position1.y);
             text.transform.parent.position = pos;

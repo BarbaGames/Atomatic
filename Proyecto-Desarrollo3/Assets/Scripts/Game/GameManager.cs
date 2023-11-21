@@ -1,16 +1,10 @@
-using System;
 using System.Collections.Generic;
 
 using Generators;
-
 using Newtonsoft.Json;
-
 using Progress;
-
 using UI;
-
 using UnityEngine;
-
 
 namespace Game
 {
@@ -23,6 +17,7 @@ namespace Game
         [SerializeField] private GeneratorSO generatorSoData = null;
         [SerializeField] private Upgrades upgradesData = null;
         [SerializeField] private GameplayView gameplayView = null;
+        [SerializeField] private GameObject[] stages = null;
 
         private const string EnergyKey = "energy";
         private const string GeneratorsKey = "generators";
@@ -32,6 +27,8 @@ namespace Game
         private List<Generator> generators = null;
         private List<Upgrade> upgrades = null;
 
+        private bool deleteSavedData = false;
+
         private void Start()
         {
             upgrades = new List<Upgrade>();
@@ -40,8 +37,7 @@ namespace Game
                 upgrades.Add(Instantiate(upgradesData.upgrades[i]));
             }
 
-            gameplayView.Init(generatorSoData.generators, upgrades, BuyGenerator, BuyUpgrade, PlayerClick);
-
+            gameplayView.Init(upgrades, BuyUpgrade, PlayerClick);
             generators = new List<Generator>();
 
             for (int i = 0; i < generatorSoData.generators.Count; i++)
@@ -50,54 +46,79 @@ namespace Game
                 generator.Init(Instantiate(generatorSoData.generators[i]));
                 generators.Add(generator);
             }
-
-            if (FileHandler.FileExist(EnergyKey))
+            
+            if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
             {
-                if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
-                {
-                    AddCurrency(long.Parse(energyDataString));
-                }
+                List<GeneratorData> savedGeneratorsData =
+                    JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
+                
+                gameplayView.InitGeneratorsBuyView(generatorSoData.generators, BuyGenerator, false);
 
-                if (FileHandler.TryLoadFileRaw(GeneratorsKey, out string generatorsDataString))
+                for (int i = 0; i < savedGeneratorsData.Count; i++)
                 {
-                    List<GeneratorData> generatorsData = JsonConvert.DeserializeObject<List<GeneratorData>>(generatorsDataString);
-
-                    for (int i = 0; i < generatorsData.Count; i++)
+                    Generator generator = generators.Find(g => g.GeneratorData.id == savedGeneratorsData[i].id);
+                    if (generator != null && savedGeneratorsData[i].unlocked)
                     {
-                        Generator generator = generators.Find(g => g.GeneratorData.id == generatorsData[i].id);
-                        if (generator != null && generatorsData[i].unlocked)
+                        generator.SetData(savedGeneratorsData[i]);
+                        generator.GeneratorData.unlocked = true;
+                        generator.IsActive = true;
+                        generator.gameObject.SetActive(true);
+                        gameplayView.AddGenerator(generator.GeneratorData);
+                        gameplayView.UnlockGenerator(generator.GeneratorData);
+                        gameplayView.UpdateGenerator(generator.GeneratorData, true);
+
+                        if (i == savedGeneratorsData.Count - 1)
                         {
-                            generator.SetData(generatorsData[i]);
-                            generator.GeneratorData.unlocked = true;
-                            generator.IsActive = true;
-                            generator.gameObject.SetActive(true);
-                            gameplayView.UnlockGenerator(generator.GeneratorData);
-                            gameplayView.UpdateGenerator(generator.GeneratorData);
-                        }
-                    }
-                }
-
-                if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
-                {
-                    List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
-
-                    for (int i = 0; i < upgrades.Count; i++)
-                    {
-                        Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
-
-                        if (upgrade != null && upgrade.bought)
-                        {
-                            upgrades[i] = upgrade;
-                            gameplayView.UpdateUpgrade(upgrades[i]);
+                            if (i + 1 < generators.Count && !generators[i + 1].IsActive)
+                            {
+                                gameplayView.AddGenerator(generators[i + 1].GeneratorData);
+                            }
                         }
                     }
                 }
             }
+            else
+            {
+                gameplayView.InitGeneratorsBuyView(generatorSoData.generators, BuyGenerator, true);
+            }
+        
+
+            if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
+            {
+                List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
+
+                for (int i = 0; i < upgrades.Count; i++)
+                {
+                    Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
+
+                    if (upgrade != null && upgrade.bought)
+                    {
+                        upgrades[i] = upgrade;
+                        gameplayView.UpdateUpgrade(upgrades[i]);
+                    }
+                }
+            }
+
+            if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
+            {
+                AddCurrency(long.Parse(energyDataString));
+            }
+            UpdateEnergyPerSecond();
         }
-        private void Update() { GeneratorsLoop(); }
+
+        private void Update()
+        {
+            GeneratorsLoop();
+        }
 
         private void OnApplicationQuit()
         {
+            if (deleteSavedData)
+            {
+                FileHandler.DeleteAllFiles();
+                return;
+            }
+            
             FileHandler.SaveFile(EnergyKey, energy.ToString());
 
             List<GeneratorData> generatorsData = new List<GeneratorData>();
@@ -140,12 +161,20 @@ namespace Game
         }
 
         /// <summary>
-        /// The purpose is to use this function in a button for debugging purposes.
+        /// Function for debugging
         /// </summary>
         public void DebugAddCurrency()
         {
             energy += 1000000;
             gameplayView.UpdateEnergy(energy);
+        }
+        
+        /// <summary>
+        /// Function for debugging
+        /// </summary>
+        public void DebugClearLocalData()
+        {
+            deleteSavedData = true;
         }
 
         public void AddCurrency(long energyToAdd)
@@ -187,9 +216,9 @@ namespace Game
             AkSoundEngine.PostEvent("ClickGenerator", gameObject); // Wwise evento de click
         }
 
-        private void BuyGenerator(string id)
+        private void BuyGenerator(int id)
         {
-            Generator generator = generators.Find(i => i.GeneratorData.id == id);
+            Generator generator = generators.Find(i => i.GeneratorData.numId == id);
 
             if (generator != null)
             {
@@ -203,6 +232,11 @@ namespace Game
                 {
                     UnlockGenerator(generator);
                     gameplayView.UnlockGenerator(generator.GeneratorData);
+
+                    if (id + 1 < generators.Count && !generators[id + 1].IsActive) 
+                    {
+                        gameplayView.AddGenerator(generators[id + 1].GeneratorData);
+                    }
                 }
                 else
                 {
@@ -210,11 +244,9 @@ namespace Game
                     generator.Upgrade();
                 }
 
-                GeneratorSwitchSFXChange(id);
-
-                //AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop2", gameObject);
+                generator.PlayAudio(gameObject);
                 AkSoundEngine.PostEvent("BuyShop", gameObject); // Wwise evento de BuyShop
-                gameplayView.UpdateGenerator(generator.GeneratorData);
+                gameplayView.UpdateGenerator(generator.GeneratorData, false);
 
                 UpdateEnergyPerSecond();
             }
@@ -236,6 +268,11 @@ namespace Game
                     upgrades[i].bought = true;
                     gameplayView.UpdateUpgrade(upgrades[i]);
                     AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
+                    if (upgrades[i].stageUpgrade)
+                    {
+                        stages[upgrades[i].stageUnlock - 2].SetActive(false);
+                        stages[upgrades[i].stageUnlock - 1].SetActive(true);
+                    }
                     return;
                 }
             }
@@ -248,58 +285,6 @@ namespace Game
             generator.Upgrade();
             generator.IsActive = true;
             generator.gameObject.SetActive(true);
-
-        }
-        private void GeneratorSwitchSFXChange(string id)
-        {
-            switch (id)
-            {
-                case "Basic":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop1", gameObject);
-                    break;
-                case "Generator":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop2", gameObject);
-                    break;
-                case "Small Energy Plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop3", gameObject);
-                    break;
-                case "Solar Panels":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop4", gameObject);
-                    break;
-                case "Coal Plants":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop5", gameObject);
-                    break;
-                case "Nuclear Plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop6", gameObject);
-                    break;
-                case "Fusion plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop7", gameObject);
-                    break;
-                case "Geothermic plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop8", gameObject);
-                    break;
-                case "Dyson sphere":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop9", gameObject);
-                    break;
-                case "Star Harvester":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop10", gameObject);
-                    break;
-                case "Alien Energy":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop11", gameObject);
-                    break;
-                case "Black hole plant":
-                    AkSoundEngine.SetSwitch("IncrementalBuyShopSwitches", "IncrementalBuyShop12", gameObject);
-                    break;
-
-
-
-
-
-            }
-
-
         }
     }
 }
-
-

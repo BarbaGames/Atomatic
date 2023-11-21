@@ -17,6 +17,10 @@ namespace Menu
             Init();
         }
 
+        public void SetVolume(float volume)
+        {
+            //mainMixer.SetFloat("Volume", Mathf.Log10(volume) * 20); 
+        }
         public void SetResolution(int resolutionId)
         {
             Resolution res = resolutions[resolutionId];
