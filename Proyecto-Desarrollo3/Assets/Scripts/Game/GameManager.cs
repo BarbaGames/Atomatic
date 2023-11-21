@@ -6,7 +6,6 @@ using Progress;
 using UI;
 using UnityEngine;
 
-
 namespace Game
 {
     /// <summary>
@@ -18,6 +17,7 @@ namespace Game
         [SerializeField] private GeneratorSO generatorSoData = null;
         [SerializeField] private Upgrades upgradesData = null;
         [SerializeField] private GameplayView gameplayView = null;
+        [SerializeField] private GameObject[] stages = null;
 
         private const string EnergyKey = "energy";
         private const string GeneratorsKey = "generators";
@@ -267,6 +267,11 @@ namespace Game
                     upgrades[i].bought = true;
                     gameplayView.UpdateUpgrade(upgrades[i]);
                     AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
+                    if (upgrades[i].stageUpgrade)
+                    {
+                        stages[upgrades[i].stageUnlock - 2].SetActive(false);
+                        stages[upgrades[i].stageUnlock - 1].SetActive(true);
+                    }
                     return;
                 }
             }

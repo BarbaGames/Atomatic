@@ -17,3 +17,4 @@ MonoBehaviour:
   price: 1
   id: 11
   bought: 0
+  stageUpgrade: 1
