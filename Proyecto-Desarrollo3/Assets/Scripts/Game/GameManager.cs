@@ -103,6 +103,7 @@ namespace Game
             {
                 AddCurrency(long.Parse(energyDataString));
             }
+            UpdateEnergyPerSecond();
         }
 
         private void Update()

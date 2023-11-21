@@ -26,3 +26,4 @@ MonoBehaviour:
   timer: 0
   level: 1
   unlocked: 0
+  showData: 0
