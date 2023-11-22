@@ -1,5 +1,7 @@
 using System;
 
+using Generators;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -40,9 +42,10 @@ public class UpgradeButtonView : MonoBehaviour, IPointerEnterHandler, IPointerEx
         }
     }
 
-    public void UpdateUpgrade(Upgrade upgradeData)
+    public void UpdateUpgrade(Upgrade upgradeData, GeneratorData generatorData)
     {
         this.upgradeData = upgradeData;
+        
         if (upgradeData.bought)
         {
             btnBuy.interactable = false;

@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using Generators;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,13 +31,13 @@ public class UpgradeBuyView : MonoBehaviour
         }
     }
 
-    public void UpdateUpgrade(Upgrade upgrade)
+    public void UpdateUpgrade(Upgrade upgrade, GeneratorData generatorData)
     {
         for (int i = 0; i < upgradeButtonViews.Count; i++)
         {
             if (upgradeButtonViews[i].Id == upgrade.id)
             {
-                upgradeButtonViews[i].UpdateUpgrade(upgrade);
+                upgradeButtonViews[i].UpdateUpgrade(upgrade, generatorData);
                 return;
             }
         }

@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
                 //AkSoundEngine.SetState("GameScene", "Win");
                 //break;
             default:
-                Debug.LogWarning("La escena" + scene.ToString() + " aún no tiene implementado un cambio de música, ¡notificar a los de audio!");
+                Debug.LogWarning("La escena" + scene.ToString() + " aÃºn no tiene implementado un cambio de mÃºsica, Â¡notificar a los de audio!");
                 break;
 
 

@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Progress;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game
 {
@@ -56,7 +57,7 @@ namespace Game
 
                 for (int i = 0; i < savedGeneratorsData.Count; i++)
                 {
-                    Generator generator = generators.Find(g => g.GeneratorData.id == savedGeneratorsData[i].id);
+                    Generator generator = generators.Find(g => g.GeneratorData.numId == savedGeneratorsData[i].numId);
                     if (generator != null && savedGeneratorsData[i].unlocked)
                     {
                         generator.SetData(savedGeneratorsData[i]);
@@ -94,7 +95,7 @@ namespace Game
                     if (upgrade != null && upgrade.bought)
                     {
                         upgrades[i] = upgrade;
-                        gameplayView.UpdateUpgrade(upgrades[i]);
+                        gameplayView.UpdateUpgrade(upgrades[i], null);
                     }
                 }
             }
@@ -133,19 +134,7 @@ namespace Game
             FileHandler.SaveFile(GeneratorsKey, JsonConvert.SerializeObject(generatorsData));
             FileHandler.SaveFile(UpgradesKey, JsonConvert.SerializeObject(upgrades));
         }
-
-        public void UpgradeGenerator(long price, int id)
-        {
-            const int multiplier = 2;
-            if (energy > price)
-            {
-                generators[id].GeneratorData.currencyGenerated *= multiplier;
-                generators[id].GeneratorData.baseCurrencyGenerated *= multiplier;
-                RemoveCurrency(price);
-                UpdateEnergyPerSecond();
-            }
-        }
-
+        
         private void GeneratorsLoop()
         {
             long generated = 0;
@@ -266,12 +255,30 @@ namespace Game
 
                     RemoveCurrency(upgrades[i].price);
                     upgrades[i].bought = true;
-                    gameplayView.UpdateUpgrade(upgrades[i]);
+
+                    gameplayView.UpdateUpgrade(upgrades[i], null);
+                   
                     AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
                     if (upgrades[i].stageUpgrade)
                     {
-                        stages[upgrades[i].stageUnlock - 2].SetActive(false);
-                        stages[upgrades[i].stageUnlock - 1].SetActive(true);
+                        if (upgrades[i].stageUnlock > stages.Length)
+                        {
+                            SceneManager.LoadScene("Win");
+                        }
+                        else
+                        {
+                            stages[upgrades[i].stageUnlock - 2].SetActive(false);
+                            stages[upgrades[i].stageUnlock - 1].SetActive(true);
+                            
+                            string generatorState = "";
+                            switch (upgrades[i].stageUnlock)
+                            {
+                                case 1: generatorState = "One"; break;
+                                case 2: generatorState = "Two"; break;
+                                case 3: generatorState = "Three"; break;
+                            }
+                            AkSoundEngine.SetState("CurrentGenerator", generatorState);
+                        }
                     }
                     return;
                 }
