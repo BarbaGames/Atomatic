@@ -1,5 +1,4 @@
-﻿using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Generators
 {
@@ -47,7 +46,7 @@ namespace Generators
         public void Upgrade()
         {
             generatorData.level++;
-            generatorData.levelUpCost = (long)(generatorData.levelUpCost * generatorData.levelUpCostIncrease);
+            generatorData.levelUpCost = (long)(generatorData.baseLevelUpCost * Mathf.Pow(generatorData.levelUpCostIncrease,generatorData.level )/generatorData.levelUpCostIncrease);
             generatorData.currencyGenerated = generatorData.baseCurrencyGenerated * generatorData.level;
         }
 

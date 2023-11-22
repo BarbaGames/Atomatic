@@ -14,8 +14,9 @@ namespace Generators
         [SerializeField] public int numId;
         [JsonIgnore] public Sprite icon;
         [JsonIgnore] public Sprite background;
-        [SerializeField] public float levelUpCostIncrease;
+        [SerializeField] public float levelUpCostIncrease = 1.15f;
         [SerializeField] public long levelUpCost;
+        [SerializeField] public long baseLevelUpCost;
         [SerializeField] public long currencyGenerated;
         [SerializeField] public long baseCurrencyGenerated;
         [SerializeField] public long totalCurrencyGenerated;
