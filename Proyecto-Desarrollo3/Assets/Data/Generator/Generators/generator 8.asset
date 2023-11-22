@@ -16,13 +16,15 @@ MonoBehaviour:
   numId: 8
   icon: {fileID: 21300000, guid: 2a0b7b97fa13cba46b63ea3dbced42cf, type: 3}
   background: {fileID: 21300000, guid: fed682676eb27754ab4b1355fe8835f2, type: 3}
-  levelUpCostIncrease: 3.3
-  levelUpCost: 1000
-  currencyGenerated: 50
-  baseCurrencyGenerated: 50
+  levelUpCostIncrease: 1.15
+  levelUpCost: 330000000
+  baseLevelUpCost: 330000000
+  currencyGenerated: 260000
+  baseCurrencyGenerated: 260000
   totalCurrencyGenerated: 0
   description: Who is using it anyways?
   maxTimer: 1
   timer: 1
   level: 0
   unlocked: 0
+  showData: 0

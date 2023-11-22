@@ -16,13 +16,15 @@ MonoBehaviour:
   numId: 1
   icon: {fileID: 21300000, guid: 5107ee78f3887b044bb56f2daeff3358, type: 3}
   background: {fileID: 21300000, guid: 35fec34ac6de4da4cabb94081a0853f4, type: 3}
-  levelUpCostIncrease: 1.3
-  levelUpCost: 30
-  currencyGenerated: 1
-  baseCurrencyGenerated: 1
+  levelUpCostIncrease: 1.15
+  levelUpCost: 100
+  baseLevelUpCost: 100
+  currencyGenerated: 3
+  baseCurrencyGenerated: 3
   totalCurrencyGenerated: 0
   description: Perfect for third world countries
   maxTimer: 1
   timer: 1
   level: 0
   unlocked: 0
+  showData: 0

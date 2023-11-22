@@ -16,10 +16,11 @@ MonoBehaviour:
   numId: 2
   icon: {fileID: 21300000, guid: 822ad1e108e38764cb63d158bde36b30, type: 3}
   background: {fileID: 21300000, guid: fbefc842ef921f44582d6be1f02702a3, type: 3}
-  levelUpCostIncrease: 2.5
-  levelUpCost: 300
-  currencyGenerated: 15
-  baseCurrencyGenerated: 15
+  levelUpCostIncrease: 1.15
+  levelUpCost: 1100
+  baseLevelUpCost: 1100
+  currencyGenerated: 13
+  baseCurrencyGenerated: 13
   totalCurrencyGenerated: 0
   description: Made from scrap and gathers energy from the enviroment, people wont
     bother you now
@@ -27,3 +28,4 @@ MonoBehaviour:
   timer: 1
   level: 0
   unlocked: 0
+  showData: 0
