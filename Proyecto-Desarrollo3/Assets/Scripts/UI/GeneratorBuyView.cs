@@ -13,6 +13,7 @@ namespace UI
         [SerializeField] private Button btnBuy = null;
         [SerializeField] private TMP_Text txtName = null;
         [SerializeField] private TMP_Text txtPrice = null;
+        [SerializeField] private TMP_Text txtOwned = null;
         [SerializeField] private Image imgIcon = null;
         [SerializeField] private Image imgIconShadow = null;
 
@@ -32,6 +33,7 @@ namespace UI
             id = this.generatorData.numId;
             txtName.text = generatorData.unlocked ? this.generatorData.id : "???";
             txtPrice.text = this.generatorData.levelUpCost.ToString("N0");
+            txtOwned.text = this.generatorData.level.ToString("N0");
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
         
@@ -61,6 +63,7 @@ namespace UI
         {
             this.generatorData = generatorData;
             txtPrice.text = generatorData.levelUpCost.ToString("N0");
+            txtOwned.text = generatorData.level.ToString("N0");
             onEnableTooltip.Invoke(this.generatorData);
         }
         
