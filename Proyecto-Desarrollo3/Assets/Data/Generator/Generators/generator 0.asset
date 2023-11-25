@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a32569ad3434e2fb05ada9852f02703, type: 3}
   m_Name: generator 0
   m_EditorClassIdentifier: 
-  id: Basic
+  id: Powercore
   numId: 0
   icon: {fileID: 21300000, guid: 2a0b7b97fa13cba46b63ea3dbced42cf, type: 3}
   background: {fileID: 0}

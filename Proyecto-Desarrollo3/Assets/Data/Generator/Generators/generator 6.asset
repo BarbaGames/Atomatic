@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a32569ad3434e2fb05ada9852f02703, type: 3}
   m_Name: generator 6
   m_EditorClassIdentifier: 
-  id: Fusion plant
+  id: Fusion Plant
   numId: 6
   icon: {fileID: 21300000, guid: 7c24e2e166f27324096730a8bdf2e5f1, type: 3}
   background: {fileID: 21300000, guid: fd6ee9a515b16c141940683cbc39ff5a, type: 3}
