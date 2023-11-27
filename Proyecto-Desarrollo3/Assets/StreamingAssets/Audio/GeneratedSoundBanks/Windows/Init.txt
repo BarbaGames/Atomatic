@@ -8,6 +8,7 @@ State	ID	Name	State Group			Notes
 	912956111	Three	CurrentGenerator			
 	1064933119	One	CurrentGenerator			
 	748895195	None	GameScene			
+	979765101	Win	GameScene			
 	984691642	InGame	GameScene			
 	3604647259	MainMenu	GameScene			
 

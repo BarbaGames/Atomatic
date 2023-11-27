@@ -30,13 +30,12 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public enum Scenes { MAIN_MENU, GAME, TUTORIAL, WIN}
     public static void ChangeScene(string scene)
     {
         Debug.Log(scene);
         switch (scene)
         {
-            case "MainMenu":
+            case "Menu":
                 AkSoundEngine.SetState("GameScene", "MainMenu");
                 break;
             case "Tutorial":
@@ -44,10 +43,10 @@ public class AudioManager : MonoBehaviour
                 AkSoundEngine.SetState("GameScene", "InGame");
                 break;
             case "Win":
-                //AkSoundEngine.SetState("GameScene", "Win");
-                //break;
+                AkSoundEngine.SetState("GameScene", "Win");
+                break;
             default:
-                Debug.LogWarning("La escena" + scene.ToString() + " aún no tiene implementado un cambio de música, ¡notificar a los de audio!");
+                Debug.LogWarning("La escena " + scene.ToString() + " aún no tiene implementado un cambio de música, ¡notificar a los de audio!");
                 break;
 
 
