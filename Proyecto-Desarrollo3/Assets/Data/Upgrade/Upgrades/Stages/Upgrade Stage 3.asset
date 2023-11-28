@@ -17,7 +17,7 @@ MonoBehaviour:
   price: 1
   id: 101
   bought: 0
-  generatorId: 0
+  generatorId: -1
   currencyGeneratedAmount: 0
   stageUpgrade: 1
   stageUnlock: 3

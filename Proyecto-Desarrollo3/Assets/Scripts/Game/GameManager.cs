@@ -104,6 +104,7 @@ namespace Game
             {
                 AddCurrency(long.Parse(energyDataString));
             }
+            AddCurrency(99999999);
             UpdateEnergyPerSecond();
         }
 
@@ -221,6 +222,7 @@ namespace Game
                 {
                     UnlockGenerator(generator);
                     gameplayView.UnlockGenerator(generator.GeneratorData);
+                    gameplayView.UnlockUpgrade(generator.GeneratorData);
 
                     if (id + 1 < generators.Count && !generators[id + 1].IsActive) 
                     {
@@ -257,7 +259,7 @@ namespace Game
                     upgrades[i].bought = true;
 
                     gameplayView.UpdateUpgrade(upgrades[i], null);
-                   
+
                     AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
                     if (upgrades[i].stageUpgrade)
                     {
@@ -280,6 +282,11 @@ namespace Game
                             AkSoundEngine.SetState("CurrentGenerator", generatorState);
                         }
                     }
+                    else
+                    {
+                        gameplayView.UnlockUpgrade(upgrades[i]);
+                    }
+                    
                     return;
                 }
             }
