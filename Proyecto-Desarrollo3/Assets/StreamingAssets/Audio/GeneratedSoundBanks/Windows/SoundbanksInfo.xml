@@ -11,12 +11,17 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2135287841">
+		<SoundBank Id="1355168291" Language="SFX" Hash="98273149">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="736504446" Name="MasterVol" ObjectPath="\Game Parameters\Default Work Unit\MasterVol"/>
+				<GameParameter Id="1795262521" Name="MusVol" ObjectPath="\Game Parameters\Default Work Unit\MusVol"/>
+				<GameParameter Id="3432874653" Name="SfxVol" ObjectPath="\Game Parameters\Default Work Unit\SfxVol"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1596687163">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3932182560">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -145,27 +150,43 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3532703493" Name="BuyUpgrade" ObjectPath="\Events\Default Work Unit\Gameplay\BuyUpgrade" DurationType="OneShot" DurationMin="0.888896" DurationMax="0.888896">
+				<Event Id="3532703493" Name="BuyUpgrade" ObjectPath="\Events\Default Work Unit\Gameplay\BuyUpgrade" DurationType="OneShot" DurationMin="0.279646" DurationMax="0.279646">
 					<IncludedMemoryFiles>
-						<File Id="2067128" Language="SFX">
-							<ShortName>BuyUpgradeTest.wav</ShortName>
-							<Path>SFX\BuyUpgradeTest_10C4C929.wem</Path>
+						<File Id="780292732" Language="SFX">
+							<ShortName>BuyUpgrade2.wav</ShortName>
+							<Path>SFX\BuyUpgrade2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1397303698" Name="ClickGenerator" ObjectPath="\Events\Default Work Unit\Gameplay\ClickGenerator" DurationType="OneShot" DurationMin="0.127271" DurationMax="0.315146">
+				<Event Id="1397303698" Name="ClickGenerator" ObjectPath="\Events\Default Work Unit\Gameplay\ClickGenerator" DurationType="OneShot" DurationMin="0.127271" DurationMax="0.563208">
 					<IncludedMemoryFiles>
 						<File Id="5496699" Language="SFX">
 							<ShortName>ClickElectrico-002.wav</ShortName>
 							<Path>SFX\ClickElectrico-002_10C4C929.wem</Path>
 						</File>
+						<File Id="7059099" Language="SFX">
+							<ShortName>ClickSegundo-004.wav</ShortName>
+							<Path>SFX\ClickSegundo-004_10C4C929.wem</Path>
+						</File>
 						<File Id="26575827" Language="SFX">
 							<ShortName>ClickElectrico-006.wav</ShortName>
 							<Path>SFX\ClickElectrico-006_10C4C929.wem</Path>
 						</File>
+						<File Id="66182435" Language="SFX">
+							<ShortName>ClickSecundario-004.wav</ShortName>
+							<Path>SFX\ClickSecundario-004_10C4C929.wem</Path>
+						</File>
+						<File Id="72964328" Language="SFX">
+							<ShortName>ClickSegundo-003.wav</ShortName>
+							<Path>SFX\ClickSegundo-003_10C4C929.wem</Path>
+						</File>
 						<File Id="223137404" Language="SFX">
 							<ShortName>ClickElectrico-004.wav</ShortName>
 							<Path>SFX\ClickElectrico-004_10C4C929.wem</Path>
+						</File>
+						<File Id="519215433" Language="SFX">
+							<ShortName>ClickSecundario-002.wav</ShortName>
+							<Path>SFX\ClickSecundario-002_10C4C929.wem</Path>
 						</File>
 						<File Id="645693971" Language="SFX">
 							<ShortName>ClickElectrico-003.wav</ShortName>
@@ -179,7 +200,52 @@
 							<ShortName>ClickElectrico-005.wav</ShortName>
 							<Path>SFX\ClickElectrico-005_10C4C929.wem</Path>
 						</File>
+						<File Id="709838868" Language="SFX">
+							<ShortName>ClickSegundo-002.wav</ShortName>
+							<Path>SFX\ClickSegundo-002_10C4C929.wem</Path>
+						</File>
+						<File Id="748030901" Language="SFX">
+							<ShortName>ClickSegundo-001.wav</ShortName>
+							<Path>SFX\ClickSegundo-001_10C4C929.wem</Path>
+						</File>
+						<File Id="824949019" Language="SFX">
+							<ShortName>ClickSecundario-003.wav</ShortName>
+							<Path>SFX\ClickSecundario-003_10C4C929.wem</Path>
+						</File>
+						<File Id="1014281206" Language="SFX">
+							<ShortName>ClickSecundario-001.wav</ShortName>
+							<Path>SFX\ClickSecundario-001_10C4C929.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{1F110991-2F4D-4515-8EF3-2B18B441869A}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{68C76061-E341-461B-89B3-2C0CA2B1A0D9}">
+							<Media>
+								<File Id="66182435"/>
+								<File Id="519215433"/>
+								<File Id="824949019"/>
+								<File Id="1014281206"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{1F110991-2F4D-4515-8EF3-2B18B441869A}">
+							<Media>
+								<File Id="5496699"/>
+								<File Id="26575827"/>
+								<File Id="223137404"/>
+								<File Id="645693971"/>
+								<File Id="699753697"/>
+								<File Id="704009042"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{7FAB38DC-18E6-44C6-97C0-00B698AB032E}">
+							<Media>
+								<File Id="7059099"/>
+								<File Id="72964328"/>
+								<File Id="709838868"/>
+								<File Id="748030901"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="271697268" Name="GeneratorAmbience" ObjectPath="\Events\Default Work Unit\Gameplay\GeneratorAmbience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="303266102" Name="MenuHover" ObjectPath="\Events\Default Work Unit\Main Menu\MenuHover" DurationType="OneShot" DurationMin="0.010208" DurationMax="0.010208">
@@ -721,15 +787,6 @@
 						<Switch Id="434851590" Name="IncrementalBuyShop10" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop10" GUID="{84080E0E-A0ED-4542-8996-225B26556C71}"/>
 						<Switch Id="434851591" Name="IncrementalBuyShop11" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop11" GUID="{532905F0-ECDD-4E5A-938E-EB56203605DA}"/>
 						<Switch Id="434851588" Name="IncrementalBuyShop12" ObjectPath="\Switches\Default Work Unit\IncrementalBuyShopSwitches\IncrementalBuyShop12" GUID="{5DE629D9-5C50-4523-93C9-2877E98E0267}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="1240427665" Name="ClickStatus" ObjectPath="\Switches\Default Work Unit\ClickStatus" GUID="{E7C6216F-4810-4017-A316-326190C4D216}">
-					<Switches>
-						<Switch Id="1206986080" Name="ClickA" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickA" GUID="{A8AA3C04-DFA2-4EEB-BECB-64E2E4DDF3FA}"/>
-						<Switch Id="1206986083" Name="ClickB" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickB" GUID="{4E8E7D62-9D06-4843-B24F-9A5FF66ECB5D}"/>
-						<Switch Id="1206986082" Name="ClickC" ObjectPath="\Switches\Default Work Unit\ClickStatus\ClickC" GUID="{624F653B-6450-46E1-960E-FA5B22D4DD9A}"/>
-						<Switch Id="2281549183" Name="DobleClick" ObjectPath="\Switches\Default Work Unit\ClickStatus\DobleClick" GUID="{7DE62BB7-33B8-43B3-A3E9-5AAA94874FFF}"/>
-						<Switch Id="3938304779" Name="DobleClickReversa" ObjectPath="\Switches\Default Work Unit\ClickStatus\DobleClickReversa" GUID="{CFA91971-E567-4C24-B995-A45230BE1A90}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
