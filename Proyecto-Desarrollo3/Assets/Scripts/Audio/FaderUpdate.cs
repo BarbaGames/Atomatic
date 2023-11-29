@@ -10,6 +10,6 @@ public class FaderUpdate : MonoBehaviour
     public void FaderUpdated (float sliderValue)
     {
         AkSoundEngine.SetRTPCValue(rtpcName, sliderValue);
-        UnityEngine.Debug.Log(sliderValue);
+      
     }
 }
