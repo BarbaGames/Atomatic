@@ -21,7 +21,7 @@
 				<GameParameter Id="3432874653" Name="SfxVol" ObjectPath="\Game Parameters\Default Work Unit\SfxVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2578302463">
+		<SoundBank Id="3161908922" Language="SFX" Hash="563888383">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -280,11 +280,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2909695010" Name="MenuStartGame" ObjectPath="\Events\Default Work Unit\Main Menu\MenuStartGame" DurationType="OneShot" DurationMin="1.565396" DurationMax="1.565396">
+				<Event Id="2909695010" Name="MenuStartGame" ObjectPath="\Events\Default Work Unit\Main Menu\MenuStartGame" DurationType="OneShot" DurationMin="3.988625" DurationMax="3.988625">
 					<IncludedMemoryFiles>
-						<File Id="919586181" Language="SFX">
-							<ShortName>Placeholder.wav</ShortName>
-							<Path>SFX\Placeholder_10C4C929.wem</Path>
+						<File Id="368382643" Language="SFX">
+							<ShortName>startGame.wav</ShortName>
+							<Path>SFX\startGame_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
