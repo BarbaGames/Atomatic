@@ -105,7 +105,6 @@ namespace Game
                 AddCurrency(long.Parse(energyDataString));
             }
             
-            AddCurrency(9999999999999);
             UpdateEnergyPerSecond();
         }
 
@@ -169,7 +168,7 @@ namespace Game
         /// </summary>
         public void DebugAddCurrency()
         {
-            energy += 1000000;
+            energy += 9999999999999999;
             gameplayView.UpdateEnergy(energy);
         }
         
