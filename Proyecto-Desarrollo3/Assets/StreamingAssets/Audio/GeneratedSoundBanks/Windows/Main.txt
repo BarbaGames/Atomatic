@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	70193633	MenuPositive2			\Default Work Unit\Main Menu\MenuPositive2	
 	271697268	GeneratorAmbience			\Default Work Unit\Gameplay\GeneratorAmbience	
 	303266102	MenuHover			\Default Work Unit\Main Menu\MenuHover	
 	393478359	PlayAtEnd			\Default Work Unit\Music\PlayAtEnd	
@@ -82,6 +83,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	308500214	Batería A completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería A sin hihat_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\MainMenu\MainMenu\A\Batería A completa		1982000
 	327312290	Batería B completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería B sin hihat_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\MainMenu\MainMenu\B\Batería B completa		1982000
 	333392990	IncrementalBuyShop-001	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\IncrementalBuyShop-001_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\IncrementalBuyShop\IncrementalBuyShop-001		96064
+	333482707	MenuPositive2	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\MenuPositive2_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\MainMenu\MenuPositive2		63608
 	338355016	BuyNegative	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\BuyNegative_10C4C929.wem		\Actor-Mixer Hierarchy\Gameplay\UI\BuyNegative		72892
 	352214731	Full	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Generator1Full_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\Generators\Music Switch\Generator 1\Generator 1\Segment\Full		32873004
 	357408021	Batería A completa	D:\Git\Atomatic-Audio-Team\Atomatic-Audio-Team\Proyecto-Desarrollo3_WwiseProject\.cache\Windows\SFX\Batería A completa_D79FB2B7.wem		\Interactive Music Hierarchy\Main\Main Switch\MainMenu\MainMenu\A\Batería A completa		1982000

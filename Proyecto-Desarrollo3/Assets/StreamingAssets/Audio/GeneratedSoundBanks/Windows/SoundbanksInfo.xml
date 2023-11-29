@@ -21,7 +21,7 @@
 				<GameParameter Id="3432874653" Name="SfxVol" ObjectPath="\Game Parameters\Default Work Unit\SfxVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="563888383">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1692131094">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -277,6 +277,14 @@
 						<File Id="368962797" Language="SFX">
 							<ShortName>MenuPositive.wav</ShortName>
 							<Path>SFX\MenuPositive_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="70193633" Name="MenuPositive2" ObjectPath="\Events\Default Work Unit\Main Menu\MenuPositive2" DurationType="OneShot" DurationMin="0.258169" DurationMax="0.258169">
+					<IncludedMemoryFiles>
+						<File Id="333482707" Language="SFX">
+							<ShortName>MenuPositive2.wav</ShortName>
+							<Path>SFX\MenuPositive2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
