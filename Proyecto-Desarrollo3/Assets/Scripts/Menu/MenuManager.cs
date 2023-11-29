@@ -15,7 +15,8 @@ namespace Menu
 
         public void Start()
         {
-            versionText.text = "v"+Application.version;
+            
+            if(versionText != null) versionText.text = "v"+Application.version;
         }
         /// <summary>
         /// Quits the application

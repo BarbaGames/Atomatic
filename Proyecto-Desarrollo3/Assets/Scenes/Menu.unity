@@ -326,17 +326,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28523369}
   m_CullTransparentMesh: 1
---- !u!114 &29705056 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8367933652893419185, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-  m_PrefabInstance: {fileID: 8938790179051503838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0442e366e4974fb3352fd304e1b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &103917942
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +359,7 @@ RectTransform:
   m_LocalScale: {x: 0.85, y: 0.7, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1485421634}
+  m_Father: {fileID: 769993190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -421,18 +410,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: f83ba68f4439e8743910b36e30355831, type: 2}
-        m_TargetAssemblyTypeName: Audio.SoundEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 264855120}
         m_TargetAssemblyTypeName: Menu.MenuManager, Assembly-CSharp
         m_MethodName: QuitApplication
@@ -580,9 +557,7 @@ GameObject:
   - component: {fileID: 129871825}
   - component: {fileID: 129871828}
   - component: {fileID: 129871827}
-  - component: {fileID: 129871830}
   - component: {fileID: 129871826}
-  - component: {fileID: 129871829}
   m_Layer: 5
   m_Name: Link (1)
   m_TagString: Untagged
@@ -703,66 +678,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129871824}
   m_CullTransparentMesh: 1
---- !u!114 &129871829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129871824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1176667114}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 251099920}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &129871830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129871824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &132286293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +959,7 @@ RectTransform:
   m_LocalScale: {x: 0.85, y: 0.7, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1485421634}
+  m_Father: {fileID: 769993190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1068,7 +983,7 @@ MonoBehaviour:
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 103917944}
     m_SelectOnDown: {fileID: 1282932449}
-    m_SelectOnLeft: {fileID: 197944951}
+    m_SelectOnLeft: {fileID: 1067601849}
     m_SelectOnRight: {fileID: 1067601849}
   m_Transition: 1
   m_Colors:
@@ -1118,18 +1033,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &197944952
 MonoBehaviour:
@@ -1241,8 +1144,6 @@ GameObject:
   - component: {fileID: 210174404}
   - component: {fileID: 210174403}
   - component: {fileID: 210174402}
-  - component: {fileID: 210174406}
-  - component: {fileID: 210174405}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -1388,66 +1289,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210174400}
   m_CullTransparentMesh: 1
---- !u!114 &210174405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210174400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &210174406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210174400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &230748750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,9 +1421,7 @@ GameObject:
   - component: {fileID: 251099916}
   - component: {fileID: 251099919}
   - component: {fileID: 251099918}
-  - component: {fileID: 251099920}
   - component: {fileID: 251099917}
-  - component: {fileID: 251099921}
   m_Layer: 5
   m_Name: Link (2)
   m_TagString: Untagged
@@ -1703,66 +1542,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251099915}
   m_CullTransparentMesh: 1
---- !u!114 &251099920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251099915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &251099921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251099915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1176667114}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 251099920}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &264855119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1603,6 @@ GameObject:
   - component: {fileID: 279461535}
   - component: {fileID: 279461534}
   - component: {fileID: 279461533}
-  - component: {fileID: 279461536}
   m_Layer: 5
   m_Name: Inst
   m_TagString: Untagged
@@ -1945,21 +1723,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279461531}
   m_CullTransparentMesh: 1
---- !u!114 &279461536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279461531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &326776483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,8 +1774,6 @@ GameObject:
   - component: {fileID: 369345507}
   - component: {fileID: 369345506}
   - component: {fileID: 369345505}
-  - component: {fileID: 369345508}
-  - component: {fileID: 369345509}
   m_Layer: 5
   m_Name: Sketch
   m_TagString: Untagged
@@ -2133,66 +1894,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369345503}
   m_CullTransparentMesh: 1
---- !u!114 &369345508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369345503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &369345509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369345503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &395148246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +1906,6 @@ GameObject:
   - component: {fileID: 395148250}
   - component: {fileID: 395148249}
   - component: {fileID: 395148248}
-  - component: {fileID: 395148251}
   m_Layer: 5
   m_Name: ArtS
   m_TagString: Untagged
@@ -2326,21 +2026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395148246}
   m_CullTransparentMesh: 1
---- !u!114 &395148251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395148246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &404084672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,7 +2041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &404084673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3540,7 +3225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &634984281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3630,8 +3315,6 @@ GameObject:
   - component: {fileID: 672719115}
   - component: {fileID: 672719114}
   - component: {fileID: 672719113}
-  - component: {fileID: 672719116}
-  - component: {fileID: 672719117}
   m_Layer: 5
   m_Name: Link (4)
   m_TagString: Untagged
@@ -3752,66 +3435,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672719111}
   m_CullTransparentMesh: 1
---- !u!114 &672719116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672719111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &672719117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672719111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &702951231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,8 +3447,6 @@ GameObject:
   - component: {fileID: 702951235}
   - component: {fileID: 702951234}
   - component: {fileID: 702951233}
-  - component: {fileID: 702951237}
-  - component: {fileID: 702951236}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -3971,34 +3592,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702951231}
   m_CullTransparentMesh: 1
---- !u!114 &702951236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702951231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
---- !u!114 &702951237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702951231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &707201321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,8 +3604,6 @@ GameObject:
   - component: {fileID: 707201325}
   - component: {fileID: 707201324}
   - component: {fileID: 707201323}
-  - component: {fileID: 707201326}
-  - component: {fileID: 707201327}
   m_Layer: 5
   m_Name: Link
   m_TagString: Untagged
@@ -4133,66 +3724,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707201321}
   m_CullTransparentMesh: 1
---- !u!114 &707201326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707201321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &707201327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707201321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &709406079
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,6 +4034,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752005862}
   m_CullTransparentMesh: 1
+--- !u!1 &769993189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769993190}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &769993190
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769993189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1067601848}
+  - {fileID: 197944950}
+  - {fileID: 1282932448}
+  - {fileID: 103917943}
+  m_Father: {fileID: 1485421634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &791068890
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,7 +4222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &823193076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4690,8 +4260,6 @@ GameObject:
   - component: {fileID: 833350568}
   - component: {fileID: 833350567}
   - component: {fileID: 833350566}
-  - component: {fileID: 833350569}
-  - component: {fileID: 833350570}
   m_Layer: 5
   m_Name: Inst
   m_TagString: Untagged
@@ -4812,66 +4380,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833350564}
   m_CullTransparentMesh: 1
---- !u!114 &833350569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833350564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &833350570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833350564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &838859710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,8 +4392,6 @@ GameObject:
   - component: {fileID: 838859714}
   - component: {fileID: 838859713}
   - component: {fileID: 838859712}
-  - component: {fileID: 838859716}
-  - component: {fileID: 838859715}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -5043,66 +4549,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838859710}
   m_CullTransparentMesh: 1
---- !u!114 &838859715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838859710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1176667114}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 251099920}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &838859716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838859710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &886561816
 GameObject:
   m_ObjectHideFlags: 0
@@ -5271,9 +4717,7 @@ GameObject:
   - component: {fileID: 919435551}
   - component: {fileID: 919435554}
   - component: {fileID: 919435553}
-  - component: {fileID: 919435556}
   - component: {fileID: 919435552}
-  - component: {fileID: 919435555}
   m_Layer: 5
   m_Name: Link (3)
   m_TagString: Untagged
@@ -5394,66 +4838,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919435550}
   m_CullTransparentMesh: 1
---- !u!114 &919435555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919435550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1176667114}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 251099920}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &919435556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919435550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &942887393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,7 +5098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5771,7 +5155,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1485421634}
+  m_Father: {fileID: 769993190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5944,8 +5328,6 @@ GameObject:
   - component: {fileID: 1071448897}
   - component: {fileID: 1071448896}
   - component: {fileID: 1071448895}
-  - component: {fileID: 1071448899}
-  - component: {fileID: 1071448898}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -6091,66 +5473,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071448893}
   m_CullTransparentMesh: 1
---- !u!114 &1071448898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071448893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1071448899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071448893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &1080095691
 GameObject:
   m_ObjectHideFlags: 0
@@ -6574,8 +5896,6 @@ GameObject:
   - component: {fileID: 1174460783}
   - component: {fileID: 1174460782}
   - component: {fileID: 1174460781}
-  - component: {fileID: 1174460784}
-  - component: {fileID: 1174460785}
   m_Layer: 5
   m_Name: Link (3)
   m_TagString: Untagged
@@ -6696,66 +6016,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174460779}
   m_CullTransparentMesh: 1
---- !u!114 &1174460784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174460779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &1174460785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174460779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1176667109
 GameObject:
   m_ObjectHideFlags: 0
@@ -6767,9 +6027,7 @@ GameObject:
   - component: {fileID: 1176667110}
   - component: {fileID: 1176667113}
   - component: {fileID: 1176667112}
-  - component: {fileID: 1176667114}
   - component: {fileID: 1176667111}
-  - component: {fileID: 1176667115}
   m_Layer: 5
   m_Name: Link
   m_TagString: Untagged
@@ -6890,66 +6148,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176667109}
   m_CullTransparentMesh: 1
---- !u!114 &1176667114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176667109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &1176667115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176667109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1176667114}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 251099920}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1231086080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6962,8 +6160,6 @@ GameObject:
   - component: {fileID: 1231086084}
   - component: {fileID: 1231086083}
   - component: {fileID: 1231086082}
-  - component: {fileID: 1231086086}
-  - component: {fileID: 1231086085}
   m_Layer: 5
   m_Name: SoundC
   m_TagString: Untagged
@@ -7084,66 +6280,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231086080}
   m_CullTransparentMesh: 1
---- !u!114 &1231086085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231086080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1231086086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231086080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &1236306855
 GameObject:
   m_ObjectHideFlags: 0
@@ -7154,9 +6290,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1236306856}
   - component: {fileID: 1236306858}
-  - component: {fileID: 1236306857}
   m_Layer: 5
-  m_Name: OptionsMenu
+  m_Name: SettingsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7184,36 +6319,6 @@ RectTransform:
   m_AnchoredPosition: {x: -500, y: 1}
   m_SizeDelta: {x: 1011, y: -22}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1236306857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236306855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5256de7198f1adb45a6c6395b314e941, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1236306858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7255,7 +6360,7 @@ RectTransform:
   m_LocalScale: {x: 0.85, y: 0.7, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1485421634}
+  m_Father: {fileID: 769993190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7599,8 +6704,6 @@ GameObject:
   - component: {fileID: 1294390954}
   - component: {fileID: 1294390953}
   - component: {fileID: 1294390952}
-  - component: {fileID: 1294390956}
-  - component: {fileID: 1294390955}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -7746,66 +6849,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294390950}
   m_CullTransparentMesh: 1
---- !u!114 &1294390955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294390950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1294390956}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1294390956}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1294390956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294390950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuNegative
 --- !u!1 &1344345447
 GameObject:
   m_ObjectHideFlags: 0
@@ -7818,8 +6861,6 @@ GameObject:
   - component: {fileID: 1344345451}
   - component: {fileID: 1344345450}
   - component: {fileID: 1344345449}
-  - component: {fileID: 1344345453}
-  - component: {fileID: 1344345452}
   m_Layer: 5
   m_Name: SoundC (1)
   m_TagString: Untagged
@@ -7940,66 +6981,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344345447}
   m_CullTransparentMesh: 1
---- !u!114 &1344345452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344345447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1344345453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344345447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &1361108342
 GameObject:
   m_ObjectHideFlags: 0
@@ -8012,8 +6993,6 @@ GameObject:
   - component: {fileID: 1361108346}
   - component: {fileID: 1361108345}
   - component: {fileID: 1361108344}
-  - component: {fileID: 1361108348}
-  - component: {fileID: 1361108347}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -8159,66 +7138,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361108342}
   m_CullTransparentMesh: 1
---- !u!114 &1361108347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361108342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1361108348}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1361108348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361108342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuNegative
 --- !u!224 &1414744972 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4073157108199173745, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
@@ -8236,8 +7155,6 @@ GameObject:
   - component: {fileID: 1439840613}
   - component: {fileID: 1439840612}
   - component: {fileID: 1439840611}
-  - component: {fileID: 1439840615}
-  - component: {fileID: 1439840614}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -8383,66 +7300,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439840609}
   m_CullTransparentMesh: 1
---- !u!114 &1439840614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439840609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2097598458}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1439840615}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1439840615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439840609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &1441344346
 GameObject:
   m_ObjectHideFlags: 0
@@ -8530,8 +7387,6 @@ GameObject:
   - component: {fileID: 1443400697}
   - component: {fileID: 1443400696}
   - component: {fileID: 1443400695}
-  - component: {fileID: 1443400699}
-  - component: {fileID: 1443400698}
   m_Layer: 5
   m_Name: Link (1)
   m_TagString: Untagged
@@ -8652,66 +7507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443400693}
   m_CullTransparentMesh: 1
---- !u!114 &1443400698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443400693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 707201326}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1443400699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443400693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &1484965784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8877,10 +7672,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 944592492}
-  - {fileID: 1067601848}
-  - {fileID: 197944950}
-  - {fileID: 1282932448}
-  - {fileID: 103917943}
+  - {fileID: 769993190}
   - {fileID: 238756154}
   - {fileID: 539463118}
   - {fileID: 1576195455}
@@ -9425,17 +8217,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674274426}
   m_CullTransparentMesh: 1
---- !u!114 &1717011156 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671119596783228179, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-  m_PrefabInstance: {fileID: 8938790179051503838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0442e366e4974fb3352fd304e1b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1772810048
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,8 +8364,6 @@ GameObject:
   - component: {fileID: 1803592686}
   - component: {fileID: 1803592685}
   - component: {fileID: 1803592684}
-  - component: {fileID: 1803592687}
-  - component: {fileID: 1803592688}
   m_Layer: 5
   m_Name: Art
   m_TagString: Untagged
@@ -9705,66 +8484,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803592682}
   m_CullTransparentMesh: 1
---- !u!114 &1803592687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803592682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &1803592688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803592682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1810629315
 GameObject:
   m_ObjectHideFlags: 0
@@ -9813,8 +8532,6 @@ GameObject:
   - component: {fileID: 1917403884}
   - component: {fileID: 1917403883}
   - component: {fileID: 1917403882}
-  - component: {fileID: 1917403885}
-  - component: {fileID: 1917403886}
   m_Layer: 5
   m_Name: Link
   m_TagString: Untagged
@@ -9935,66 +8652,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917403880}
   m_CullTransparentMesh: 1
---- !u!114 &1917403885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917403880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &1917403886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917403880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1968635766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10455,8 +9112,6 @@ GameObject:
   - component: {fileID: 2031576715}
   - component: {fileID: 2031576714}
   - component: {fileID: 2031576713}
-  - component: {fileID: 2031576717}
-  - component: {fileID: 2031576716}
   m_Layer: 5
   m_Name: SoundC (2)
   m_TagString: Untagged
@@ -10577,66 +9232,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031576711}
   m_CullTransparentMesh: 1
---- !u!114 &2031576716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031576711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1917403885}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2031576717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031576711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
 --- !u!1 &2042435204
 GameObject:
   m_ObjectHideFlags: 0
@@ -10880,8 +9475,6 @@ GameObject:
   - component: {fileID: 2046563650}
   - component: {fileID: 2046563649}
   - component: {fileID: 2046563648}
-  - component: {fileID: 2046563651}
-  - component: {fileID: 2046563652}
   m_Layer: 5
   m_Name: Itch
   m_TagString: Untagged
@@ -11002,66 +9595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046563646}
   m_CullTransparentMesh: 1
---- !u!114 &2046563651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046563646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuPositive
---- !u!114 &2046563652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046563646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1174460784}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &2053724820
 GameObject:
   m_ObjectHideFlags: 0
@@ -11302,8 +9835,6 @@ GameObject:
   - component: {fileID: 2097598456}
   - component: {fileID: 2097598455}
   - component: {fileID: 2097598454}
-  - component: {fileID: 2097598458}
-  - component: {fileID: 2097598457}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -11449,77 +9980,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097598452}
   m_CullTransparentMesh: 1
---- !u!114 &2097598457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097598452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2097598458}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event0
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2097598458}
-          m_TargetAssemblyTypeName: SimpleWwiseEvent2, Assembly-CSharp
-          m_MethodName: Event1
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &2097598458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097598452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b53e74765ed9046b3bcf4db353b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  akEvent:
-  - MenuHover
-  - MenuNegative
---- !u!114 &2135323681 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5591151500032464425, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-  m_PrefabInstance: {fileID: 8938790179051503838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0442e366e4974fb3352fd304e1b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8938790179051503838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11528,109 +9988,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236306856}
     m_Modifications:
-    - target: {fileID: 532416254486066921, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 532416254486066921, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0087b16131ffcc3448dbc5841225c1b2, type: 3}
-    - target: {fileID: 1159412227727028936, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 541.021
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159412227727028936, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 62.253
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159412227727028936, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 678.255
-      objectReference: {fileID: 0}
-    - target: {fileID: 1159412227727028936, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 127
-      objectReference: {fileID: 0}
-    - target: {fileID: 1972494576413127922, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8938790179051503839}
-    - target: {fileID: 1972494576413127922, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFullscreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MinValue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1717011156}
-    - target: {fileID: 1975423729081475490, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FaderUpdated
-      objectReference: {fileID: 0}
     - target: {fileID: 2393856006448586026, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1236306855}
-    - target: {fileID: 2393856006448586026, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1236306855}
-    - target: {fileID: 2393856006448586026, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 197944951}
-    - target: {fileID: 2393856006448586026, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 2736947302645604406, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.662963
       objectReference: {fileID: 0}
     - target: {fileID: 2736947302645604406, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MinValue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 29705056}
-    - target: {fileID: 3004307275460502630, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FaderUpdated
       objectReference: {fileID: 0}
     - target: {fileID: 3231103493489912590, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11642,23 +10010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353382283151868343, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3353382283151868343, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3353382283151868343, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_MinValue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3353382283151868343, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2135323681}
-    - target: {fileID: 3353382283151868343, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FaderUpdated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3809378084995008547, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11671,10 +10023,6 @@ PrefabInstance:
     - target: {fileID: 3809378084995008547, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3809378084995008547, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.2000122
       objectReference: {fileID: 0}
     - target: {fileID: 4073157108199173745, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_Pivot.x
@@ -11768,81 +10116,9 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4109994623776354534, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.2000122
-      objectReference: {fileID: 0}
     - target: {fileID: 5152900706321301091, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_Name
       value: Buttons
-      objectReference: {fileID: 0}
-    - target: {fileID: 5562184744842538849, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 124
-      objectReference: {fileID: 0}
-    - target: {fileID: 5841211441074962887, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 480.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5841211441074962887, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 82.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 5841211441074962887, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 254
-      objectReference: {fileID: 0}
-    - target: {fileID: 5841211441074962887, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -44
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236282735828985332, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 541.021
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236282735828985332, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 62.253
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236282735828985332, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 679.056
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236282735828985332, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -106.33397
-      objectReference: {fileID: 0}
-    - target: {fileID: 6477254812016119512, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5.0000305
-      objectReference: {fileID: 0}
-    - target: {fileID: 6811383048581195086, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5.0000305
-      objectReference: {fileID: 0}
-    - target: {fileID: 7220434463941222711, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 262
-      objectReference: {fileID: 0}
-    - target: {fileID: 7326541844790988386, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5.0000305
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867071170569300119, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 541.021
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867071170569300119, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 62.253
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867071170569300119, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 679.056
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867071170569300119, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 8.615028
       objectReference: {fileID: 0}
     - target: {fileID: 8479160465791056141, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11854,7 +10130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671296629432074513, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.662963
       objectReference: {fileID: 0}
     - target: {fileID: 8671296629432074513, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11862,36 +10138,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671296629432074513, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8671296629432074513, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.2000122
-      objectReference: {fileID: 0}
-    - target: {fileID: 8990088020252668846, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 8938790179051503839}
-    - target: {fileID: 8990088020252668846, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetResolution
+      value: 0.662963
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
---- !u!114 &8938790179051503839 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7313268415308875978, guid: 1fb202999b3224e45a5dbac4b3492ec6, type: 3}
-  m_PrefabInstance: {fileID: 8938790179051503838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7063df5ec67fc4a4fa398fdec6d93aa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
