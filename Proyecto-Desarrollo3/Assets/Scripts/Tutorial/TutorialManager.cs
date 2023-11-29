@@ -1,7 +1,5 @@
 using Newtonsoft.Json;
-
 using Progress;
-
 using TMPro;
 using UnityEngine;
 
@@ -14,10 +12,11 @@ namespace Tutorial
         [SerializeField] private GameObject[] tutorialSteps;
         [SerializeField] private TMP_Text dialogue;
         [SerializeField] private GameObject tutorialObject;
-        private int currentDialogue = 0;
-        private int currentStep = 0;
-        private int previousDialogues = 0;
-        private int i = -1;
+        private int _currentDialogue = 0;
+        private int _currentStep = 0;
+        private int _previousDialogues = 0;
+        private int _i = 0;
+        private int _dialogueOffset = 0;
 
         private const string TutorialKey = "watchedTutorial";
 
@@ -33,11 +32,11 @@ namespace Tutorial
                     return;
                 }
             }
-            
+
             if (dialogues.Length > 0)
             {
                 dialogue.text = dialogues[0];
-                tutorialSteps[currentStep].SetActive(true);
+                tutorialSteps[_currentStep].SetActive(true);
             }
             else
             {
@@ -47,50 +46,86 @@ namespace Tutorial
 
         public void NextDialogue()
         {
-            i++;
-            if (i >= dialoguesAmount[currentDialogue])
+            _currentDialogue++;
+
+            if (_currentDialogue >= dialoguesAmount[_currentStep])
             {
-                currentDialogue++;
-                
-                if (currentDialogue >= tutorialSteps.Length)
+                _dialogueOffset += _currentDialogue;
+                _currentDialogue = 0;
+
+                tutorialSteps[_currentStep].SetActive(false);
+
+                _currentStep++;
+
+                if (_currentStep < tutorialSteps.Length) tutorialSteps[_currentStep].SetActive(true);
+            }
+
+            if (_currentStep >= tutorialSteps.Length)
+            {
+                CloseTutorial();
+            }
+            else
+            {
+                dialogue.text = dialogues[_dialogueOffset + _currentDialogue];
+            }
+        }
+
+        public void NextDialogue2()
+        {
+            if (_i >= dialoguesAmount[_currentDialogue])
+            {
+                _currentDialogue++;
+
+                if (_currentDialogue >= tutorialSteps.Length)
                 {
                     CloseTutorial();
                 }
                 else
                 {
                     NextStep();
-                    dialogue.text = dialogues[i];
+                    dialogue.text = dialogues[_i];
                 }
             }
             else
             {
-                dialogue.text = dialogues[i];
+                dialogue.text = dialogues[_i];
             }
+
+            _i++;
         }
 
         private void NextStep()
         {
-            previousDialogues += dialoguesAmount[currentDialogue];
-            tutorialSteps[currentStep].SetActive(false);
-            currentStep++;
-            tutorialSteps[currentStep].SetActive(true);
+            _previousDialogues += dialoguesAmount[_currentDialogue];
+
+            tutorialSteps[_currentStep].SetActive(false);
+
+            _currentStep++;
+
+            tutorialSteps[_currentStep].SetActive(true);
         }
 
         private void PreviousStep()
         {
-            if(currentStep < 1) return;
-            previousDialogues -= dialoguesAmount[currentDialogue];
-            tutorialSteps[currentStep].SetActive(false);
-            currentStep--;
-            tutorialSteps[currentStep].SetActive(true);
+            if (_currentStep < 1) return;
+            _dialogueOffset -= dialoguesAmount[_currentStep];
+            tutorialSteps[_currentStep].SetActive(false);
+            _currentStep--;
+            tutorialSteps[_currentStep].SetActive(true);
+            _currentDialogue = dialoguesAmount[_currentStep];
         }
 
         public void PreviousDialogue()
         {
-            if (i < 1) return;
-            i--;
-            dialogue.text = dialogues[i];
-            if (i-previousDialogues < dialoguesAmount[currentDialogue])
+            if (_currentStep < 0 || _currentDialogue < 0) return;
+
+            _currentDialogue--;
+            if (_currentDialogue + _dialogueOffset >= 0)
+            {
+                dialogue.text = dialogues[_dialogueOffset + _currentDialogue];
+            }
+
+            if (_currentDialogue < dialoguesAmount[_currentStep])
             {
                 PreviousStep();
             }
@@ -98,7 +133,7 @@ namespace Tutorial
 
         public void CloseTutorial()
         {
-            FileHandler.SaveFile(TutorialKey,JsonConvert.SerializeObject(true));
+            FileHandler.SaveFile(TutorialKey, JsonConvert.SerializeObject(true));
             tutorialObject.SetActive(false);
             // final music start tener en cuenta la segunda vez que se abre le tuto. 
         }
