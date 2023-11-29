@@ -54,4 +54,4 @@ This game was also possible thanks to the support of these professors:
 
 ## Links
 
-Download it from itch.io: https://santiagobarra.itch.io/atomatic?password=Atomatic
+Download it from itch.io: https://santiagobarra.itch.io/atomatic
