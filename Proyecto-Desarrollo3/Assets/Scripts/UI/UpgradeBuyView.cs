@@ -22,7 +22,7 @@ public class UpgradeBuyView : MonoBehaviour
     {
         scrollbar.size = 0.1f;
     }
-    
+
     public void Init(List<Upgrade> upgrades, Action<int> onTryBuyUpgrade, Action<Upgrade> onEnableTooltip, Action onDisableTooltip)
     {
         this.upgrades = upgrades;
@@ -30,11 +30,15 @@ public class UpgradeBuyView : MonoBehaviour
         this.onEnableTooltip = onEnableTooltip;
         this.onDisableTooltip = onDisableTooltip;
         upgradeButtonViews = new List<UpgradeButtonView>();
-        for (int i = 0; i < 1; i++)
+        
+        for (int i = 0; i < upgrades.Count; i++)
         {
-            UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
-            upgradeButtonView.Init(upgrades[i], onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
-            upgradeButtonViews.Add(upgradeButtonView);
+            if (upgrades[i].bought || upgrades[i].unlocked) 
+            {
+                UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
+                upgradeButtonView.Init(upgrades[i], onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
+                upgradeButtonViews.Add(upgradeButtonView);
+            }
         }
     }
 
@@ -50,7 +54,14 @@ public class UpgradeBuyView : MonoBehaviour
         }
     }
 
-    public void UnlockUpgrade(Upgrade upgrade)
+    public void AddUpgrade(Upgrade upgrade)
+    {
+        UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
+        upgradeButtonView.Init(upgrade, onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
+        upgradeButtonViews.Add(upgradeButtonView);
+    }
+    
+    public bool UnlockUpgrade(Upgrade upgrade)
     {
         int nextId = upgrade.id + 1;
         if (nextId < upgrades.Count && (upgrade.generatorId == upgrades[nextId].generatorId || upgrades[nextId].stageUpgrade)) 
@@ -58,14 +69,16 @@ public class UpgradeBuyView : MonoBehaviour
             UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
             upgradeButtonView.Init(upgrades[nextId], onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
             upgradeButtonViews.Add(upgradeButtonView);
+            return true;
         }
+        return false;
     }
     
     public void UnlockUpgrade(GeneratorData generatorData)
     {
         for (int i = 0; i < upgrades.Count; i++)
         {
-            if (upgrades[i].generatorId == generatorData.numId)
+            if (upgrades[i].generatorId == generatorData.numId && !upgrades[i].unlocked) 
             {
                 UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
                 upgradeButtonView.Init(upgrades[i], onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);

@@ -42,9 +42,8 @@ namespace UI
         {
             description.text = upgrade.description;
             cost.text = "Cost: " + upgrade.price;
-            cost.text = "";
             production.text = "";
-            unitEfficiency.text = "";
+            unitEfficiency.text = "Upgrade amount: " + upgrade.currencyGeneratedAmount;
             historicalProduction.text = "";
             holder.gameObject.SetActive(true);
         }

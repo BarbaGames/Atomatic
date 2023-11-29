@@ -11,6 +11,7 @@ public class Upgrade : ScriptableObject
     [SerializeField] public long price;
     [SerializeField] public int id;
     [SerializeField] public bool bought;
+    [SerializeField] public bool unlocked;
     [SerializeField] public int generatorId;
     [SerializeField] public int currencyGeneratedAmount;
     [SerializeField] public bool stageUpgrade;

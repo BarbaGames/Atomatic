@@ -16,6 +16,10 @@ namespace Generators
         public void Init(GeneratorData generatorData)
         {
             this.generatorData = generatorData;
+            if (this.generatorData.unlocked)
+            {
+                IsActive = true;
+            }
         }
 
         public void SetData(GeneratorData generatorData)

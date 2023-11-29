@@ -15,7 +15,7 @@ MonoBehaviour:
   description: Stage 3
   icon: {fileID: 21300000, guid: 2f160a58629b7db479966ce5664fd3a8, type: 3}
   price: 1
-  id: 101
+  id: 46
   bought: 0
   generatorId: -1
   currencyGeneratedAmount: 0

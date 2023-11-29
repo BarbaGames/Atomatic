@@ -37,7 +37,24 @@ namespace Game
             {
                 upgrades.Add(Instantiate(upgradesData.upgrades[i]));
             }
+            
+            if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
+            {
+                List<(int id, bool bought, bool unlocked)> savedUpgrades = JsonConvert.DeserializeObject<List<(int id, bool bought, bool unlocked)>>(upgradesDataString);
 
+                for (int i = 0; i < savedUpgrades.Count; i++)
+                {
+                    int upgradeIndex = upgrades.FindIndex(up => up.id == savedUpgrades[i].id);
+
+                    if (upgradeIndex != -1)
+                    {
+                        upgrades[upgradeIndex].bought = savedUpgrades[i].bought;
+                        upgrades[upgradeIndex].unlocked = savedUpgrades[i].unlocked;
+                    }
+                }
+                
+            }
+            
             gameplayView.Init(upgrades, BuyUpgrade, PlayerClick);
             generators = new List<Generator>();
 
@@ -82,29 +99,13 @@ namespace Game
             {
                 gameplayView.InitGeneratorsBuyView(generatorSoData.generators, BuyGenerator, true);
             }
-        
-
-            if (FileHandler.TryLoadFileRaw(UpgradesKey, out string upgradesDataString))
-            {
-                List<Upgrade> savedUpgrades = JsonConvert.DeserializeObject<List<Upgrade>>(upgradesDataString);
-
-                for (int i = 0; i < upgrades.Count; i++)
-                {
-                    Upgrade upgrade = savedUpgrades.Find(u => u.id == upgrades[i].id);
-
-                    if (upgrade != null && upgrade.bought)
-                    {
-                        upgrades[i] = upgrade;
-                        gameplayView.UpdateUpgrade(upgrades[i], null);
-                    }
-                }
-            }
 
             if (FileHandler.TryLoadFileRaw(EnergyKey, out string energyDataString))
             {
                 AddCurrency(long.Parse(energyDataString));
             }
-            AddCurrency(99999999);
+            
+            AddCurrency(9999999999999);
             UpdateEnergyPerSecond();
         }
 
@@ -133,7 +134,13 @@ namespace Game
             }
 
             FileHandler.SaveFile(GeneratorsKey, JsonConvert.SerializeObject(generatorsData));
-            FileHandler.SaveFile(UpgradesKey, JsonConvert.SerializeObject(upgrades));
+
+            List<(int id, bool bought, bool unlocked)> savedUpgrades = new List<(int, bool, bool)>();
+            for (int i = 0; i < upgrades.Count; i++)
+            {
+                savedUpgrades.Add((upgrades[i].id,upgrades[i].bought, upgrades[i].unlocked));
+            }
+            FileHandler.SaveFile(UpgradesKey, JsonConvert.SerializeObject(savedUpgrades));
         }
         
         private void GeneratorsLoop()
@@ -145,6 +152,13 @@ namespace Game
                 if (!generators[i].IsActive) continue;
 
                 generated += generators[i].Generate();
+            }
+
+            for (int i = 0; i < upgrades.Count; i++)
+            {
+                if(!upgrades[i].bought) continue;
+
+                generated += upgrades[i].currencyGeneratedAmount;
             }
 
             if (generated > 0) AddCurrency(generated);
@@ -190,10 +204,17 @@ namespace Game
 
                 generationPerSec += generators[i].GeneratorData.currencyGenerated;
             }
+            
+            for (int i = 0; i < upgrades.Count; i++)
+            {
+                if(!upgrades[i].bought) continue;
+
+                generationPerSec += upgrades[i].currencyGeneratedAmount;
+            }
 
             gameplayView.UpdateEnergyPerSec(generationPerSec);
         }
-
+        
         private void PlayerClick()
         {
             long energyGenerated = generators[0].Generate();
@@ -257,6 +278,7 @@ namespace Game
 
                     RemoveCurrency(upgrades[i].price);
                     upgrades[i].bought = true;
+                    upgrades[i].unlocked = true;
 
                     gameplayView.UpdateUpgrade(upgrades[i], null);
 
@@ -284,7 +306,10 @@ namespace Game
                     }
                     else
                     {
-                        gameplayView.UnlockUpgrade(upgrades[i]);
+                        if (gameplayView.UnlockUpgrade(upgrades[i]))
+                        {
+                            upgrades[i + 1].unlocked = true;
+                        }
                     }
                     
                     return;
