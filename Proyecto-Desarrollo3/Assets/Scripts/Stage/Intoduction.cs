@@ -1,13 +1,16 @@
 ﻿using Newtonsoft.Json;
 using Progress;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Stage
 {
     public class Intoduction : MonoBehaviour
     {
+        [SerializeField] private GameObject[] panels;
         [SerializeField] private GameObject[] pages;
-        
+        [SerializeField] private bool isEnding = false;
+        private int _currentPage = 0;
         private const string IntroductionKey = "watchedIntro";
 
         public void Start()
@@ -16,27 +19,37 @@ namespace Stage
             {
                 bool watchedIntro = JsonConvert.DeserializeObject<bool>(introDataString);
 
-                if (watchedIntro)
+                if (watchedIntro & !isEnding)
                 {
                     gameObject.SetActive(false);
                 }
             }
         }
 
-        public void ActivateNext()
+        public void ActivateNextPage()
         {
-            foreach (GameObject page in pages)
+            for (int i = 0; i < panels.Length; i++)
             {
-                if (!page.activeSelf)
+                if (!panels[i].activeSelf)
                 {
-                    page.SetActive(true);
+                    panels[i].SetActive(true);
+                    
+                    if(i % 4 == 0) ActivateNextPanel();
+                    
                     return;
                 }
             }
-            
-            FileHandler.SaveFile(IntroductionKey,JsonConvert.SerializeObject(true));
-            
+
+            FileHandler.SaveFile(IntroductionKey, JsonConvert.SerializeObject(true));
+
             gameObject.SetActive(false);
+        }
+
+        private void ActivateNextPanel()
+        {
+            pages[_currentPage].SetActive(false);
+            _currentPage++;
+            pages[_currentPage].SetActive(true);
         }
     }
 }
