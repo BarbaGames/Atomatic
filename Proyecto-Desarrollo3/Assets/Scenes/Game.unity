@@ -3787,6 +3787,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457248971}
   m_CullTransparentMesh: 1
+--- !u!1 &458277912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3996855762827705547, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+  m_PrefabInstance: {fileID: 2769194752380083565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &458277914 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+  m_PrefabInstance: {fileID: 2769194752380083565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &458277915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458277912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776495383a5568b47b3852e8bb1fb623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerImage: {fileID: 0}
+  flickerLight: {fileID: 458277914}
+  minFlickerTime: 10
+  maxFlickerTime: 20
 --- !u!1 &468466896
 GameObject:
   m_ObjectHideFlags: 0
@@ -6800,6 +6826,7 @@ GameObject:
   - component: {fileID: 1002663093}
   - component: {fileID: 1002663095}
   - component: {fileID: 1002663094}
+  - component: {fileID: 1002663096}
   m_Layer: 5
   m_Name: energy_panel_light
   m_TagString: Untagged
@@ -6833,7 +6860,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002663092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6864,6 +6891,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002663092}
   m_CullTransparentMesh: 1
+--- !u!114 &1002663096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002663092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776495383a5568b47b3852e8bb1fb623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerImage: {fileID: 1002663094}
+  flickerLight: {fileID: 0}
+  minFlickerTime: 20
+  maxFlickerTime: 60
 --- !u!1 &1049085080
 GameObject:
   m_ObjectHideFlags: 0
@@ -19279,6 +19322,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      propertyPath: m_Range
+      value: 2.2684717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      propertyPath: m_DrawHalo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      propertyPath: m_Intensity
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      propertyPath: m_SpotAngle
+      value: 43.094345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562617379148798993, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3579665013724065842, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
       propertyPath: m_Name
       value: Generator 1
@@ -19353,7 +19416,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4244175294872349320, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 567043529}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3996855762827705547, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 458277915}
   m_SourcePrefab: {fileID: 100100000, guid: 4da0f1bb6a525ec429e8b0c6f17a6c89, type: 3}
 --- !u!1 &2769194752380083566 stripped
 GameObject:
