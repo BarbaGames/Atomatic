@@ -1521,6 +1521,8 @@ MonoBehaviour:
   - {fileID: 2769194752380083566}
   - {fileID: 1292357295}
   - {fileID: 163679074257669944}
+  debugIncreaseCurrency: {fileID: 265876100}
+  debugClearData: {fileID: 1429530947}
 --- !u!114 &154531649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2424,7 +2426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &265876099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9698,7 +9700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1429530946
 RectTransform:
   m_ObjectHideFlags: 0

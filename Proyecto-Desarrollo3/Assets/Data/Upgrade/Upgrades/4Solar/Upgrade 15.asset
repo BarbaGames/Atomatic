@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: standard solar panel
   icon: {fileID: 21300000, guid: e0fd975b2bccb0d4dbbcba5d9487cad2, type: 3}
-  price: 1
+  price: 16000
   id: 15
   bought: 0
   unlocked: 0

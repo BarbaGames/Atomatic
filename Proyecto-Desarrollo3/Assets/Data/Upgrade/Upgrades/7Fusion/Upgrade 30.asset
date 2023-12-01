@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: ugly rusty magnets, they work tho
   icon: {fileID: 21300000, guid: db129e2307d307a479e5456a4e40e210, type: 3}
-  price: 1
+  price: 31000
   id: 31
   bought: 0
   unlocked: 0

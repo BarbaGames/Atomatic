@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: new structured coal, it alows better air flow, increasing the flames
   icon: {fileID: 21300000, guid: bd5eb6489e30bd9448ccd5ba8f49688e, type: 3}
-  price: 1
+  price: 23000
   id: 22
   bought: 0
   unlocked: 0

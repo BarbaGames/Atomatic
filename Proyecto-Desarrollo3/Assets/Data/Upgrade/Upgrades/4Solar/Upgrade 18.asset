@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: its growing...
   icon: {fileID: 21300000, guid: 34d9ca12e10dc5549933b97760bdfafc, type: 3}
-  price: 1
+  price: 19000
   id: 18
   bought: 0
   unlocked: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: average coal, nothing interesting
   icon: {fileID: 21300000, guid: 225c04740e191b447a9920f39c326b2b, type: 3}
-  price: 1
+  price: 21000
   id: 20
   bought: 0
   unlocked: 0

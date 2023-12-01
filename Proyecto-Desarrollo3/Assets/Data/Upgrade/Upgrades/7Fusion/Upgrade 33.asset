@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: powerfull magnets, ready to contain plasma for several minutes
   icon: {fileID: 21300000, guid: 8e8cf2c87f1e450478eb6ffffb5f7af5, type: 3}
-  price: 1
+  price: 34000
   id: 34
   bought: 0
   unlocked: 0

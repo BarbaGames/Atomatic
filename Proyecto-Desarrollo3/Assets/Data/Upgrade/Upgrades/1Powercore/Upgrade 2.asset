@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: a flashy core for more power
   icon: {fileID: 21300000, guid: 80d59d852a3aa2745924fb13ee05f2b1, type: 3}
-  price: 30
+  price: 3000
   id: 2
   bought: 0
   unlocked: 0

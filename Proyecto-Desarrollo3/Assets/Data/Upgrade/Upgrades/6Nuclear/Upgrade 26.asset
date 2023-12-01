@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: high quality plut, with alien power added
   icon: {fileID: 21300000, guid: 541897230192c2340a27a1cc354196e3, type: 3}
-  price: 1
+  price: 27000
   id: 27
   bought: 0
   unlocked: 0

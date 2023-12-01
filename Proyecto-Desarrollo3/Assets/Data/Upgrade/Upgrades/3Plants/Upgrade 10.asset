@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: a small modification to the energy plant
   icon: {fileID: 21300000, guid: 1a3621b84ef573348bc239112a555cb3, type: 3}
-  price: 110
+  price: 11000
   id: 10
   bought: 0
   unlocked: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'dont close it '
   icon: {fileID: 21300000, guid: 380f3bde4dce961479748ed4624a0e63, type: 3}
-  price: 1
+  price: 28000
   id: 28
   bought: 0
   unlocked: 0

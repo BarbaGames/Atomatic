@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: new drills, sharpened
   icon: {fileID: 21300000, guid: 84c5340cbdb75844f9addfcd2753d278, type: 3}
-  price: 1
+  price: 37000
   id: 37
   bought: 0
   unlocked: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'power emanates from it '
   icon: {fileID: 21300000, guid: e84a979d3ccfaa8499431eae8a23afde, type: 3}
-  price: 40
+  price: 4000
   id: 3
   bought: 0
   unlocked: 0

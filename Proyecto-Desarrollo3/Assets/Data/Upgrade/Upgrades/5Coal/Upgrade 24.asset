@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'they say they dug this deep on earth, just one burns like a thousand '
   icon: {fileID: 21300000, guid: da87cae218826bb45843c153aa8eff85, type: 3}
-  price: 1
+  price: 25000
   id: 24
   bought: 0
   unlocked: 0

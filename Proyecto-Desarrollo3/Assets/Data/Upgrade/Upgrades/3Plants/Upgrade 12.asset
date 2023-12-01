@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'high end module, no one knows how it produces energy '
   icon: {fileID: 21300000, guid: 0bceb0e79f7cd204e8a0ab4ff5b761d4, type: 3}
-  price: 130
+  price: 13000
   id: 12
   bought: 0
   unlocked: 0

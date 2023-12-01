@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: upgraded core for more energy
   icon: {fileID: 21300000, guid: ca9dbe31bfa3fa24f904c92c8fdca389, type: 3}
-  price: 10
+  price: 500
   id: 0
   bought: 0
   unlocked: 1

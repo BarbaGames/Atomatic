@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: it generates its own heat
   icon: {fileID: 21300000, guid: 23200de4cd133c743a2c08af605d1dee, type: 3}
-  price: 1
+  price: 24000
   id: 23
   bought: 0
   unlocked: 0

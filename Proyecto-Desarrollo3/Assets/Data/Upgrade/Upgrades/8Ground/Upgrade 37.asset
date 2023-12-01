@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: new materials are used in these
   icon: {fileID: 21300000, guid: c10b73a8e14888740b58d80c702fad3b, type: 3}
-  price: 1
+  price: 38000
   id: 38
   bought: 0
   unlocked: 0

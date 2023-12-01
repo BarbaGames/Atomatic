@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'an experimental core with great ammounts of energy '
   icon: {fileID: 21300000, guid: abb19b2a9133cec46a4d629438535555, type: 3}
-  price: 50
+  price: 5000
   id: 4
   bought: 0
   unlocked: 0

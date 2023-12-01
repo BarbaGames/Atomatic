@@ -6,6 +6,7 @@ using Progress;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -19,6 +20,9 @@ namespace Game
         [SerializeField] private Upgrades upgradesData = null;
         [SerializeField] private GameplayView gameplayView = null;
         [SerializeField] private GameObject[] stages = null;
+
+        [SerializeField] private Button debugIncreaseCurrency = null;
+        [SerializeField] private Button debugClearData = null;
 
         private const string EnergyKey = "energy";
         private const string GeneratorsKey = "generators";
@@ -110,6 +114,11 @@ namespace Game
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                debugIncreaseCurrency.gameObject.SetActive(!debugIncreaseCurrency.gameObject.activeSelf);
+                debugClearData.gameObject.SetActive(!debugClearData.gameObject.activeSelf);
+            }
             GeneratorsLoop();
         }
 
