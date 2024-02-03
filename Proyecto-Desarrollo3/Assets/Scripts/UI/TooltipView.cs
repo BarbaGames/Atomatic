@@ -12,7 +12,6 @@ namespace UI
         [SerializeField] private TMP_Text cost = null;
         [SerializeField] private TMP_Text production = null;
         [SerializeField] private TMP_Text unitEfficiency = null;
-        [SerializeField] private TMP_Text historicalProduction = null;
         [SerializeField] private Transform holder = null;
 
         public void OnTooltipEnable(GeneratorData generatorData)
@@ -22,9 +21,10 @@ namespace UI
                 title.text = generatorData.id;
                 description.text = generatorData.description;
                 cost.text = "";
+                
                 production.text = "Total E/s: " + generatorData.currencyGenerated.ToString("N0");
                 unitEfficiency.text = "Energy per unit: " + generatorData.baseCurrencyGenerated.ToString("N0");
-                historicalProduction.text = "Total generated: " + generatorData.totalCurrencyGenerated.ToString("N0");
+                //historicalProduction.text = "Total generated: " + generatorData.totalCurrencyGenerated.ToString("N0");
             }
             else
             {
@@ -32,8 +32,8 @@ namespace UI
                 description.text = "";
                 cost.text = "";
                 production.text = "";
-                unitEfficiency.text = "";
-                historicalProduction.text = "";
+                //unitEfficiency.text = "";
+                //historicalProduction.text = "";
             }
             holder.gameObject.SetActive(true);
         }
@@ -44,7 +44,7 @@ namespace UI
             cost.text = "Cost: " + upgrade.price;
             production.text = "";
             unitEfficiency.text = "Upgrade amount: " + upgrade.currencyGeneratedAmount;
-            historicalProduction.text = "";
+            //historicalProduction.text = "";
             holder.gameObject.SetActive(true);
         }
 
