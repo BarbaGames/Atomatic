@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-using Progress;
 using TMPro;
 using UnityEngine;
 
@@ -18,21 +16,9 @@ namespace Tutorial
         private int _i = 0;
         private int _dialogueOffset = 0;
 
-        private const string TutorialKey = "watchedTutorial";
 
         private void Start()
         {
-            if (FileHandler.TryLoadFileRaw(TutorialKey, out string tutorialDataString))
-            {
-                bool watchedTutorial = JsonConvert.DeserializeObject<bool>(tutorialDataString);
-
-                if (watchedTutorial)
-                {
-                    CloseTutorial();
-                    return;
-                }
-            }
-
             if (dialogues.Length > 0)
             {
                 dialogue.text = dialogues[0];
@@ -133,7 +119,6 @@ namespace Tutorial
 
         public void CloseTutorial()
         {
-            FileHandler.SaveFile(TutorialKey, JsonConvert.SerializeObject(true));
             tutorialObject.SetActive(false);
             // final music start tener en cuenta la segunda vez que se abre le tuto. 
         }
