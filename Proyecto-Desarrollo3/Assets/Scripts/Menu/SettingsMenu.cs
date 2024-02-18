@@ -12,15 +12,16 @@ namespace Menu
         private const string ResWidthKey = "width";
         private const string ResHeightKey = "height";
         private Resolution[] resolutions;
+        private Resolution fullscreen = default;
+        private Resolution window = default;
+
+
         private void Start()
         {
             Init();
         }
 
-        public void SetVolume(float volume)
-        {
-            //mainMixer.SetFloat("Volume", Mathf.Log10(volume) * 20); 
-        }
+
         public void SetResolution(int resolutionId)
         {
             Resolution res = resolutions[resolutionId];
@@ -28,21 +29,28 @@ namespace Menu
             PlayerPrefs.SetInt(ResWidthKey, res.width);
             PlayerPrefs.SetInt(ResHeightKey, res.height);
         }
-        
+
         public void SetFullscreen(bool isFullscreen)
         {
             Screen.fullScreen = isFullscreen;
             PlayerPrefs.SetInt(FullscreenKey, isFullscreen ? 1 : 0);
+
+            Screen.SetResolution(Screen.fullScreen ? fullscreen.width : window.width,
+                Screen.fullScreen ? fullscreen.height : window.height, Screen.fullScreen);
         }
 
         public void SetQuality(int qualityId)
         {
             QualitySettings.SetQualityLevel(qualityId);
         }
-        
+
         private void Init()
         {
-            InitResolutionDropdown();
+            fullscreen.width = 1920;
+            fullscreen.height = 1080;
+            window.width = 1280;
+            window.height = 720;
+
             InitSettingsValues();
         }
 
@@ -75,6 +83,7 @@ namespace Menu
                     resolutions[i] = resolution;
                     i++;
                 }
+
                 if (resolution.width == Screen.width && resolution.height == Screen.height)
                 {
                     resID = uniqueResolutions.Count - 1;
@@ -90,7 +99,6 @@ namespace Menu
             resDropdown.AddOptions(resOptions);
             resDropdown.value = resID;
             resDropdown.RefreshShownValue();
-
         }
 
         void InitSettingsValues()
@@ -107,12 +115,13 @@ namespace Menu
             fullscreenToggle.isOn = Screen.fullScreen;
             if (PlayerPrefs.HasKey(ResWidthKey) && PlayerPrefs.HasKey(ResHeightKey))
             {
-                Screen.SetResolution(PlayerPrefs.GetInt(ResWidthKey), PlayerPrefs.GetInt(ResHeightKey), Screen.fullScreen);
+                Screen.SetResolution(PlayerPrefs.GetInt(ResWidthKey), PlayerPrefs.GetInt(ResHeightKey),
+                    Screen.fullScreen);
             }
             else
             {
-                PlayerPrefs.SetInt(ResWidthKey, Screen.currentResolution.width);
-                PlayerPrefs.SetInt(ResHeightKey, Screen.currentResolution.height);
+                PlayerPrefs.SetInt(ResWidthKey, Screen.fullScreen ? fullscreen.width : window.width);
+                PlayerPrefs.SetInt(ResHeightKey, Screen.fullScreen ? fullscreen.height : window.height);
             }
         }
     }
