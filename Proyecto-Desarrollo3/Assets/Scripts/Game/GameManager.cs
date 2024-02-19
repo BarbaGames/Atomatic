@@ -20,6 +20,7 @@ namespace Game
         [SerializeField] private Upgrades upgradesData = null;
         [SerializeField] private GameplayView gameplayView = null;
         [SerializeField] private GameObject[] stages = null;
+        [SerializeField] private LeaderboardHandler leaderboardHandler = null;
 
         [SerializeField] private Button debugIncreaseCurrency = null;
         [SerializeField] private Button debugClearData = null;
@@ -74,6 +75,8 @@ namespace Game
                 FileHandler.DeleteAllFiles();
                 return;
             }
+            
+            leaderboardHandler.TryUpdateLeaderboard(energy);
         }
         
         private void GeneratorsLoop()
