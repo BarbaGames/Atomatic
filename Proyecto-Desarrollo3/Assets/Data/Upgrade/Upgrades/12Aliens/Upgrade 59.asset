@@ -15,10 +15,10 @@ MonoBehaviour:
   description: an acient species gives energy to you, they look familiar
   icon: {fileID: 21300000, guid: 685979cfa2775ac4e8a6bb53cf174fd3, type: 3}
   price: 1
-  id: 61
+  id: 59
   bought: 0
   unlocked: 0
   generatorId: 11
   currencyGeneratedAmount: 0
-  stageUpgrade: 0
-  stageUnlock: 0
+  stageUpgrade: 1
+  stageUnlock: 5

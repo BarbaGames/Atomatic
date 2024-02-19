@@ -16,7 +16,7 @@ MonoBehaviour:
     have hidden you monster
   icon: {fileID: 21300000, guid: 4e3c49afbb12f2b41ae4fab223b82583, type: 3}
   price: 1
-  id: 42
+  id: 41
   bought: 0
   unlocked: 0
   generatorId: 8

@@ -15,7 +15,7 @@ MonoBehaviour:
   description: upgraded magnets dont get close you will loose your keys
   icon: {fileID: 21300000, guid: 1cb921c9adbc84c4094d73b92722ff9a, type: 3}
   price: 33000
-  id: 33
+  id: 32
   bought: 0
   unlocked: 0
   generatorId: 6

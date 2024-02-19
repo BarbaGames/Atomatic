@@ -226,14 +226,14 @@ namespace Game
                         {
                             stages[upgrades[i].stageUnlock - 2].SetActive(false);
                             stages[upgrades[i].stageUnlock - 1].SetActive(true);
-                            
-                            string generatorState = "";
-                            switch (upgrades[i].stageUnlock)
+
+                            string generatorState = upgrades[i].stageUnlock switch
                             {
-                                case 1: generatorState = "One"; break;
-                                case 2: generatorState = "Two"; break;
-                                case 3: generatorState = "Three"; break;
-                            }
+                                1 => "One",
+                                2 => "Two",
+                                3 => "Three",
+                                _ => "One"
+                            };
                             AkSoundEngine.SetState("CurrentGenerator", generatorState);
                         }
                     }

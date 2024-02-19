@@ -15,7 +15,7 @@ MonoBehaviour:
   description: u saw this in a movie, pehaps
   icon: {fileID: 21300000, guid: e3c3edc67754b4b4e9dbc7836a57bea8, type: 3}
   price: 1
-  id: 62
+  id: 60
   bought: 0
   unlocked: 0
   generatorId: 12

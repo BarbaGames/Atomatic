@@ -28,8 +28,8 @@ public class UpgradeButtonView : MonoBehaviour, IPointerEnterHandler, IPointerEx
         this.upgradeData = upgradeData;
         imgIcon.sprite = this.upgradeData.icon;
         id = this.upgradeData.id;
-        this.onEnableTooltip = onEnableTooltip;
-        this.onDisableTooltip = onDisableTooltip;
+        this.onEnableTooltip += onEnableTooltip;
+        this.onDisableTooltip += onDisableTooltip;
         
         btnBuy.onClick.AddListener( () =>
         {

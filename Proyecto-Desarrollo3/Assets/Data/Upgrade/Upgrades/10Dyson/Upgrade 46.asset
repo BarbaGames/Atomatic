@@ -15,7 +15,7 @@ MonoBehaviour:
   description: its sunny today, lets change that...forever
   icon: {fileID: 21300000, guid: 4448f46223a0a554a8aeca44387dc49e, type: 3}
   price: 1
-  id: 48
+  id: 46
   bought: 0
   unlocked: 0
   generatorId: 9

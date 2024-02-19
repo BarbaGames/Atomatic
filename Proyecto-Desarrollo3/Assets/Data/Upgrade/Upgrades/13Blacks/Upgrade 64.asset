@@ -16,10 +16,10 @@ MonoBehaviour:
     it
   icon: {fileID: 21300000, guid: 6d55d2d96e6c40448ac6b452e445cd87, type: 3}
   price: 1
-  id: 66
+  id: 64
   bought: 0
   unlocked: 0
   generatorId: 12
   currencyGeneratedAmount: 0
   stageUpgrade: 1
-  stageUnlock: 4
+  stageUnlock: 5

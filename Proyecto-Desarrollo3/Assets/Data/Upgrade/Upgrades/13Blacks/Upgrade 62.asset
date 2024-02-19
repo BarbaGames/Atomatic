@@ -15,7 +15,7 @@ MonoBehaviour:
   description: a big black hole, time get weird
   icon: {fileID: 21300000, guid: f560da3b35e490744a06e5a23000726f, type: 3}
   price: 1
-  id: 64
+  id: 62
   bought: 0
   unlocked: 0
   generatorId: 12

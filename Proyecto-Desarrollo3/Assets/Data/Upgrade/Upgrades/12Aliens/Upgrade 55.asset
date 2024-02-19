@@ -15,7 +15,7 @@ MonoBehaviour:
   description: mi casa su casa
   icon: {fileID: 21300000, guid: 202634e275b550941819f32faec01b05, type: 3}
   price: 1
-  id: 57
+  id: 55
   bought: 0
   unlocked: 0
   generatorId: 11

@@ -15,7 +15,7 @@ MonoBehaviour:
   description: techno drills, they will avoid obstacles
   icon: {fileID: 21300000, guid: 019d69e0d7a5aab40806c1354c9b3565, type: 3}
   price: 39000
-  id: 39
+  id: 38
   bought: 0
   unlocked: 0
   generatorId: 7

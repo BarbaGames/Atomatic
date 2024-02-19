@@ -15,7 +15,7 @@ MonoBehaviour:
   description: made with unobtanium, very big brain
   icon: {fileID: 21300000, guid: 632863c8672990c49a80328dd026292a, type: 3}
   price: 40000
-  id: 40
+  id: 39
   bought: 0
   unlocked: 0
   generatorId: 7

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using Generators;
 
+using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
 

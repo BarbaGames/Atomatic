@@ -15,7 +15,7 @@ MonoBehaviour:
   description: somethig its going on...
   icon: {fileID: 21300000, guid: dcca3beaa6add564984b42e7dcc66113, type: 3}
   price: 1
-  id: 65
+  id: 63
   bought: 0
   unlocked: 0
   generatorId: 12
