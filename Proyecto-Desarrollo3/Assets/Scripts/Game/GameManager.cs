@@ -88,15 +88,19 @@ namespace Game
                 if (!generators[i].IsActive) continue;
 
                 generated += generators[i].Generate();
+                if (generated > 0)
+                {
+                    List<Upgrade> genUpgrades = upgrades.FindAll(u => u.generatorId == i);
+                    for (int j = 0; j < genUpgrades.Count; j++)
+                    {
+                        if (genUpgrades[j].bought)
+                        {
+                            generated += genUpgrades[j].currencyGeneratedAmount;
+                        }
+                    }
+                }
             }
-
-            for (int i = 0; i < upgrades.Count; i++)
-            {
-                if(!upgrades[i].bought) continue;
-
-                generated += upgrades[i].currencyGeneratedAmount;
-            }
-
+            
             if (generated > 0) AddCurrency(generated);
         }
 
@@ -105,7 +109,7 @@ namespace Game
         /// </summary>
         public void DebugAddCurrency()
         {
-            energy += 9999999999999999;
+            energy += 500;
             gameplayView.UpdateEnergy(energy);
         }
         
@@ -139,13 +143,15 @@ namespace Game
                 if (!generators[i].IsActive) continue;
 
                 generationPerSec += generators[i].GeneratorData.currencyGenerated;
-            }
-            
-            for (int i = 0; i < upgrades.Count; i++)
-            {
-                if(!upgrades[i].bought) continue;
-
-                generationPerSec += upgrades[i].currencyGeneratedAmount;
+                
+                List<Upgrade> genUpgrades = upgrades.FindAll(u => u.generatorId == i);
+                for (int j = 0; j < genUpgrades.Count; j++)
+                {
+                    if (genUpgrades[j].bought)
+                    {
+                        generationPerSec += genUpgrades[j].currencyGeneratedAmount;
+                    }
+                }
             }
 
             gameplayView.UpdateEnergyPerSec(generationPerSec);
@@ -156,6 +162,15 @@ namespace Game
             long energyGenerated = generators[0].Generate();
 
             if (energyGenerated <= 0) return;
+            
+            List<Upgrade> genUpgrades = upgrades.FindAll(u => u.generatorId == 0);
+            for (int j = 0; j < genUpgrades.Count; j++)
+            {
+                if (genUpgrades[j].bought)
+                {
+                    energyGenerated += genUpgrades[j].currencyGeneratedAmount;
+                }
+            }
 
             AddCurrency(energyGenerated);
 
@@ -247,7 +262,8 @@ namespace Game
                             upgrades[i + 1].unlocked = true;
                         }
                     }
-                    
+                    UpdateEnergyPerSecond();
+
                     return;
                 }
             }
