@@ -1,5 +1,5 @@
 <p align="center">
-<img src="overpowered_logo.png" alt="Atomatic"/>
+<img src="atomatic_logo.png" alt="Atomatic"/>
 </p>
 
 # Atomatic
