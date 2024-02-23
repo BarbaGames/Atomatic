@@ -26,7 +26,7 @@ This is a game being developed by students from <a href="https://www.imagecampus
 - **Isidro Santos Ortega** - *Art*
 - **Walter Sanchez** - *Art*
 - **Santiago José Alonso** - *Audio*
-- **Solar Rodrigo Jaramillo ** - *Audio*
+- **Solar Rodrigo Jaramillo** - *Audio*
 - **Pilar Marco** - *Audio*
 - **Ignacio Navarro Azurmendi** - *Audio*
 - **Federico Duran** - *Testing*
