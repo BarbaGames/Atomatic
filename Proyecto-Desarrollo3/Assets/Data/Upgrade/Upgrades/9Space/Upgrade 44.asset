@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 44
   m_EditorClassIdentifier: 
-  description: 'god engine, who knows where it will take you '
+  description: 'God engine, who knows where it will take you '
   icon: {fileID: 21300000, guid: 226898b6f4edafa4fa2521d5ef8435a2, type: 3}
   price: 1
   id: 44

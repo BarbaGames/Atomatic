@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 39
   m_EditorClassIdentifier: 
-  description: made with unobtanium, very big brain
+  description: Made with unobtanium, very big brain
   icon: {fileID: 21300000, guid: 632863c8672990c49a80328dd026292a, type: 3}
   price: 40000
   id: 39

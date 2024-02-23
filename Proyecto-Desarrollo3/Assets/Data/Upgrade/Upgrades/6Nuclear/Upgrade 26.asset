@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 26
   m_EditorClassIdentifier: 
-  description: high quality plut, with alien power added
+  description: High quality plut, with alien power added
   icon: {fileID: 21300000, guid: 541897230192c2340a27a1cc354196e3, type: 3}
   price: 27000
   id: 26

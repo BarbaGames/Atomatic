@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 22
   m_EditorClassIdentifier: 
-  description: new structured coal, it alows better air flow, increasing the flames
+  description: New structured coal that improves air flow, increasing the flames
   icon: {fileID: 21300000, guid: bd5eb6489e30bd9448ccd5ba8f49688e, type: 3}
   price: 23000
   id: 22

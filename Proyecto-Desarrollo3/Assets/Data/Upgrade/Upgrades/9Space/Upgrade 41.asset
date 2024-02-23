@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 41
   m_EditorClassIdentifier: 
-  description: new engines, developed by some kid in a garage,... like the rest you
-    have hidden you monster
+  description: New engines, developed by some kid in a garage
   icon: {fileID: 21300000, guid: 4e3c49afbb12f2b41ae4fab223b82583, type: 3}
   price: 1
   id: 41

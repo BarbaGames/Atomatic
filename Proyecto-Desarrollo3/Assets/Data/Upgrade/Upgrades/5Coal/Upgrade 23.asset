@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 23
   m_EditorClassIdentifier: 
-  description: it generates its own heat
+  description: It generates its own heat
   icon: {fileID: 21300000, guid: 23200de4cd133c743a2c08af605d1dee, type: 3}
   price: 24000
   id: 23

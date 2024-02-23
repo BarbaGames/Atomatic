@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 29
   m_EditorClassIdentifier: 
-  description: its very hot in here
+  description: Its very hot in here
   icon: {fileID: 21300000, guid: 96c337cd25f258f49bf87f7cc27bff85, type: 3}
   price: 30000
   id: 29

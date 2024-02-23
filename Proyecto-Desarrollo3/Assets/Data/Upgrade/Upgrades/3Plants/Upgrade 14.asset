@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 14
   m_EditorClassIdentifier: 
-  description: 'top sectret module, several countries are trying to get the blueprints '
+  description: Top sectret module, several countries are trying to get the blueprints
   icon: {fileID: 21300000, guid: c237ebb606eba4044b3624fb17e2be55, type: 3}
   price: 15000
   id: 14

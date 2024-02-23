@@ -1247,11 +1247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMin.y
@@ -5686,11 +5686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064839268953776702, guid: 024773bd12ae53a4ab85fa86305e1391, type: 3}
       propertyPath: m_AnchorMin.y
@@ -14227,11 +14227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7333678366666840579, guid: 94f6cb2b52ad92a4182279179cd99178, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333678366666840579, guid: 94f6cb2b52ad92a4182279179cd99178, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7333678366666840579, guid: 94f6cb2b52ad92a4182279179cd99178, type: 3}
       propertyPath: m_AnchorMin.y
@@ -15048,10 +15048,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.15
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

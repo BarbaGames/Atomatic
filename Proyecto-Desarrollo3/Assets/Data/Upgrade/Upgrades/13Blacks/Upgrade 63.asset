@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 63
   m_EditorClassIdentifier: 
-  description: somethig its going on...
+  description: Somethig its going on...
   icon: {fileID: 21300000, guid: dcca3beaa6add564984b42e7dcc66113, type: 3}
   price: 1
   id: 63

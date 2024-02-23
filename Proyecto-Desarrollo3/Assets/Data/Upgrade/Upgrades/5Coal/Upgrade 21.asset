@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 21
   m_EditorClassIdentifier: 
-  description: infused with some chemicals, it burns more
+  description: Infused with some chemicals, it burns more
   icon: {fileID: 21300000, guid: ff525e38ca2cc554dbb997a3b3697042, type: 3}
   price: 22000
   id: 21

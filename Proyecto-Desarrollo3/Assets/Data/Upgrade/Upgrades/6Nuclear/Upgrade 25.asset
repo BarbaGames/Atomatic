@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 25
   m_EditorClassIdentifier: 
-  description: plutonium, tasty!, loved by bodybuilders
+  description: Tasty plutonium! Loved by bodybuilders
   icon: {fileID: 21300000, guid: a0cad61bf8895dd4bbdf76f44a572dfc, type: 3}
   price: 26000
   id: 25

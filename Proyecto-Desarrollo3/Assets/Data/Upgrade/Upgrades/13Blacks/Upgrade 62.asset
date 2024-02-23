@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 62
   m_EditorClassIdentifier: 
-  description: a big black hole, time get weird
+  description: A big black hole, time get weird
   icon: {fileID: 21300000, guid: f560da3b35e490744a06e5a23000726f, type: 3}
   price: 1
   id: 62

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 3
   m_EditorClassIdentifier: 
-  description: 'power emanates from it '
+  description: 'Power emanates from it '
   icon: {fileID: 21300000, guid: e84a979d3ccfaa8499431eae8a23afde, type: 3}
   price: 4000
   id: 3

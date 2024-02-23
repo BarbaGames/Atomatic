@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 42
   m_EditorClassIdentifier: 
-  description: a tuner passed by, tungsten tubing it is
+  description: A tuner passed by, tungsten tubing it is
   icon: {fileID: 21300000, guid: 7ce3e95b68b1af04c99e00d3e7d8862c, type: 3}
   price: 1
   id: 42

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 11
   m_EditorClassIdentifier: 
-  description: an upgraded module
+  description: An upgraded module
   icon: {fileID: 21300000, guid: b9755d746f774bb47aef4346823f0101, type: 3}
   price: 12000
   id: 11

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 27
   m_EditorClassIdentifier: 
-  description: 'dont close it '
+  description: 'Don''t close it '
   icon: {fileID: 21300000, guid: 380f3bde4dce961479748ed4624a0e63, type: 3}
   price: 28000
   id: 27

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 48
   m_EditorClassIdentifier: 
-  description: star containment for increased eficency, forget about the construction
+  description: Star containment for increased efficency, forget about the construction
     costs
   icon: {fileID: 21300000, guid: 199f91312687e7c4ab1c318b20102a17, type: 3}
   price: 1

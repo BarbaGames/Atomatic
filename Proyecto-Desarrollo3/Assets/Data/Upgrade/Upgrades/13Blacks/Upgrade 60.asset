@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 60
   m_EditorClassIdentifier: 
-  description: u saw this in a movie, pehaps
+  description: U saw this in a movie, pehaps
   icon: {fileID: 21300000, guid: e3c3edc67754b4b4e9dbc7836a57bea8, type: 3}
   price: 1
   id: 60

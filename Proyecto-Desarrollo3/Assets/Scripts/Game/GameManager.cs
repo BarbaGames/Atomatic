@@ -109,7 +109,7 @@ namespace Game
         /// </summary>
         public void DebugAddCurrency()
         {
-            energy += 500;
+            energy *= 5;
             gameplayView.UpdateEnergy(energy);
         }
         

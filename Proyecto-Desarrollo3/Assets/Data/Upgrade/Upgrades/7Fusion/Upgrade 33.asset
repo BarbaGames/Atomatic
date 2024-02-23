@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 33
   m_EditorClassIdentifier: 
-  description: powerfull magnets, ready to contain plasma for several minutes
+  description: Powerfull magnets, ready to contain plasma for several minutes
   icon: {fileID: 21300000, guid: 8e8cf2c87f1e450478eb6ffffb5f7af5, type: 3}
   price: 34000
   id: 33

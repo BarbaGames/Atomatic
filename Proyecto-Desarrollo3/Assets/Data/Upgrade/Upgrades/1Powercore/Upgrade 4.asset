@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 4
   m_EditorClassIdentifier: 
-  description: 'an experimental core with great ammounts of energy '
+  description: 'An experimental core with great ammounts of energy '
   icon: {fileID: 21300000, guid: abb19b2a9133cec46a4d629438535555, type: 3}
   price: 5000
   id: 4

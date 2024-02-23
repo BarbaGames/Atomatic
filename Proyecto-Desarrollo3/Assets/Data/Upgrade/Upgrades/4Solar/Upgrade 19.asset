@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f9b7f78b474ace95105ca9ca8a7a42, type: 3}
   m_Name: Upgrade 19
   m_EditorClassIdentifier: 
-  description: a super solar cell among many, at night people see them move
+  description: A super solar cell among many, at night people see them move
   icon: {fileID: 21300000, guid: b44d260b009f9824eb5b85a97676681a, type: 3}
   price: 20000
   id: 19
