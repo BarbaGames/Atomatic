@@ -19,20 +19,20 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Barra Santiago** - *Programming*
-- **Rodriguez Giles Juan** - *Programming*
-- **De Bonis Lucas Martín** - *Art*
-- **Gigena Daniel Carlos Tomas** - *Art*
-- **Santos Ortega Isidro** - *Art*
-- **Sanchez Walter** - *Art*
-- **Alonso Santiago José** - *Audio*
-- **Jaramillo Solar Rodrigo** - *Audio*
-- **Marco Pilar** - *Audio*
-- **Navarro Azurmendi Ignacio** - *Audio*
-- **Duran Federico** - *Testing*
-- **Fernández Gordano M. Florencia** - *Testing*
-- **Lasdica Ignacio Benjamín** - *Testing*
-- **Nervi Maxy** - *Testing*
+- **Santiago Barra ** - *Programming*
+- **Juan Rodriguez Giles** - *Programming*
+- **Lucas Martín De Bonis** - *Art*
+- **Daniel Carlos Tomas Gigena** - *Art*
+- **Isidro Santos Ortega ** - *Art*
+- **Walter Sanchez** - *Art*
+- **Santiago José Alonso** - *Audio*
+- **Solar Rodrigo Jaramillo ** - *Audio*
+- **Pilar Marco** - *Audio*
+- **Ignacio Navarro Azurmendi** - *Audio*
+- **Federico Duran** - *Testing*
+- **Gordano M. Florencia Fernández** - *Testing*
+- **Ignacio Benjamín Lasdica** - *Testing*
+- **Maxy Nervi** - *Testing*
 
 
 This game was also possible thanks to the support of these professors:
