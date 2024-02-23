@@ -19,11 +19,11 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Santiago Barra ** - *Programming*
+- **Santiago Barra** - *Programming*
 - **Juan Rodriguez Giles** - *Programming*
 - **Lucas Martín De Bonis** - *Art*
 - **Daniel Carlos Tomas Gigena** - *Art*
-- **Isidro Santos Ortega ** - *Art*
+- **Isidro Santos Ortega** - *Art*
 - **Walter Sanchez** - *Art*
 - **Santiago José Alonso** - *Audio*
 - **Solar Rodrigo Jaramillo ** - *Audio*
