@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: New engines, developed by some kid in a garage
   icon: {fileID: 21300000, guid: 4e3c49afbb12f2b41ae4fab223b82583, type: 3}
-  price: 1
+  price: 42000
   id: 41
   bought: 0
   unlocked: 0
   generatorId: 8
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 41
   stageUpgrade: 0
   stageUnlock: 0

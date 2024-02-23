@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: U saw this in a movie, pehaps
   icon: {fileID: 21300000, guid: e3c3edc67754b4b4e9dbc7836a57bea8, type: 3}
-  price: 1
+  price: 60000
   id: 60
   bought: 0
   unlocked: 0
   generatorId: 12
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 60
   stageUpgrade: 0
   stageUnlock: 0

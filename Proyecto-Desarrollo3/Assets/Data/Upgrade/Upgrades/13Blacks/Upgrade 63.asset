@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Somethig its going on...
   icon: {fileID: 21300000, guid: dcca3beaa6add564984b42e7dcc66113, type: 3}
-  price: 1
+  price: 63000
   id: 63
   bought: 0
   unlocked: 0
   generatorId: 12
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 63
   stageUpgrade: 0
   stageUnlock: 0

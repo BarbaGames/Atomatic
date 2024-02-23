@@ -15,11 +15,11 @@ MonoBehaviour:
   description: overclocked core, dont get close, whatch out for the kid in a space
     ship
   icon: {fileID: 21300000, guid: 096176b0f468c7e4b90e31eaa1c31993, type: 3}
-  price: 1
+  price: 52000
   id: 52
   bought: 0
   unlocked: 0
   generatorId: 10
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 52
   stageUpgrade: 0
   stageUnlock: 0

@@ -15,11 +15,11 @@ MonoBehaviour:
   description: 'cristalized core, very pretty, some magic guys want to make wacky
     light swords out of it, dont let em '
   icon: {fileID: 21300000, guid: 9f7ee2f211c95d443a63b144c08220e4, type: 3}
-  price: 1
+  price: 53000
   id: 53
   bought: 0
   unlocked: 0
   generatorId: 10
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 53
   stageUpgrade: 0
   stageUnlock: 0

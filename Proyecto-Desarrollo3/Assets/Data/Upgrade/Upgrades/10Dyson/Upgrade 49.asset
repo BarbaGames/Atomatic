@@ -15,11 +15,11 @@ MonoBehaviour:
   description: We are succesfully containing a supernova, more energy i guess, gotta
     find more stars tho
   icon: {fileID: 21300000, guid: 3f3b4bc059412e74f90aa0e84bc35625, type: 3}
-  price: 1
+  price: 49000
   id: 49
   bought: 0
   unlocked: 0
   generatorId: 9
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 49
   stageUpgrade: 0
   stageUnlock: 0

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: A big black hole, time get weird
   icon: {fileID: 21300000, guid: f560da3b35e490744a06e5a23000726f, type: 3}
-  price: 1
+  price: 62000
   id: 62
   bought: 0
   unlocked: 0
   generatorId: 12
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 62
   stageUpgrade: 0
   stageUnlock: 0

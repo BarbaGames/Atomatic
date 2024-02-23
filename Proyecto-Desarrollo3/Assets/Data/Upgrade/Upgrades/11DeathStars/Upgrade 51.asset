@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: new carcass, looks better, makes more
   icon: {fileID: 21300000, guid: 0672e739787662442a07cba812dd1d38, type: 3}
-  price: 1
+  price: 51000
   id: 51
   bought: 0
   unlocked: 0
   generatorId: 10
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 51
   stageUpgrade: 0
   stageUnlock: 0

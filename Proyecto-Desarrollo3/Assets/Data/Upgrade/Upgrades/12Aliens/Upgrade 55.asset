@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Mi casa su casa
   icon: {fileID: 21300000, guid: 202634e275b550941819f32faec01b05, type: 3}
-  price: 1
+  price: 55000
   id: 55
   bought: 0
   unlocked: 0
   generatorId: 11
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 55
   stageUpgrade: 0
   stageUnlock: 0

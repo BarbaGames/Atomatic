@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: A small black hole, very pretty lo look at
   icon: {fileID: 21300000, guid: ad175faca674bbd40a56422b00903d8f, type: 3}
-  price: 1
+  price: 61000
   id: 61
   bought: 0
   unlocked: 0
   generatorId: 12
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 61
   stageUpgrade: 0
   stageUnlock: 0

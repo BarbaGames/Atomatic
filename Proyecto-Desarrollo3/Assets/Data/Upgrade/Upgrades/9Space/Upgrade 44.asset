@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: 'God engine, who knows where it will take you '
   icon: {fileID: 21300000, guid: 226898b6f4edafa4fa2521d5ef8435a2, type: 3}
-  price: 1
+  price: 44000
   id: 44
   bought: 0
   unlocked: 0
   generatorId: 8
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 44
   stageUpgrade: 1
   stageUnlock: 4

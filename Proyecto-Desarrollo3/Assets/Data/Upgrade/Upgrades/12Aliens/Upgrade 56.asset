@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Oh he's blue now
   icon: {fileID: 21300000, guid: 5e909df231cc31f40beef24ea2af14cf, type: 3}
-  price: 1
+  price: 56000
   id: 56
   bought: 0
   unlocked: 0
   generatorId: 11
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 56
   stageUpgrade: 0
   stageUnlock: 0

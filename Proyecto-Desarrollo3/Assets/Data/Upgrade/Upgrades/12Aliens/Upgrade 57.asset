@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Warrior species gives energy to you, behave.
   icon: {fileID: 21300000, guid: ca3d5ae621d69b44da16e09b68edd602, type: 3}
-  price: 1
+  price: 57000
   id: 57
   bought: 0
   unlocked: 0
   generatorId: 11
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 57
   stageUpgrade: 0
   stageUnlock: 0

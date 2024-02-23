@@ -19,6 +19,6 @@ MonoBehaviour:
   bought: 0
   unlocked: 0
   generatorId: 5
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 26
   stageUpgrade: 0
   stageUnlock: 0

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Its sunny today, lets change that... Forever
   icon: {fileID: 21300000, guid: 4448f46223a0a554a8aeca44387dc49e, type: 3}
-  price: 1
+  price: 46000
   id: 46
   bought: 0
   unlocked: 0
   generatorId: 9
-  currencyGeneratedAmount: 0
+  currencyGeneratedAmount: 46
   stageUpgrade: 0
   stageUnlock: 0
