@@ -32,11 +32,17 @@ namespace Menu
 
         public void SetFullscreen(bool isFullscreen)
         {
-            Screen.fullScreen = isFullscreen;
-            PlayerPrefs.SetInt(FullscreenKey, isFullscreen ? 1 : 0);
-
-            Screen.SetResolution(Screen.fullScreen ? fullscreen.width : window.width,
-                Screen.fullScreen ? fullscreen.height : window.height, Screen.fullScreen);
+            if (isFullscreen)
+            {
+                PlayerPrefs.SetInt(FullscreenKey, 1);
+                Screen.SetResolution(fullscreen.width, fullscreen.height, true);
+            }
+            else
+            {
+                PlayerPrefs.SetInt(FullscreenKey, 0);
+                Screen.SetResolution(window.width, window.height, false);
+                
+            }
         }
 
         public void SetQuality(int qualityId)
