@@ -16,7 +16,8 @@ namespace UI
         private GeneratorData generatorData = null;
         private Action<GeneratorData> onEnableTooltip;
         private Action onDisableTooltip;
-
+        private int scientistAmount = 0;
+        private const int MaxScientistsAmount = 30;
         public string Id
         {
             get => generatorData.id;
@@ -36,7 +37,7 @@ namespace UI
             this.generatorData = generatorData;
 
             int randomScientist = Random.Range(0, scientist.Length);
-            
+            if(scientistAmount >= MaxScientistsAmount) return;
             if (fromSave)
             {
                 for (int i = 0; i < this.generatorData.level; i++)
@@ -56,6 +57,8 @@ namespace UI
                 scientistController.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                 scientistController.StartYScaleLerp();
             }
+
+            scientistAmount++;
         }
 
         public void OnPointerEnter(PointerEventData eventData)
