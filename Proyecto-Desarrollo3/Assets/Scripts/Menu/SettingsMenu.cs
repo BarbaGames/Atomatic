@@ -36,11 +36,15 @@ namespace Menu
             {
                 PlayerPrefs.SetInt(FullscreenKey, 1);
                 Screen.SetResolution(fullscreen.width, fullscreen.height, true);
+                PlayerPrefs.SetInt(ResWidthKey, fullscreen.width);
+                PlayerPrefs.SetInt(ResHeightKey, fullscreen.height);
             }
             else
             {
                 PlayerPrefs.SetInt(FullscreenKey, 0);
                 Screen.SetResolution(window.width, window.height, false);
+                PlayerPrefs.SetInt(ResWidthKey, window.width);
+                PlayerPrefs.SetInt(ResHeightKey, window.height);
             }
         }
 
