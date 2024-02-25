@@ -32,7 +32,7 @@ namespace UI
             imgIconShadow.sprite = this.generatorData.icon;
             id = this.generatorData.numId;
             txtName.text = generatorData.unlocked ? this.generatorData.id : "???";
-            txtPrice.text = this.generatorData.levelUpCost.ToString("N0");
+            txtPrice.text = "$ " + this.generatorData.levelUpCost.ToString("N0");
             txtOwned.text = this.generatorData.level.ToString("N0");
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;
@@ -62,7 +62,7 @@ namespace UI
         public void UpdateData(GeneratorData generatorData)
         {
             this.generatorData = generatorData;
-            txtPrice.text = generatorData.levelUpCost.ToString("N0");
+            txtPrice.text = "$ " + generatorData.levelUpCost.ToString("N0");
             txtOwned.text = generatorData.level.ToString("N0");
             onEnableTooltip.Invoke(this.generatorData);
         }

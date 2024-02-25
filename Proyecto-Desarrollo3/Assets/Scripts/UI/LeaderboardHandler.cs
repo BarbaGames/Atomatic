@@ -27,7 +27,7 @@ public class LeaderboardHandler : MonoBehaviour
 
         for (int i = 0; i < scores.Count; i++)
         {
-            text.text += (i + 1) + ". " + scores[i] + "\n";
+            text.text += (i + 1) + "." + scores[i] + "\n";
         }
     }
     

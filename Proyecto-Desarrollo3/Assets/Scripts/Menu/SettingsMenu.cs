@@ -41,7 +41,6 @@ namespace Menu
             {
                 PlayerPrefs.SetInt(FullscreenKey, 0);
                 Screen.SetResolution(window.width, window.height, false);
-                
             }
         }
 
