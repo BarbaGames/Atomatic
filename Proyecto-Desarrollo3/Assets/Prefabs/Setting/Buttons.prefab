@@ -1880,6 +1880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4073157108199173745}
   - component: {fileID: 7313268415308875978}
+  - component: {fileID: 8619580387289715926}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -1926,6 +1927,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullscreenToggle: {fileID: 1972494576413127922}
   resDropdown: {fileID: 8990088020252668846}
+--- !u!114 &8619580387289715926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152900706321301091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2fc7e39e2c4107833489980ab0a1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterSlider: {fileID: 3353382283151868343}
+  sfxSlider: {fileID: 3004307275460502630}
+  musicSlider: {fileID: 1975423729081475490}
 --- !u!1 &5558210172588548106
 GameObject:
   m_ObjectHideFlags: 0
