@@ -1,9 +1,6 @@
 using UnityEngine;
-
 using TMPro;
-
 using Generators;
-
 using UnityEngine.UI;
 
 namespace UI
@@ -11,6 +8,9 @@ namespace UI
     public class TooltipView : MonoBehaviour
     {
         [SerializeField] private TMP_Text description = null;
+        [SerializeField] private TMP_Text production = null;
+        [SerializeField] private TMP_Text unitEfficiency = null;
+        [SerializeField] private TMP_Text totalGenerated = null;
         [SerializeField] private Image imgIcon = null;
         [SerializeField] private TextMeshProUGUI txtPrice = null;
 
@@ -22,15 +22,18 @@ namespace UI
                 description.text = generatorData.description;
                 //cost.text = "";
 
-                //production.text = "Total E/s: " + generatorData.currencyGenerated.ToString("N0");
-                //unitEfficiency.text = "Energy per unit: " + generatorData.baseCurrencyGenerated.ToString("N0");
+                production.text = "Total E/s: " + System.Environment.NewLine + generatorData.currencyGenerated.ToString("N0");
+                unitEfficiency.text = "Energy/lvl: " + System.Environment.NewLine + generatorData.baseCurrencyGenerated.ToString("N0");
+                totalGenerated.text = "Generated: " + System.Environment.NewLine + generatorData.totalCurrencyGenerated.ToString("N0");
             }
             else
             {
                 //title.text = "???";
                 description.text = "???";
                 //cost.text = "";
-                //production.text = "";
+                production.text = "Total E/s: ";
+                unitEfficiency.text = "Energy/lvl: ";
+                totalGenerated.text = "Generated: ";
             }
         }
 
