@@ -8211,7 +8211,6 @@ MonoBehaviour:
   - {fileID: 91845659}
   - {fileID: 1049085080}
   - {fileID: 1323419151}
-  isEnding: 0
 --- !u!1 &1323419151
 GameObject:
   m_ObjectHideFlags: 0
