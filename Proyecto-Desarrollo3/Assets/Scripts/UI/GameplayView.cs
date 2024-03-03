@@ -114,6 +114,11 @@ namespace UI
         {
             flyingTextPool.Release(tmpText);
         }
+
+        public void UpdateToolTip(GeneratorData generatorData)
+        {
+            tooltipView.UpdateToolTip(generatorData);
+        }
         #endregion
 
         #region POOLING

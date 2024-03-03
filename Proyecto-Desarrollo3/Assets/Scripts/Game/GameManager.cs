@@ -106,10 +106,14 @@ namespace Game
                             generated += genUpgrades[j].currencyGeneratedAmount;
                         }
                     }
+                    gameplayView.UpdateToolTip(generators[i].GeneratorData);
                 }
             }
-            
-            if (generated > 0) AddCurrency(generated);
+
+            if (generated > 0)
+            {
+                AddCurrency(generated);
+            }
         }
 
         /// <summary>

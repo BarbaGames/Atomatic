@@ -14,13 +14,14 @@ namespace UI
         [SerializeField] private Image imgIcon = null;
         [SerializeField] private TextMeshProUGUI txtPrice = null;
 
+        private GeneratorData selectedGen = null;
+        
         public void OnTooltipEnable(GeneratorData generatorData)
         {
+            selectedGen = generatorData;
             if (generatorData.showData || generatorData.unlocked)
             {
-                //title.text = generatorData.id;
                 description.text = generatorData.description;
-                //cost.text = "";
 
                 production.text = "Total E/s: " + System.Environment.NewLine + generatorData.currencyGenerated.ToString("N0");
                 unitEfficiency.text = "Energy/lvl: " + System.Environment.NewLine + generatorData.baseCurrencyGenerated.ToString("N0");
@@ -28,9 +29,7 @@ namespace UI
             }
             else
             {
-                //title.text = "???";
                 description.text = "???";
-                //cost.text = "";
                 production.text = "Total E/s: ";
                 unitEfficiency.text = "Energy/lvl: ";
                 totalGenerated.text = "Generated: ";
@@ -39,24 +38,33 @@ namespace UI
 
         public void OnTooltipEnable(Upgrade upgrade)
         {
+            selectedGen = null;
             description.text = upgrade.description;
             imgIcon.sprite = upgrade.icon;
             imgIcon.enabled = true;
             txtPrice.text = "$" + upgrade.price.ToString();
-            //cost.text = "Cost: " + upgrade.price;
-            //production.text = "";
-            //unitEfficiency.text = "Upgrade amount: " + upgrade.currencyGeneratedAmount;
+            production.text = "";
+            unitEfficiency.text = "Upgrade amount: " + System.Environment.NewLine + upgrade.currencyGeneratedAmount.ToString("N0");
+            totalGenerated.text = "";
         }
 
         public void OnToolTipDisable()
         {
+            selectedGen = null;
             imgIcon.enabled = false;
             txtPrice.text = "";
-            //title.text = "";
             description.text = "...";
-            //cost.text = "";
-            //production.text = "";
-            //unitEfficiency.text = "";
+            production.text = "";
+            unitEfficiency.text = "";
+            totalGenerated.text = "";
+        }
+
+        public void UpdateToolTip(GeneratorData generatorData)
+        {
+            if (selectedGen != null && generatorData.id == selectedGen.id)
+            {
+                OnTooltipEnable(generatorData);
+            }
         }
     }
 }
