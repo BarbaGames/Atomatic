@@ -6,7 +6,6 @@ namespace Stage
     {
         [SerializeField] private GameObject[] panels;
         [SerializeField] private GameObject[] pages;
-        [SerializeField] private bool isEnding = false;
         private int _currentPage = 0;
         
         public void ActivateNextPage()

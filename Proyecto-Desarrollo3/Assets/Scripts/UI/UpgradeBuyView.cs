@@ -42,13 +42,13 @@ public class UpgradeBuyView : MonoBehaviour
         }
     }
 
-    public void UpdateUpgrade(Upgrade upgrade, GeneratorData generatorData)
+    public void UpdateUpgrade(Upgrade upgrade)
     {
         for (int i = 0; i < upgradeButtonViews.Count; i++)
         {
             if (upgradeButtonViews[i].Id == upgrade.id)
             {
-                upgradeButtonViews[i].UpdateUpgrade(upgrade, generatorData);
+                upgradeButtonViews[i].UpdateUpgrade(upgrade);
                 return;
             }
         }

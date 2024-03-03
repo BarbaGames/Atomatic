@@ -1,7 +1,5 @@
 using System;
 
-using Generators;
-
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -42,7 +40,7 @@ public class UpgradeButtonView : MonoBehaviour, IPointerEnterHandler, IPointerEx
         }
     }
 
-    public void UpdateUpgrade(Upgrade upgradeData, GeneratorData generatorData)
+    public void UpdateUpgrade(Upgrade upgradeData)
     {
         this.upgradeData = upgradeData;
         

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
 using Generators;
-using Newtonsoft.Json;
 using Progress;
 using UI;
 using UnityEngine;
@@ -26,11 +25,7 @@ namespace Game
         [SerializeField] private GameObject settingsMenu = null;
         [SerializeField] private Button debugIncreaseCurrency = null;
         [SerializeField] private Button debugClearData = null;
-
-        private const string EnergyKey = "energy";
-        private const string GeneratorsKey = "generators";
-        private const string UpgradesKey = "upgrades";
-
+        
         private long energy = 0;
         private List<Generator> generators = null;
         private List<Upgrade> upgrades = null;
@@ -243,7 +238,7 @@ namespace Game
                     upgrades[i].bought = true;
                     upgrades[i].unlocked = true;
 
-                    gameplayView.UpdateUpgrade(upgrades[i], null);
+                    gameplayView.UpdateUpgrade(upgrades[i]);
 
                     AkSoundEngine.PostEvent("BuyUpgrade", gameObject); // Wwise evento de BuyUpgrade
                     if (upgrades[i].stageUpgrade)

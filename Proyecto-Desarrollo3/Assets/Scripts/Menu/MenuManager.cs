@@ -1,5 +1,3 @@
-using System;
-
 using TMPro;
 
 using UnityEngine;
@@ -11,8 +9,7 @@ namespace Menu
     {
         [SerializeField] private TMP_Text versionText = null;
         private const string SceneName = "Game";
-
-
+        
         public void Start()
         {
             if (versionText != null) versionText.text = Application.version;

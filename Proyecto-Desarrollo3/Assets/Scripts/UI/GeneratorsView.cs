@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Generators;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace UI
 {

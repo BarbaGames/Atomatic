@@ -26,7 +26,7 @@ namespace UI
         public void Init(GeneratorData generatorData, Action<GeneratorData> onEnableTooltip, Action onDisableTooltip)
         {
             this.generatorData = generatorData;
-            counterTxt.text = ""; //generatorData.level.ToString();
+            counterTxt.text = ""; 
             background.sprite = generatorData.background;
             this.onEnableTooltip = onEnableTooltip;
             this.onDisableTooltip = onDisableTooltip;

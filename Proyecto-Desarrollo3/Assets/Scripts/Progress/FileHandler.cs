@@ -48,30 +48,6 @@ namespace Progress
                 fileInfo.Delete();
             }
         }
-
-        public static void DeleteFile(string id, string subDirectory = null)
-        {
-            string path = GetPath(id);
-
-            if (File.Exists(path))
-            {
-                File.Delete(path);
-            }
-        }
-
-        public static bool TryDeleteDirectory(string path)
-        {
-            bool directoryExist = Directory.Exists(path);
-
-            if (directoryExist)
-            {
-                Directory.Delete(Application.persistentDataPath + path, true);
-            }
-
-            return directoryExist;
-        }
-
-        public static bool FileExist(string id) { return File.Exists(GetPath(id)); }
         #endregion
 
         #region PRIVATE_METHODS

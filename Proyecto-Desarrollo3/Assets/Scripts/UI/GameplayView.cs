@@ -67,9 +67,9 @@ namespace UI
             generatorsView.UpdateGenerator(generatorData, fromSave);
         }
         
-        public void UpdateUpgrade(Upgrade upgrade, GeneratorData generatorData)
+        public void UpdateUpgrade(Upgrade upgrade)
         {
-            upgradeBuyView.UpdateUpgrade(upgrade, generatorData);
+            upgradeBuyView.UpdateUpgrade(upgrade);
         }
         
         public bool UnlockUpgrade(Upgrade upgrade)
