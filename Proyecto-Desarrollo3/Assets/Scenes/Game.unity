@@ -1556,6 +1556,8 @@ MonoBehaviour:
   - {fileID: 1292357295}
   - {fileID: 163679074257669944}
   leaderboardHandler: {fileID: 1984023805}
+  pauseMenu: {fileID: 1946043407}
+  settingsMenu: {fileID: 1228053365}
   debugIncreaseCurrency: {fileID: 265876100}
   debugClearData: {fileID: 1429530947}
 --- !u!114 &154531649
@@ -2129,7 +2131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &253722143
 RectTransform:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ namespace Game
         [SerializeField] private GameObject[] stages = null;
         [SerializeField] private LeaderboardHandler leaderboardHandler = null;
 
+        [SerializeField] private GameObject pauseMenu = null;
+        [SerializeField] private GameObject settingsMenu = null;
         [SerializeField] private Button debugIncreaseCurrency = null;
         [SerializeField] private Button debugClearData = null;
 
@@ -64,6 +66,12 @@ namespace Game
             {
                 debugIncreaseCurrency.gameObject.SetActive(!debugIncreaseCurrency.gameObject.activeSelf);
                 debugClearData.gameObject.SetActive(!debugClearData.gameObject.activeSelf);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                pauseMenu.SetActive(!pauseMenu.activeSelf);
+                if(settingsMenu.activeSelf) settingsMenu.SetActive(false);
             }
             GeneratorsLoop();
         }
