@@ -66,11 +66,6 @@ namespace UI
             generatorsBuyView.UpdateGenerator(generatorData);
             generatorsView.UpdateGenerator(generatorData, fromSave);
         }
-
-        public void AddUpgrade(Upgrade upgrade)
-        {
-            upgradeBuyView.AddUpgrade(upgrade);
-        }
         
         public void UpdateUpgrade(Upgrade upgrade, GeneratorData generatorData)
         {

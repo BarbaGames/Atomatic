@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 using Generators;
 
-using TMPro;
-
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,13 +53,6 @@ public class UpgradeBuyView : MonoBehaviour
             }
         }
     }
-
-    public void AddUpgrade(Upgrade upgrade)
-    {
-        UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
-        upgradeButtonView.Init(upgrade, onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
-        upgradeButtonViews.Add(upgradeButtonView);
-    }
     
     public bool UnlockUpgrade(Upgrade upgrade)
     {
@@ -70,6 +61,7 @@ public class UpgradeBuyView : MonoBehaviour
         {
             UpgradeButtonView upgradeButtonView = Instantiate(upgradeViewPrefab, scrollViewHolder).GetComponent<UpgradeButtonView>();
             upgradeButtonView.Init(upgrades[nextId], onTryBuyUpgrade, onEnableTooltip, onDisableTooltip);
+            upgradeButtonView.transform.SetSiblingIndex(upgradeButtonView.Id);
             upgradeButtonViews.Add(upgradeButtonView);
             return true;
         }
