@@ -164,7 +164,7 @@ namespace Game
             gameplayView.UpdateEnergyPerSec(generationPerSec);
         }
         
-        private void PlayerClick()
+        public void PlayerClick()
         {
             long energyGenerated = generators[0].Generate();
 

@@ -1,4 +1,5 @@
 using TMPro;
+using UI;
 using UnityEngine;
 
 namespace Tutorial
@@ -10,6 +11,7 @@ namespace Tutorial
         [SerializeField] private GameObject[] tutorialSteps;
         [SerializeField] private TMP_Text dialogue;
         [SerializeField] private GameObject tutorialObject;
+        [SerializeField] private TooltipView tooltipView = null;
         private int _currentDialogue = 0;
         private int _currentStep = 0;
         private int _previousDialogues = 0;
@@ -19,6 +21,7 @@ namespace Tutorial
 
         private void Start()
         {
+            tooltipView.TogglePlayingTutorial(true);
             if (dialogues.Length > 0)
             {
                 dialogue.text = dialogues[0];
@@ -119,6 +122,8 @@ namespace Tutorial
 
         public void CloseTutorial()
         {
+            tooltipView.TogglePlayingTutorial(false);
+            dialogue.text = "";
             tutorialObject.SetActive(false);
             // final music start tener en cuenta la segunda vez que se abre le tuto. 
         }
